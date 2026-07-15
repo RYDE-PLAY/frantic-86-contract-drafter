@@ -1,0 +1,238 @@
+{
+  "schema": "frantic.verification.v1",
+  "bounty": 86,
+  "package": "ryde-play/contract-drafter@sha-8f10f3657a3c",
+  "public_url": "https://runx.ai/x/ryde-play/contract-drafter@sha-8f10f3657a3c",
+  "source_url": "https://github.com/RYDE-PLAY/runx/tree/a7ee625855088af9394900ac0e79b667cfe47b76/skills/contract-drafter",
+  "source_commit": "a7ee625855088af9394900ac0e79b667cfe47b76",
+  "pr_url": "https://github.com/runxhq/runx/pull/334",
+  "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/a7ee625855088af9394900ac0e79b667cfe47b76/skills/contract-drafter/X.yaml",
+  "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/a7ee625855088af9394900ac0e79b667cfe47b76/skills/contract-drafter/SKILL.md",
+  "runx_cli_version": "runx-cli 0.6.14",
+  "registry": {
+    "status": "published",
+    "owner": "ryde-play",
+    "name": "contract-drafter",
+    "version": "sha-8f10f3657a3c",
+    "digest": "sha256:18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+    "profile_digest": "sha256:a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+    "registry_read": "registry-read.json"
+  },
+  "source_package_match": {
+    "status": "passed",
+    "all_normalized_eof_match": true,
+    "runtime_files_byte_match": true,
+    "detail": "X.yaml and run.mjs are byte-identical; SKILL.md differs only by the registry's final-newline normalization.",
+    "result": "source-package-match.json"
+  },
+  "install": {
+    "status": "installed",
+    "ref": "ryde-play/contract-drafter@sha-8f10f3657a3c",
+    "runner_names": [
+      "draft",
+      "refusal_check"
+    ],
+    "result": "clean-install.json"
+  },
+  "harness": {
+    "local": {
+      "status": "passed",
+      "case_count": 2,
+      "assertion_error_count": 0,
+      "result": "https://raw.githubusercontent.com/RYDE-PLAY/runx/a7ee625855088af9394900ac0e79b667cfe47b76/skills/contract-drafter/harness-evidence.json"
+    },
+    "hosted_registry": {
+      "status": "passed",
+      "case_count": 2,
+      "checks_passed": 2,
+      "checks_failed": 0,
+      "receipt_ids": [
+        "sha256:88c59b044eccadb0f94f3f7783e252c958587943b70f65ddd7dcdecf7e697b97",
+        "sha256:d7f2e7e77d58cfe0d84f71bc4665702af6fb8441133bc133c558d4a4657fc65f"
+      ],
+      "result": "hosted-harness.json"
+    },
+    "installed_package": {
+      "status": "passed",
+      "case_count": 2,
+      "assertion_error_count": 0,
+      "result": "installed-harness.json"
+    },
+    "cases": [
+      {
+        "name": "complete-template-produces-gated-draft",
+        "status": "sealed",
+        "outputs": [
+          "draft_doc",
+          "deviations",
+          "send_proposal"
+        ]
+      },
+      {
+        "name": "missing-required-term-refuses-without-proposal",
+        "status": "refused",
+        "runtime_status": "failure",
+        "reason": "terms.payment_terms is required",
+        "draft_doc": null,
+        "deviations": [],
+        "send_proposal": null
+      }
+    ]
+  },
+  "dogfood": {
+    "status": "sealed",
+    "package": "ryde-play/contract-drafter@sha-8f10f3657a3c",
+    "run_id": "run_draft_7bd5705a3d7a",
+    "input": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/17d2f3db257bc5f35fd1770bc80435257f4d6d1d/public/dogfood-input.json",
+    "result": "dogfood-run.json",
+    "registry_provenance": {
+      "skill_id": "ryde-play/contract-drafter",
+      "version": "sha-8f10f3657a3c",
+      "digest": "sha256:18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+      "profile_digest": "sha256:a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+      "registry_source": "remote https://api.runx.ai",
+      "trust_state": "trusted"
+    },
+    "output": {
+      "status": "draft_ready",
+      "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+      "deviation_count": 4,
+      "send_proposal_status": "gated_not_sent",
+      "send_proposal_approved": false,
+      "send_consumer": "runx/send-as",
+      "no_send_performed": true
+    }
+  },
+  "receipt": {
+    "ref": "runx:receipt:sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+    "id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+    "file": "runx-receipt.json",
+    "issuer": {
+      "kid": "contract-drafter-dogfood-20260715-v2",
+      "type": "hosted"
+    },
+    "runtime_persistence": {
+      "selected_from_dedicated_store": true,
+      "runtime_id_matches_persisted_id": true,
+      "persisted_json_matches_runtime_output": true,
+      "re_minted": false,
+      "selection_result": "receipt-selection.json"
+    },
+    "subject": {
+      "kind": "skill",
+      "ref_type": "harness",
+      "ref_uri": "hrn_run_draft_7bd5705a3d7a_turn",
+      "explanation": "This is stock graph-turn subject encoding. The receipt was emitted and persisted by the sealed post-publish runx skill invocation, not by runx harness or a replacement observation seal."
+    },
+    "act": {
+      "form": "review",
+      "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+      "artifact_ref": "runx:contract-draft:c29a7681049d5b7e"
+    }
+  },
+  "verification_public_key": {
+    "kid": "contract-drafter-dogfood-20260715-v2",
+    "alg": "Ed25519",
+    "public_key_base64": "VOF1/bTyz5WkAtFHyCN9FRAXndbHIddIXqVdY45UYyA=",
+    "file": "verification-key.json"
+  },
+  "verdict": {
+    "valid": true,
+    "receipt_id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+    "signature": {
+      "mode": "production",
+      "status": "valid",
+      "kid": "contract-drafter-dogfood-20260715-v2"
+    },
+    "findings": [],
+    "result": "runx-verify.json"
+  },
+  "send_as_boundary": {
+    "status": "passed",
+    "consumer_skill": "runx/send-as",
+    "consumer_runner": "plan",
+    "required_keys_missing": [],
+    "gate_approved": false,
+    "provider_action": null,
+    "no_send_performed": true,
+    "result": "send-as-contract-check.json"
+  },
+  "ci": {
+    "pr_head": "a7ee625855088af9394900ac0e79b667cfe47b76",
+    "js_checks": "passed",
+    "demo_checks": "passed",
+    "gitleaks": "passed",
+    "local_verify_fast": "passed",
+    "unrelated_baseline_failures": [
+      "authoring-smoke official catalog sweep failures do not include contract-drafter",
+      "rust-checks fails existing bundled_voice_profile_matches_canonical_workspace_profile"
+    ]
+  },
+  "checks": [
+    {
+      "id": "package_name",
+      "status": "passed",
+      "detail": "name is exactly contract-drafter"
+    },
+    {
+      "id": "publisher_identity",
+      "status": "passed",
+      "detail": "registry owner is ryde-play and PR author/commits map to RYDE-PLAY"
+    },
+    {
+      "id": "source_revision",
+      "status": "passed",
+      "detail": "public source, raw X.yaml, raw SKILL.md, and PR resolve source commit a7ee625855088af9394900ac0e79b667cfe47b76"
+    },
+    {
+      "id": "registry_publish_read_install",
+      "status": "passed",
+      "detail": "published, read, and clean-installed sha-8f10f3657a3c"
+    },
+    {
+      "id": "source_package_match",
+      "status": "passed",
+      "detail": "installed runtime files match submitted source"
+    },
+    {
+      "id": "harness",
+      "status": "passed",
+      "detail": "local, hosted registry, and clean installed-package harnesses passed 2/2"
+    },
+    {
+      "id": "sealed_case",
+      "status": "passed",
+      "detail": "complete typed input emitted draft_doc, four deviations, and gated send_proposal"
+    },
+    {
+      "id": "refusal_case",
+      "status": "passed",
+      "detail": "missing payment_terms refused with no draft, deviations, or proposal"
+    },
+    {
+      "id": "post_publish_dogfood",
+      "status": "passed",
+      "detail": "exact registry version returned sealed with trusted registry provenance"
+    },
+    {
+      "id": "runtime_persisted_receipt",
+      "status": "passed",
+      "detail": "submitted receipt was selected by exact id from the dedicated runtime store and matches the runtime output"
+    },
+    {
+      "id": "receipt_verification",
+      "status": "passed",
+      "detail": "production Ed25519 signature is valid with no findings"
+    },
+    {
+      "id": "send_as_boundary",
+      "status": "passed",
+      "detail": "proposal matches runx/send-as plan inputs and remains unapproved and unsent"
+    },
+    {
+      "id": "no_invention",
+      "status": "passed",
+      "detail": "runner validates explicit source fields and every departure names clause, baseline, and proposed change"
+    }
+  ]
+}

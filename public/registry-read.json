@@ -1,0 +1,55 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "read",
+    "source": "remote",
+    "ref": "ryde-play/contract-drafter@sha-8f10f3657a3c",
+    "skill": {
+      "skill_id": "ryde-play/contract-drafter",
+      "owner": "ryde-play",
+      "name": "contract-drafter",
+      "description": "Assemble a reviewable contract draft from an explicit template, parties, and terms while exposing every baseline departure and preparing a gated send-as handoff.",
+      "category": "content",
+      "version": "sha-8f10f3657a3c",
+      "digest": "18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+      "markdown": "---\nname: contract-drafter\ndescription: Assemble a reviewable contract draft from an explicit template, parties, and terms while exposing every baseline departure and preparing a gated send-as handoff.\nrunx:\n  category: business-ops\n  tags:\n    - contracts\n    - drafting\n    - governance\n---\n\n# Contract Drafter\n\n`contract-drafter` assembles a review draft from three bounded inputs: a\ntemplate, explicit parties, and explicit terms. It renders only clause text\npresent in the template, records each supplied value that differs from the\ntemplate baseline, and emits a gated proposal whose consumer inputs match the\ncanonical `runx/send-as` planner.\n\nThe skill does not approve legal terms, provide legal advice, execute a\nsignature workflow, contact a recipient, or call a provider. A downstream\noperator must review the draft, approve the proposal, invoke `send-as`, and\ncomplete any provider-specific preflight under separate authority.\n\n## Inputs\n\n- `template` supplies:\n  - `template_id`, `title`, and a checkable `source_ref`;\n  - `required_party_roles` and `required_terms`;\n  - `clauses[]`, each with a stable `id`, `title`, and `body_template`;\n  - `baseline`, keyed by term; and\n  - `term_clauses`, mapping every baseline term to the clause it changes.\n- `parties` supplies every role named by `required_party_roles`. Each role must\n  include an explicit `legal_name`; the runner never creates one.\n- `terms` supplies every required deal value and a `send` object containing the\n  exact downstream `send-as` planning inputs.\n\nClause templates use `[[path]]` placeholders and may interpolate only scalar\n`parties.*` and `terms.*` paths.\nEvery placeholder must resolve from the current run inputs. The runner does not\nfall back to a baseline, guess a missing value, or add a clause.\n\n## Outputs\n\n- `draft_doc`: Markdown assembled from the supplied clause bodies, with a\n  content digest, stable draft ref, template source, party roles, and the exact\n  source paths used.\n- `deviations[]`: one item per changed baseline value. Every item names the\n  clause, term, baseline, and proposed change.\n- `send_proposal`: a `gated_not_sent` packet with `approved: false`. Its\n  `consumer` names `runx/send-as`, runner `plan`, and binds the official planner\n  inputs `objective`, `principal`, `audience`, `content_ref`, `consent_basis`,\n  and `operator_context`.\n- `validation`: the required fields and placeholders checked, plus explicit\n  no-invention and no-send assertions.\n\nThe sealed receipt uses a review act and binds the generated `draft_ref` as the\nartifact effect. The receipt proves the draft run occurred; it does not claim\nthe draft was legally approved or delivered.\n\n## Refusal Rules\n\nThe run refuses closed and emits `draft_doc: null`, `deviations: []`, and\n`send_proposal: null` when any of these conditions holds:\n\n- a required party or `legal_name` is absent;\n- a required term or baseline term is absent;\n- the template has no checkable source ref or no clauses;\n- a clause id is duplicated;\n- a clause placeholder is unresolved, non-scalar, or outside `parties.*` and\n  `terms.*`;\n- a baseline term lacks a clause mapping; or\n- any required downstream `terms.send` field is missing.\n\nRefusal output identifies every missing or invalid field and seals that refusal\nfor review in the default graph. The package also exposes `refusal_check` for\nharness and policy validation; it emits the same refusal packet and exits with\na failure status. Neither path creates a partial draft.\n\n## Send-As Boundary\n\n`send_proposal.consumer.inputs` can be passed to the canonical `send-as` plan\nrunner after human approval. `send-as` is itself a planning and authority layer;\na provider adapter remains a further separate step. The contract draft body is\nreferenced by digest and draft ref, not silently copied into a provider call.\n\nRequired sequence:\n\n1. Run `contract-drafter` and inspect `draft_doc` and `deviations`.\n2. Obtain explicit human approval for `contract-drafter.send.approval`.\n3. Pass the unchanged `send_proposal.consumer.inputs` to `runx/send-as`.\n4. Let the resulting send plan undergo its own approval and provider preflight.\n5. Treat the draft as unsent until a separate provider receipt proves delivery.\n\n## Harness Cases\n\n- `complete-template-produces-gated-draft` seals a draft with four visible\n  deviations and a not-approved `runx/send-as` handoff.\n- `missing-required-term-refuses-without-proposal` runs `refusal_check`, omits\n  `payment_terms`, returns failure, and emits neither a draft nor a proposal.\n\nThe fixtures use synthetic parties and nonbinding review data so the public\npackage contains no private contract or personal information. Production users\nmust provide their own authorized template and party data.",
+      "profile_digest": "a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+      "runner_names": [
+        "draft",
+        "refusal_check"
+      ],
+      "source_type": "agent",
+      "trust_tier": "community",
+      "required_scopes": [],
+      "tags": [
+        "contracts",
+        "drafting",
+        "governance"
+      ],
+      "publisher": {
+        "kind": "user",
+        "id": "user_0e65bd23969ab1dea100a77c",
+        "handle": "ryde-play",
+        "display_name": "RYDE"
+      },
+      "attestations": [
+        {
+          "kind": "publisher",
+          "id": "publisher:user_0e65bd23969ab1dea100a77c",
+          "status": "declared",
+          "summary": "RYDE",
+          "issued_at": "2026-07-15T09:44:21.293Z",
+          "metadata": {
+            "publisher_display_name": "RYDE",
+            "publisher_handle": "ryde-play",
+            "publisher_id": "user_0e65bd23969ab1dea100a77c",
+            "publisher_kind": "user",
+            "trust_tier": "community"
+          }
+        }
+      ],
+      "install_command": "runx add ryde-play/contract-drafter@sha-8f10f3657a3c --registry https://api.runx.ai",
+      "run_command": "runx skill ryde-play/contract-drafter@sha-8f10f3657a3c --registry https://api.runx.ai"
+    }
+  }
+}

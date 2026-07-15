@@ -1,0 +1,184 @@
+{
+  "act_decision": "prepared",
+  "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+  "deviations": [
+    {
+      "baseline": "3 years",
+      "clause": "confidentiality",
+      "proposed_change": "2 years",
+      "source": "terms.confidentiality_period",
+      "term": "confidentiality_period",
+      "visibility": "explicit_template_departure"
+    },
+    {
+      "baseline": "California",
+      "clause": "governing-law",
+      "proposed_change": "Delaware",
+      "source": "terms.governing_law",
+      "term": "governing_law",
+      "visibility": "explicit_template_departure"
+    },
+    {
+      "baseline": "Fees paid in the prior 12 months",
+      "clause": "liability",
+      "proposed_change": "USD 80,000 aggregate",
+      "source": "terms.liability_cap",
+      "term": "liability_cap",
+      "visibility": "explicit_template_departure"
+    },
+    {
+      "baseline": "Net 30",
+      "clause": "fees",
+      "proposed_change": "Net 45",
+      "source": "terms.payment_terms",
+      "term": "payment_terms",
+      "visibility": "explicit_template_departure"
+    }
+  ],
+  "draft_doc": {
+    "clauses": [
+      {
+        "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+        "id": "parties",
+        "source": "template.clauses.parties.body_template",
+        "title": "Parties and Effective Date"
+      },
+      {
+        "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+        "id": "services",
+        "source": "template.clauses.services.body_template",
+        "title": "Services"
+      },
+      {
+        "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+        "id": "fees",
+        "source": "template.clauses.fees.body_template",
+        "title": "Fees and Payment"
+      },
+      {
+        "body": "The aggregate liability cap is USD 80,000 aggregate.",
+        "id": "liability",
+        "source": "template.clauses.liability.body_template",
+        "title": "Limitation of Liability"
+      },
+      {
+        "body": "Confidentiality obligations survive for 2 years.",
+        "id": "confidentiality",
+        "source": "template.clauses.confidentiality.body_template",
+        "title": "Confidentiality"
+      },
+      {
+        "body": "The agreement is governed by Delaware.",
+        "id": "governing-law",
+        "source": "template.clauses.governing-law.body_template",
+        "title": "Governing Law"
+      }
+    ],
+    "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+    "delivery_status": "not_sent",
+    "draft_id": "c29a7681049d5b7e",
+    "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+    "format": "markdown",
+    "legal_approval": "not_reviewed",
+    "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+    "party_roles": [
+      {
+        "legal_name": "Northstar Example Services LLC",
+        "role": "provider"
+      },
+      {
+        "legal_name": "Harbor Example Studio Inc.",
+        "role": "customer"
+      }
+    ],
+    "schema": "runx.contract_draft.document.v1",
+    "source_paths": [
+      "parties.customer.legal_name",
+      "parties.provider.legal_name",
+      "terms.confidentiality_period",
+      "terms.effective_date",
+      "terms.fees",
+      "terms.governing_law",
+      "terms.liability_cap",
+      "terms.payment_terms",
+      "terms.services"
+    ],
+    "template": {
+      "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+      "template_id": "public-services-review-v1"
+    },
+    "title": "Services Agreement Review Draft"
+  },
+  "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+  "package": "contract-drafter",
+  "schema": "runx.contract_draft.v1",
+  "send_proposal": {
+    "consumer": {
+      "inputs": {
+        "audience": {
+          "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+          "type": "repository_review"
+        },
+        "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+        "content_ref": {
+          "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+          "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+          "subject_or_title": "Review the public services agreement demonstration draft"
+        },
+        "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+        "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+        "principal": "github:RYDE-PLAY"
+      },
+      "packet": "runx.send_as.plan.v1",
+      "runner": "plan",
+      "skill": "runx/send-as"
+    },
+    "deviation_count": 4,
+    "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+    "gate": {
+      "approved": false,
+      "gate_id": "contract-drafter.send.approval",
+      "human_approval_required": true,
+      "send_as_preflight_required": true
+    },
+    "no_send_performed": true,
+    "provider_action": null,
+    "schema": "runx.contract_send_proposal.v1",
+    "status": "gated_not_sent",
+    "subject_or_title": "Review the public services agreement demonstration draft"
+  },
+  "status": "draft_ready",
+  "validation": {
+    "all_deviations_visible": true,
+    "errors": [],
+    "no_invented_clauses": true,
+    "no_invented_parties": true,
+    "no_invented_terms": true,
+    "no_send_performed": true,
+    "placeholders_checked": [
+      "parties.customer.legal_name",
+      "parties.provider.legal_name",
+      "terms.confidentiality_period",
+      "terms.effective_date",
+      "terms.fees",
+      "terms.governing_law",
+      "terms.liability_cap",
+      "terms.payment_terms",
+      "terms.services"
+    ],
+    "required_party_roles": [
+      "provider",
+      "customer"
+    ],
+    "required_terms": [
+      "effective_date",
+      "services",
+      "fees",
+      "payment_terms",
+      "liability_cap",
+      "governing_law",
+      "confidentiality_period"
+    ],
+    "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+  }
+}

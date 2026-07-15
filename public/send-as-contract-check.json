@@ -1,0 +1,41 @@
+{
+  "schema": "runx.contract_drafter.send_as_contract_check.v1",
+  "official_source": "https://raw.githubusercontent.com/runxhq/runx/c69bff9dde07f305408013c9aefec7406702d12b/skills/send-as/X.yaml",
+  "official_skill": "runx/send-as",
+  "official_runner": "plan",
+  "official_input_keys": [
+    "audience",
+    "consent_basis",
+    "content_ref",
+    "objective",
+    "operator_context",
+    "principal",
+    "provider_context"
+  ],
+  "required_consumer_input_keys": [
+    "audience",
+    "consent_basis",
+    "content_ref",
+    "objective",
+    "operator_context",
+    "principal"
+  ],
+  "proposal_consumer_input_keys": [
+    "audience",
+    "consent_basis",
+    "content_ref",
+    "objective",
+    "operator_context",
+    "principal"
+  ],
+  "required_keys_missing": [],
+  "compatible": true,
+  "gate": {
+    "approved": false,
+    "gate_id": "contract-drafter.send.approval",
+    "human_approval_required": true,
+    "send_as_preflight_required": true
+  },
+  "provider_action": null,
+  "no_send_performed": true
+}

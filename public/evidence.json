@@ -1,0 +1,214 @@
+{
+  "schema": "frantic.evidence.v1",
+  "bounty": 86,
+  "package": {
+    "owner": "ryde-play",
+    "name": "contract-drafter",
+    "version": "sha-8f10f3657a3c",
+    "registry_ref": "ryde-play/contract-drafter@sha-8f10f3657a3c",
+    "public_url": "https://runx.ai/x/ryde-play/contract-drafter@sha-8f10f3657a3c",
+    "source_url": "https://github.com/RYDE-PLAY/runx/tree/a7ee625855088af9394900ac0e79b667cfe47b76/skills/contract-drafter",
+    "pr_url": "https://github.com/runxhq/runx/pull/334",
+    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/a7ee625855088af9394900ac0e79b667cfe47b76/skills/contract-drafter/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/a7ee625855088af9394900ac0e79b667cfe47b76/skills/contract-drafter/SKILL.md",
+    "harness_evidence": "https://raw.githubusercontent.com/RYDE-PLAY/runx/a7ee625855088af9394900ac0e79b667cfe47b76/skills/contract-drafter/harness-evidence.json",
+    "packet_schema": "https://raw.githubusercontent.com/RYDE-PLAY/runx/a7ee625855088af9394900ac0e79b667cfe47b76/dist/packets/runx.contract.draft.v1.schema.json",
+    "source_commit": "a7ee625855088af9394900ac0e79b667cfe47b76",
+    "digest": "sha256:18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+    "profile_digest": "sha256:a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+    "publish_method": "runx registry publish ./skills/contract-drafter/SKILL.md --registry https://api.runx.ai --json"
+  },
+  "verification_json": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/main/public/verification.json",
+  "observations": [
+    "runx-cli 0.6.14 was used for publish, registry read, clean install, local harness, installed-package harness, the post-publish dogfood run, and receipt verification.",
+    "The verified publisher and PR author are RYDE-PLAY/ryde-play, and the exact package is ryde-play/contract-drafter@sha-8f10f3657a3c.",
+    "PR 334 contains X.yaml, SKILL.md, both JSON fixtures, harness evidence, the deterministic runner and tests, plus the generated packet schema at source commit a7ee625855088af9394900ac0e79b667cfe47b76.",
+    "Registry read resolved digest sha256:18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109 and profile digest sha256:a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504.",
+    "A clean runx add installed the exact immutable version with runners draft and refusal_check; X.yaml and run.mjs are byte-identical to source and SKILL.md matches after the registry's final-newline normalization.",
+    "The local signed harness passed 2/2 before publish, the hosted registry harness passed 2/2 after publish, and the clean installed-package harness passed 2/2.",
+    "Hosted harness case complete-template-produces-gated-draft sealed, while missing-required-term-refuses-without-proposal refused through refusal_check with no draft and no proposal.",
+    "The missing-term refusal reason is terms.payment_terms is required; refusal output has draft_doc=null, deviations=[], and send_proposal=null.",
+    "The real dogfood command invoked the published registry ref, not the source directory or a harness fixture, and stdout returned status=sealed with run_id run_draft_7bd5705a3d7a.",
+    "Dogfood receipt id is sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568.",
+    "The runtime wrote that exact receipt id into a dedicated receipt store; the persisted JSON is canonically identical to dogfood-run.json.receipt and was copied without re-minting.",
+    "The dogfood receipt is distinct from hosted harness receipts sha256:88c59b044eccadb0f94f3f7783e252c958587943b70f65ddd7dcdecf7e697b97 and sha256:d7f2e7e77d58cfe0d84f71bc4665702af6fb8441133bc133c558d4a4657fc65f.",
+    "Stock runx graph turns encode the receipt subject ref as type=harness; this is nevertheless the runtime-persisted post-publish skill receipt, proven by the sealed run output, registry provenance, matching run id, exact store selection, and review act rather than an observation receipt.",
+    "The persisted receipt act has form=review, summary draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent, and artifact runx:contract-draft:c29a7681049d5b7e.",
+    "runx verify returned valid=true, signature.status=valid, signature.mode=production, receipt id sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568, and no findings.",
+    "Draft ref is runx:contract-draft:c29a7681049d5b7e with content digest sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7.",
+    "Deviation confidentiality/confidentiality_period records baseline 3 years and proposed change 2 years.",
+    "Deviation governing-law/governing_law records baseline California and proposed change Delaware.",
+    "Deviation liability/liability_cap records baseline Fees paid in the prior 12 months and proposed change USD 80,000 aggregate.",
+    "Deviation fees/payment_terms records baseline Net 30 and proposed change Net 45.",
+    "send_proposal has status=gated_not_sent, gate_id=contract-drafter.send.approval, human_approval_required=true, approved=false, provider_action=null, and no_send_performed=true.",
+    "send_proposal.consumer names runx/send-as runner plan and supplies objective, principal, audience, content_ref, consent_basis, and operator_context matching the official send-as input contract.",
+    "The template and dogfood input are immutable public synthetic artifacts; the runner uses only template, parties, and terms and validates no invented parties, clauses, or terms.",
+    "GitHub CI js-checks, demo-checks, and gitleaks pass at the submitted PR head; the remaining authoring-smoke and Rust failures reproduce unrelated repository baseline failures and do not include contract-drafter."
+  ],
+  "commands": {
+    "version": "runx --version",
+    "publish": "runx registry publish ./skills/contract-drafter/SKILL.md --registry https://api.runx.ai --json",
+    "registry_read": "runx registry read ryde-play/contract-drafter@sha-8f10f3657a3c --registry https://api.runx.ai --json",
+    "install": "runx add ryde-play/contract-drafter@sha-8f10f3657a3c --registry https://api.runx.ai --to <clean-temp-dir> --json",
+    "local_harness": "runx harness ./skills/contract-drafter --receipt-dir <temporary-receipt-dir> --json",
+    "hosted_harness_read": "curl -sS https://api.runx.ai/v1/skills/ryde-play/contract-drafter@sha-8f10f3657a3c",
+    "installed_harness": "runx harness <clean-temp-dir>/ryde-play/contract-drafter/sha-8f10f3657a3c --receipt-dir <temporary-receipt-dir> --json",
+    "dogfood": "runx skill ryde-play/contract-drafter@sha-8f10f3657a3c --registry https://api.runx.ai --receipt-dir <dedicated-runtime-receipt-dir> --json --input-json \"template=$(jq -c '.template' public/dogfood-input.json)\" --input-json \"parties=$(jq -c '.parties' public/dogfood-input.json)\" --input-json \"terms=$(jq -c '.terms' public/dogfood-input.json)\"",
+    "verify": "RUNX_RECEIPT_VERIFY_KID=contract-drafter-dogfood-20260715-v2 RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64=<public-key-from-verification-key.json> runx verify --receipt public/runx-receipt.json --json"
+  },
+  "dogfood": {
+    "package": "ryde-play/contract-drafter@sha-8f10f3657a3c",
+    "input": {
+      "artifact": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/17d2f3db257bc5f35fd1770bc80435257f4d6d1d/public/dogfood-input.json",
+      "template_source": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+      "party_roles": [
+        "provider",
+        "customer"
+      ],
+      "required_terms": [
+        "effective_date",
+        "services",
+        "fees",
+        "payment_terms",
+        "liability_cap",
+        "governing_law",
+        "confidentiality_period"
+      ],
+      "synthetic_nonbinding": true
+    },
+    "command": "runx skill ryde-play/contract-drafter@sha-8f10f3657a3c --registry https://api.runx.ai --receipt-dir <dedicated-runtime-receipt-dir> --json <template, parties, and terms loaded from the immutable input artifact>",
+    "receipt_ref": "runx:receipt:sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+    "receipt_id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+    "run_id": "run_draft_7bd5705a3d7a",
+    "status": "sealed",
+    "registry_provenance": {
+      "skill_id": "ryde-play/contract-drafter",
+      "version": "sha-8f10f3657a3c",
+      "digest": "sha256:18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+      "profile_digest": "sha256:a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+      "registry_source": "remote https://api.runx.ai",
+      "trust_state": "trusted",
+      "trust_tier": "community"
+    },
+    "runtime_receipt_persistence": {
+      "selected_from_dedicated_store": true,
+      "runtime_receipt_id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+      "persisted_receipt_id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+      "persisted_receipt_matches_runtime_output": true,
+      "re_minted": false,
+      "proof": "receipt-selection.json"
+    },
+    "verify_verdict": {
+      "valid": true,
+      "receipt_id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+      "signature": {
+        "mode": "production",
+        "status": "valid",
+        "kid": "contract-drafter-dogfood-20260715-v2"
+      },
+      "findings": []
+    },
+    "harness_cases": [
+      {
+        "name": "complete-template-produces-gated-draft",
+        "status": "sealed",
+        "hosted_receipt_id": "sha256:88c59b044eccadb0f94f3f7783e252c958587943b70f65ddd7dcdecf7e697b97"
+      },
+      {
+        "name": "missing-required-term-refuses-without-proposal",
+        "status": "refused",
+        "runtime_status": "failure",
+        "reason": "terms.payment_terms is required",
+        "hosted_receipt_id": "sha256:d7f2e7e77d58cfe0d84f71bc4665702af6fb8441133bc133c558d4a4657fc65f"
+      }
+    ]
+  },
+  "outputs": {
+    "draft_doc": {
+      "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+      "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+      "legal_approval": "not_reviewed",
+      "delivery_status": "not_sent",
+      "artifact": "draft.md"
+    },
+    "deviations": [
+      {
+        "clause": "confidentiality",
+        "term": "confidentiality_period",
+        "baseline": "3 years",
+        "proposed_change": "2 years"
+      },
+      {
+        "clause": "governing-law",
+        "term": "governing_law",
+        "baseline": "California",
+        "proposed_change": "Delaware"
+      },
+      {
+        "clause": "liability",
+        "term": "liability_cap",
+        "baseline": "Fees paid in the prior 12 months",
+        "proposed_change": "USD 80,000 aggregate"
+      },
+      {
+        "clause": "fees",
+        "term": "payment_terms",
+        "baseline": "Net 30",
+        "proposed_change": "Net 45"
+      }
+    ],
+    "send_proposal": {
+      "status": "gated_not_sent",
+      "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+      "deviation_count": 4,
+      "gate_id": "contract-drafter.send.approval",
+      "human_approval_required": true,
+      "approved": false,
+      "consumer_skill": "runx/send-as",
+      "consumer_runner": "plan",
+      "provider_action": null,
+      "no_send_performed": true,
+      "contract_check": "send-as-contract-check.json"
+    },
+    "missing_term_refusal": {
+      "reason": "terms.payment_terms is required",
+      "draft_doc": null,
+      "deviations": [],
+      "send_proposal": null
+    },
+    "receipt_act": {
+      "form": "review",
+      "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+      "artifact_ref": "runx:contract-draft:c29a7681049d5b7e"
+    }
+  },
+  "prior_rejection_controls": {
+    "stdout_status_is_sealed": true,
+    "runtime_store_is_readable": true,
+    "submitted_receipt_is_runtime_persisted": true,
+    "submitted_receipt_matches_runtime_output": true,
+    "submitted_receipt_is_not_a_harness_case_receipt": true,
+    "submitted_receipt_is_not_an_observation_receipt": true,
+    "submitted_receipt_was_not_re_minted": true,
+    "hosted_harness_receipts_are_listed_separately": true
+  },
+  "artifacts": {
+    "registry_read": "registry-read.json",
+    "clean_install": "clean-install.json",
+    "hosted_harness": "hosted-harness.json",
+    "installed_harness": "installed-harness.json",
+    "dogfood_input": "dogfood-input.json",
+    "dogfood_run": "dogfood-run.json",
+    "dogfood_output": "dogfood-output.json",
+    "runx_receipt": "runx-receipt.json",
+    "receipt_selection": "receipt-selection.json",
+    "runx_verify": "runx-verify.json",
+    "verification_key": "verification-key.json",
+    "draft": "draft.md",
+    "deviations": "deviations.json",
+    "send_proposal": "send-proposal.json",
+    "send_as_contract_check": "send-as-contract-check.json",
+    "source_package_match": "source-package-match.json"
+  },
+  "summary": "Published ryde-play/contract-drafter@sha-8f10f3657a3c from RYDE-PLAY PR 334, passed local, hosted, and clean-installed harnesses, then ran the exact registry version on immutable synthetic contract inputs. The runtime returned sealed, persisted the same receipt submitted here, recorded four explicit template deviations and a gated unsent send-as proposal, and passed production-signature verification with no findings."
+}

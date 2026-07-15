@@ -1,0 +1,35 @@
+{
+  "consumer": {
+    "inputs": {
+      "audience": {
+        "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+        "type": "repository_review"
+      },
+      "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+      "content_ref": {
+        "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+        "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+        "subject_or_title": "Review the public services agreement demonstration draft"
+      },
+      "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+      "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+      "principal": "github:RYDE-PLAY"
+    },
+    "packet": "runx.send_as.plan.v1",
+    "runner": "plan",
+    "skill": "runx/send-as"
+  },
+  "deviation_count": 4,
+  "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+  "gate": {
+    "approved": false,
+    "gate_id": "contract-drafter.send.approval",
+    "human_approval_required": true,
+    "send_as_preflight_required": true
+  },
+  "no_send_performed": true,
+  "provider_action": null,
+  "schema": "runx.contract_send_proposal.v1",
+  "status": "gated_not_sent",
+  "subject_or_title": "Review the public services agreement demonstration draft"
+}

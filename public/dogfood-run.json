@@ -1,0 +1,1880 @@
+{
+  "closure": {
+    "closed_at": "2026-07-15T09:47:30.232Z",
+    "disposition": "closed",
+    "reason_code": "agent_act_closed",
+    "summary": "governed graph turn sealed"
+  },
+  "execution": {
+    "exit_code": 0,
+    "skill_claim": {
+      "graph": "contract-drafter",
+      "graph_status": "Succeeded",
+      "step_outputs": {
+        "assemble": {
+          "act_decision": "prepared",
+          "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+          "contract_draft_packet": {
+            "data": {
+              "act_decision": "prepared",
+              "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+              "deviations": [
+                {
+                  "baseline": "3 years",
+                  "clause": "confidentiality",
+                  "proposed_change": "2 years",
+                  "source": "terms.confidentiality_period",
+                  "term": "confidentiality_period",
+                  "visibility": "explicit_template_departure"
+                },
+                {
+                  "baseline": "California",
+                  "clause": "governing-law",
+                  "proposed_change": "Delaware",
+                  "source": "terms.governing_law",
+                  "term": "governing_law",
+                  "visibility": "explicit_template_departure"
+                },
+                {
+                  "baseline": "Fees paid in the prior 12 months",
+                  "clause": "liability",
+                  "proposed_change": "USD 80,000 aggregate",
+                  "source": "terms.liability_cap",
+                  "term": "liability_cap",
+                  "visibility": "explicit_template_departure"
+                },
+                {
+                  "baseline": "Net 30",
+                  "clause": "fees",
+                  "proposed_change": "Net 45",
+                  "source": "terms.payment_terms",
+                  "term": "payment_terms",
+                  "visibility": "explicit_template_departure"
+                }
+              ],
+              "draft_doc": {
+                "clauses": [
+                  {
+                    "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+                    "id": "parties",
+                    "source": "template.clauses.parties.body_template",
+                    "title": "Parties and Effective Date"
+                  },
+                  {
+                    "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+                    "id": "services",
+                    "source": "template.clauses.services.body_template",
+                    "title": "Services"
+                  },
+                  {
+                    "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+                    "id": "fees",
+                    "source": "template.clauses.fees.body_template",
+                    "title": "Fees and Payment"
+                  },
+                  {
+                    "body": "The aggregate liability cap is USD 80,000 aggregate.",
+                    "id": "liability",
+                    "source": "template.clauses.liability.body_template",
+                    "title": "Limitation of Liability"
+                  },
+                  {
+                    "body": "Confidentiality obligations survive for 2 years.",
+                    "id": "confidentiality",
+                    "source": "template.clauses.confidentiality.body_template",
+                    "title": "Confidentiality"
+                  },
+                  {
+                    "body": "The agreement is governed by Delaware.",
+                    "id": "governing-law",
+                    "source": "template.clauses.governing-law.body_template",
+                    "title": "Governing Law"
+                  }
+                ],
+                "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                "delivery_status": "not_sent",
+                "draft_id": "c29a7681049d5b7e",
+                "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                "format": "markdown",
+                "legal_approval": "not_reviewed",
+                "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+                "party_roles": [
+                  {
+                    "legal_name": "Northstar Example Services LLC",
+                    "role": "provider"
+                  },
+                  {
+                    "legal_name": "Harbor Example Studio Inc.",
+                    "role": "customer"
+                  }
+                ],
+                "schema": "runx.contract_draft.document.v1",
+                "source_paths": [
+                  "parties.customer.legal_name",
+                  "parties.provider.legal_name",
+                  "terms.confidentiality_period",
+                  "terms.effective_date",
+                  "terms.fees",
+                  "terms.governing_law",
+                  "terms.liability_cap",
+                  "terms.payment_terms",
+                  "terms.services"
+                ],
+                "template": {
+                  "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+                  "template_id": "public-services-review-v1"
+                },
+                "title": "Services Agreement Review Draft"
+              },
+              "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+              "package": "contract-drafter",
+              "schema": "runx.contract_draft.v1",
+              "send_proposal": {
+                "consumer": {
+                  "inputs": {
+                    "audience": {
+                      "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                      "type": "repository_review"
+                    },
+                    "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+                    "content_ref": {
+                      "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                      "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                      "subject_or_title": "Review the public services agreement demonstration draft"
+                    },
+                    "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+                    "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+                    "principal": "github:RYDE-PLAY"
+                  },
+                  "packet": "runx.send_as.plan.v1",
+                  "runner": "plan",
+                  "skill": "runx/send-as"
+                },
+                "deviation_count": 4,
+                "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                "gate": {
+                  "approved": false,
+                  "gate_id": "contract-drafter.send.approval",
+                  "human_approval_required": true,
+                  "send_as_preflight_required": true
+                },
+                "no_send_performed": true,
+                "provider_action": null,
+                "schema": "runx.contract_send_proposal.v1",
+                "status": "gated_not_sent",
+                "subject_or_title": "Review the public services agreement demonstration draft"
+              },
+              "status": "draft_ready",
+              "validation": {
+                "all_deviations_visible": true,
+                "errors": [],
+                "no_invented_clauses": true,
+                "no_invented_parties": true,
+                "no_invented_terms": true,
+                "no_send_performed": true,
+                "placeholders_checked": [
+                  "parties.customer.legal_name",
+                  "parties.provider.legal_name",
+                  "terms.confidentiality_period",
+                  "terms.effective_date",
+                  "terms.fees",
+                  "terms.governing_law",
+                  "terms.liability_cap",
+                  "terms.payment_terms",
+                  "terms.services"
+                ],
+                "required_party_roles": [
+                  "provider",
+                  "customer"
+                ],
+                "required_terms": [
+                  "effective_date",
+                  "services",
+                  "fees",
+                  "payment_terms",
+                  "liability_cap",
+                  "governing_law",
+                  "confidentiality_period"
+                ],
+                "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+              }
+            }
+          },
+          "deviations": [
+            {
+              "baseline": "3 years",
+              "clause": "confidentiality",
+              "proposed_change": "2 years",
+              "source": "terms.confidentiality_period",
+              "term": "confidentiality_period",
+              "visibility": "explicit_template_departure"
+            },
+            {
+              "baseline": "California",
+              "clause": "governing-law",
+              "proposed_change": "Delaware",
+              "source": "terms.governing_law",
+              "term": "governing_law",
+              "visibility": "explicit_template_departure"
+            },
+            {
+              "baseline": "Fees paid in the prior 12 months",
+              "clause": "liability",
+              "proposed_change": "USD 80,000 aggregate",
+              "source": "terms.liability_cap",
+              "term": "liability_cap",
+              "visibility": "explicit_template_departure"
+            },
+            {
+              "baseline": "Net 30",
+              "clause": "fees",
+              "proposed_change": "Net 45",
+              "source": "terms.payment_terms",
+              "term": "payment_terms",
+              "visibility": "explicit_template_departure"
+            }
+          ],
+          "draft_doc": {
+            "clauses": [
+              {
+                "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+                "id": "parties",
+                "source": "template.clauses.parties.body_template",
+                "title": "Parties and Effective Date"
+              },
+              {
+                "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+                "id": "services",
+                "source": "template.clauses.services.body_template",
+                "title": "Services"
+              },
+              {
+                "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+                "id": "fees",
+                "source": "template.clauses.fees.body_template",
+                "title": "Fees and Payment"
+              },
+              {
+                "body": "The aggregate liability cap is USD 80,000 aggregate.",
+                "id": "liability",
+                "source": "template.clauses.liability.body_template",
+                "title": "Limitation of Liability"
+              },
+              {
+                "body": "Confidentiality obligations survive for 2 years.",
+                "id": "confidentiality",
+                "source": "template.clauses.confidentiality.body_template",
+                "title": "Confidentiality"
+              },
+              {
+                "body": "The agreement is governed by Delaware.",
+                "id": "governing-law",
+                "source": "template.clauses.governing-law.body_template",
+                "title": "Governing Law"
+              }
+            ],
+            "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+            "delivery_status": "not_sent",
+            "draft_id": "c29a7681049d5b7e",
+            "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+            "format": "markdown",
+            "legal_approval": "not_reviewed",
+            "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+            "party_roles": [
+              {
+                "legal_name": "Northstar Example Services LLC",
+                "role": "provider"
+              },
+              {
+                "legal_name": "Harbor Example Studio Inc.",
+                "role": "customer"
+              }
+            ],
+            "schema": "runx.contract_draft.document.v1",
+            "source_paths": [
+              "parties.customer.legal_name",
+              "parties.provider.legal_name",
+              "terms.confidentiality_period",
+              "terms.effective_date",
+              "terms.fees",
+              "terms.governing_law",
+              "terms.liability_cap",
+              "terms.payment_terms",
+              "terms.services"
+            ],
+            "template": {
+              "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+              "template_id": "public-services-review-v1"
+            },
+            "title": "Services Agreement Review Draft"
+          },
+          "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+          "raw": "{\"schema\":\"runx.contract_draft.v1\",\"package\":\"contract-drafter\",\"status\":\"draft_ready\",\"act_decision\":\"prepared\",\"act_reason\":\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_doc\":{\"schema\":\"runx.contract_draft.document.v1\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_id\":\"c29a7681049d5b7e\",\"format\":\"markdown\",\"title\":\"Services Agreement Review Draft\",\"template\":{\"template_id\":\"public-services-review-v1\",\"source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\"},\"party_roles\":[{\"role\":\"provider\",\"legal_name\":\"Northstar Example Services LLC\"},{\"role\":\"customer\",\"legal_name\":\"Harbor Example Studio Inc.\"}],\"clauses\":[{\"id\":\"parties\",\"title\":\"Parties and Effective Date\",\"body\":\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\",\"source\":\"template.clauses.parties.body_template\"},{\"id\":\"services\",\"title\":\"Services\",\"body\":\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\",\"source\":\"template.clauses.services.body_template\"},{\"id\":\"fees\",\"title\":\"Fees and Payment\",\"body\":\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\",\"source\":\"template.clauses.fees.body_template\"},{\"id\":\"liability\",\"title\":\"Limitation of Liability\",\"body\":\"The aggregate liability cap is USD 80,000 aggregate.\",\"source\":\"template.clauses.liability.body_template\"},{\"id\":\"confidentiality\",\"title\":\"Confidentiality\",\"body\":\"Confidentiality obligations survive for 2 years.\",\"source\":\"template.clauses.confidentiality.body_template\"},{\"id\":\"governing-law\",\"title\":\"Governing Law\",\"body\":\"The agreement is governed by Delaware.\",\"source\":\"template.clauses.governing-law.body_template\"}],\"markdown\":\"# Services Agreement Review Draft\\n\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\nTemplate: public-services-review-v1\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\nStatus: review draft; not legally approved; not sent.\\n\\n## Parties and Effective Date\\n\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\n\\n## Services\\n\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\n\\n## Fees and Payment\\n\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\n\\n## Limitation of Liability\\n\\nThe aggregate liability cap is USD 80,000 aggregate.\\n\\n## Confidentiality\\n\\nConfidentiality obligations survive for 2 years.\\n\\n## Governing Law\\n\\nThe agreement is governed by Delaware.\\n\\n## Deviations from template baseline\\n\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\n- governing-law (governing_law): baseline California; proposed Delaware.\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\n\",\"content_digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"source_paths\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"legal_approval\":\"not_reviewed\",\"delivery_status\":\"not_sent\"},\"deviations\":[{\"clause\":\"confidentiality\",\"term\":\"confidentiality_period\",\"baseline\":\"3 years\",\"proposed_change\":\"2 years\",\"source\":\"terms.confidentiality_period\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"governing-law\",\"term\":\"governing_law\",\"baseline\":\"California\",\"proposed_change\":\"Delaware\",\"source\":\"terms.governing_law\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"liability\",\"term\":\"liability_cap\",\"baseline\":\"Fees paid in the prior 12 months\",\"proposed_change\":\"USD 80,000 aggregate\",\"source\":\"terms.liability_cap\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"fees\",\"term\":\"payment_terms\",\"baseline\":\"Net 30\",\"proposed_change\":\"Net 45\",\"source\":\"terms.payment_terms\",\"visibility\":\"explicit_template_departure\"}],\"send_proposal\":{\"schema\":\"runx.contract_send_proposal.v1\",\"status\":\"gated_not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"subject_or_title\":\"Review the public services agreement demonstration draft\",\"deviation_count\":4,\"gate\":{\"gate_id\":\"contract-drafter.send.approval\",\"human_approval_required\":true,\"approved\":false,\"send_as_preflight_required\":true},\"consumer\":{\"skill\":\"runx/send-as\",\"runner\":\"plan\",\"packet\":\"runx.send_as.plan.v1\",\"inputs\":{\"objective\":\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\",\"principal\":\"github:RYDE-PLAY\",\"audience\":{\"ref\":\"RYDE-PLAY/frantic-86-contract-drafter\",\"type\":\"repository_review\"},\"content_ref\":{\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"consent_basis\":\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\",\"operator_context\":\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\"}},\"provider_action\":null,\"no_send_performed\":true},\"validation\":{\"errors\":[],\"required_party_roles\":[\"provider\",\"customer\"],\"required_terms\":[\"effective_date\",\"services\",\"fees\",\"payment_terms\",\"liability_cap\",\"governing_law\",\"confidentiality_period\"],\"placeholders_checked\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"template_source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\",\"no_invented_parties\":true,\"no_invented_clauses\":true,\"no_invented_terms\":true,\"all_deviations_visible\":true,\"no_send_performed\":true}}\n",
+          "send_proposal": {
+            "consumer": {
+              "inputs": {
+                "audience": {
+                  "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                  "type": "repository_review"
+                },
+                "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+                "content_ref": {
+                  "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                  "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                  "subject_or_title": "Review the public services agreement demonstration draft"
+                },
+                "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+                "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+                "principal": "github:RYDE-PLAY"
+              },
+              "packet": "runx.send_as.plan.v1",
+              "runner": "plan",
+              "skill": "runx/send-as"
+            },
+            "deviation_count": 4,
+            "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+            "gate": {
+              "approved": false,
+              "gate_id": "contract-drafter.send.approval",
+              "human_approval_required": true,
+              "send_as_preflight_required": true
+            },
+            "no_send_performed": true,
+            "provider_action": null,
+            "schema": "runx.contract_send_proposal.v1",
+            "status": "gated_not_sent",
+            "subject_or_title": "Review the public services agreement demonstration draft"
+          },
+          "skill_claim": {
+            "act_decision": "prepared",
+            "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+            "deviations": [
+              {
+                "baseline": "3 years",
+                "clause": "confidentiality",
+                "proposed_change": "2 years",
+                "source": "terms.confidentiality_period",
+                "term": "confidentiality_period",
+                "visibility": "explicit_template_departure"
+              },
+              {
+                "baseline": "California",
+                "clause": "governing-law",
+                "proposed_change": "Delaware",
+                "source": "terms.governing_law",
+                "term": "governing_law",
+                "visibility": "explicit_template_departure"
+              },
+              {
+                "baseline": "Fees paid in the prior 12 months",
+                "clause": "liability",
+                "proposed_change": "USD 80,000 aggregate",
+                "source": "terms.liability_cap",
+                "term": "liability_cap",
+                "visibility": "explicit_template_departure"
+              },
+              {
+                "baseline": "Net 30",
+                "clause": "fees",
+                "proposed_change": "Net 45",
+                "source": "terms.payment_terms",
+                "term": "payment_terms",
+                "visibility": "explicit_template_departure"
+              }
+            ],
+            "draft_doc": {
+              "clauses": [
+                {
+                  "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+                  "id": "parties",
+                  "source": "template.clauses.parties.body_template",
+                  "title": "Parties and Effective Date"
+                },
+                {
+                  "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+                  "id": "services",
+                  "source": "template.clauses.services.body_template",
+                  "title": "Services"
+                },
+                {
+                  "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+                  "id": "fees",
+                  "source": "template.clauses.fees.body_template",
+                  "title": "Fees and Payment"
+                },
+                {
+                  "body": "The aggregate liability cap is USD 80,000 aggregate.",
+                  "id": "liability",
+                  "source": "template.clauses.liability.body_template",
+                  "title": "Limitation of Liability"
+                },
+                {
+                  "body": "Confidentiality obligations survive for 2 years.",
+                  "id": "confidentiality",
+                  "source": "template.clauses.confidentiality.body_template",
+                  "title": "Confidentiality"
+                },
+                {
+                  "body": "The agreement is governed by Delaware.",
+                  "id": "governing-law",
+                  "source": "template.clauses.governing-law.body_template",
+                  "title": "Governing Law"
+                }
+              ],
+              "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+              "delivery_status": "not_sent",
+              "draft_id": "c29a7681049d5b7e",
+              "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+              "format": "markdown",
+              "legal_approval": "not_reviewed",
+              "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+              "party_roles": [
+                {
+                  "legal_name": "Northstar Example Services LLC",
+                  "role": "provider"
+                },
+                {
+                  "legal_name": "Harbor Example Studio Inc.",
+                  "role": "customer"
+                }
+              ],
+              "schema": "runx.contract_draft.document.v1",
+              "source_paths": [
+                "parties.customer.legal_name",
+                "parties.provider.legal_name",
+                "terms.confidentiality_period",
+                "terms.effective_date",
+                "terms.fees",
+                "terms.governing_law",
+                "terms.liability_cap",
+                "terms.payment_terms",
+                "terms.services"
+              ],
+              "template": {
+                "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+                "template_id": "public-services-review-v1"
+              },
+              "title": "Services Agreement Review Draft"
+            },
+            "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+            "package": "contract-drafter",
+            "schema": "runx.contract_draft.v1",
+            "send_proposal": {
+              "consumer": {
+                "inputs": {
+                  "audience": {
+                    "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                    "type": "repository_review"
+                  },
+                  "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+                  "content_ref": {
+                    "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                    "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                    "subject_or_title": "Review the public services agreement demonstration draft"
+                  },
+                  "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+                  "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+                  "principal": "github:RYDE-PLAY"
+                },
+                "packet": "runx.send_as.plan.v1",
+                "runner": "plan",
+                "skill": "runx/send-as"
+              },
+              "deviation_count": 4,
+              "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+              "gate": {
+                "approved": false,
+                "gate_id": "contract-drafter.send.approval",
+                "human_approval_required": true,
+                "send_as_preflight_required": true
+              },
+              "no_send_performed": true,
+              "provider_action": null,
+              "schema": "runx.contract_send_proposal.v1",
+              "status": "gated_not_sent",
+              "subject_or_title": "Review the public services agreement demonstration draft"
+            },
+            "status": "draft_ready",
+            "validation": {
+              "all_deviations_visible": true,
+              "errors": [],
+              "no_invented_clauses": true,
+              "no_invented_parties": true,
+              "no_invented_terms": true,
+              "no_send_performed": true,
+              "placeholders_checked": [
+                "parties.customer.legal_name",
+                "parties.provider.legal_name",
+                "terms.confidentiality_period",
+                "terms.effective_date",
+                "terms.fees",
+                "terms.governing_law",
+                "terms.liability_cap",
+                "terms.payment_terms",
+                "terms.services"
+              ],
+              "required_party_roles": [
+                "provider",
+                "customer"
+              ],
+              "required_terms": [
+                "effective_date",
+                "services",
+                "fees",
+                "payment_terms",
+                "liability_cap",
+                "governing_law",
+                "confidentiality_period"
+              ],
+              "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+            }
+          },
+          "status": "success",
+          "stderr": "",
+          "stdout": "{\"schema\":\"runx.contract_draft.v1\",\"package\":\"contract-drafter\",\"status\":\"draft_ready\",\"act_decision\":\"prepared\",\"act_reason\":\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_doc\":{\"schema\":\"runx.contract_draft.document.v1\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_id\":\"c29a7681049d5b7e\",\"format\":\"markdown\",\"title\":\"Services Agreement Review Draft\",\"template\":{\"template_id\":\"public-services-review-v1\",\"source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\"},\"party_roles\":[{\"role\":\"provider\",\"legal_name\":\"Northstar Example Services LLC\"},{\"role\":\"customer\",\"legal_name\":\"Harbor Example Studio Inc.\"}],\"clauses\":[{\"id\":\"parties\",\"title\":\"Parties and Effective Date\",\"body\":\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\",\"source\":\"template.clauses.parties.body_template\"},{\"id\":\"services\",\"title\":\"Services\",\"body\":\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\",\"source\":\"template.clauses.services.body_template\"},{\"id\":\"fees\",\"title\":\"Fees and Payment\",\"body\":\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\",\"source\":\"template.clauses.fees.body_template\"},{\"id\":\"liability\",\"title\":\"Limitation of Liability\",\"body\":\"The aggregate liability cap is USD 80,000 aggregate.\",\"source\":\"template.clauses.liability.body_template\"},{\"id\":\"confidentiality\",\"title\":\"Confidentiality\",\"body\":\"Confidentiality obligations survive for 2 years.\",\"source\":\"template.clauses.confidentiality.body_template\"},{\"id\":\"governing-law\",\"title\":\"Governing Law\",\"body\":\"The agreement is governed by Delaware.\",\"source\":\"template.clauses.governing-law.body_template\"}],\"markdown\":\"# Services Agreement Review Draft\\n\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\nTemplate: public-services-review-v1\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\nStatus: review draft; not legally approved; not sent.\\n\\n## Parties and Effective Date\\n\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\n\\n## Services\\n\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\n\\n## Fees and Payment\\n\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\n\\n## Limitation of Liability\\n\\nThe aggregate liability cap is USD 80,000 aggregate.\\n\\n## Confidentiality\\n\\nConfidentiality obligations survive for 2 years.\\n\\n## Governing Law\\n\\nThe agreement is governed by Delaware.\\n\\n## Deviations from template baseline\\n\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\n- governing-law (governing_law): baseline California; proposed Delaware.\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\n\",\"content_digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"source_paths\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"legal_approval\":\"not_reviewed\",\"delivery_status\":\"not_sent\"},\"deviations\":[{\"clause\":\"confidentiality\",\"term\":\"confidentiality_period\",\"baseline\":\"3 years\",\"proposed_change\":\"2 years\",\"source\":\"terms.confidentiality_period\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"governing-law\",\"term\":\"governing_law\",\"baseline\":\"California\",\"proposed_change\":\"Delaware\",\"source\":\"terms.governing_law\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"liability\",\"term\":\"liability_cap\",\"baseline\":\"Fees paid in the prior 12 months\",\"proposed_change\":\"USD 80,000 aggregate\",\"source\":\"terms.liability_cap\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"fees\",\"term\":\"payment_terms\",\"baseline\":\"Net 30\",\"proposed_change\":\"Net 45\",\"source\":\"terms.payment_terms\",\"visibility\":\"explicit_template_departure\"}],\"send_proposal\":{\"schema\":\"runx.contract_send_proposal.v1\",\"status\":\"gated_not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"subject_or_title\":\"Review the public services agreement demonstration draft\",\"deviation_count\":4,\"gate\":{\"gate_id\":\"contract-drafter.send.approval\",\"human_approval_required\":true,\"approved\":false,\"send_as_preflight_required\":true},\"consumer\":{\"skill\":\"runx/send-as\",\"runner\":\"plan\",\"packet\":\"runx.send_as.plan.v1\",\"inputs\":{\"objective\":\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\",\"principal\":\"github:RYDE-PLAY\",\"audience\":{\"ref\":\"RYDE-PLAY/frantic-86-contract-drafter\",\"type\":\"repository_review\"},\"content_ref\":{\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"consent_basis\":\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\",\"operator_context\":\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\"}},\"provider_action\":null,\"no_send_performed\":true},\"validation\":{\"errors\":[],\"required_party_roles\":[\"provider\",\"customer\"],\"required_terms\":[\"effective_date\",\"services\",\"fees\",\"payment_terms\",\"liability_cap\",\"governing_law\",\"confidentiality_period\"],\"placeholders_checked\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"template_source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\",\"no_invented_parties\":true,\"no_invented_clauses\":true,\"no_invented_terms\":true,\"all_deviations_visible\":true,\"no_send_performed\":true}}\n",
+          "validation": {
+            "all_deviations_visible": true,
+            "errors": [],
+            "no_invented_clauses": true,
+            "no_invented_parties": true,
+            "no_invented_terms": true,
+            "no_send_performed": true,
+            "placeholders_checked": [
+              "parties.customer.legal_name",
+              "parties.provider.legal_name",
+              "terms.confidentiality_period",
+              "terms.effective_date",
+              "terms.fees",
+              "terms.governing_law",
+              "terms.liability_cap",
+              "terms.payment_terms",
+              "terms.services"
+            ],
+            "required_party_roles": [
+              "provider",
+              "customer"
+            ],
+            "required_terms": [
+              "effective_date",
+              "services",
+              "fees",
+              "payment_terms",
+              "liability_cap",
+              "governing_law",
+              "confidentiality_period"
+            ],
+            "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+          }
+        }
+      },
+      "steps": [
+        {
+          "receipt_id": "sha256:51ce4573f927e459bac0a6952631001f53a17dd758a127288d94a077fe2d27ba",
+          "skill": "assemble",
+          "status": "success",
+          "step_id": "assemble"
+        }
+      ]
+    },
+    "stderr": "",
+    "stdout": "{\"graph\":\"contract-drafter\",\"graph_status\":\"Succeeded\",\"step_outputs\":{\"assemble\":{\"act_decision\":\"prepared\",\"act_reason\":\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\",\"contract_draft_packet\":{\"data\":{\"act_decision\":\"prepared\",\"act_reason\":\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\",\"deviations\":[{\"baseline\":\"3 years\",\"clause\":\"confidentiality\",\"proposed_change\":\"2 years\",\"source\":\"terms.confidentiality_period\",\"term\":\"confidentiality_period\",\"visibility\":\"explicit_template_departure\"},{\"baseline\":\"California\",\"clause\":\"governing-law\",\"proposed_change\":\"Delaware\",\"source\":\"terms.governing_law\",\"term\":\"governing_law\",\"visibility\":\"explicit_template_departure\"},{\"baseline\":\"Fees paid in the prior 12 months\",\"clause\":\"liability\",\"proposed_change\":\"USD 80,000 aggregate\",\"source\":\"terms.liability_cap\",\"term\":\"liability_cap\",\"visibility\":\"explicit_template_departure\"},{\"baseline\":\"Net 30\",\"clause\":\"fees\",\"proposed_change\":\"Net 45\",\"source\":\"terms.payment_terms\",\"term\":\"payment_terms\",\"visibility\":\"explicit_template_departure\"}],\"draft_doc\":{\"clauses\":[{\"body\":\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\",\"id\":\"parties\",\"source\":\"template.clauses.parties.body_template\",\"title\":\"Parties and Effective Date\"},{\"body\":\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\",\"id\":\"services\",\"source\":\"template.clauses.services.body_template\",\"title\":\"Services\"},{\"body\":\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\",\"id\":\"fees\",\"source\":\"template.clauses.fees.body_template\",\"title\":\"Fees and Payment\"},{\"body\":\"The aggregate liability cap is USD 80,000 aggregate.\",\"id\":\"liability\",\"source\":\"template.clauses.liability.body_template\",\"title\":\"Limitation of Liability\"},{\"body\":\"Confidentiality obligations survive for 2 years.\",\"id\":\"confidentiality\",\"source\":\"template.clauses.confidentiality.body_template\",\"title\":\"Confidentiality\"},{\"body\":\"The agreement is governed by Delaware.\",\"id\":\"governing-law\",\"source\":\"template.clauses.governing-law.body_template\",\"title\":\"Governing Law\"}],\"content_digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"delivery_status\":\"not_sent\",\"draft_id\":\"c29a7681049d5b7e\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"format\":\"markdown\",\"legal_approval\":\"not_reviewed\",\"markdown\":\"# Services Agreement Review Draft\\n\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\nTemplate: public-services-review-v1\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\nStatus: review draft; not legally approved; not sent.\\n\\n## Parties and Effective Date\\n\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\n\\n## Services\\n\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\n\\n## Fees and Payment\\n\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\n\\n## Limitation of Liability\\n\\nThe aggregate liability cap is USD 80,000 aggregate.\\n\\n## Confidentiality\\n\\nConfidentiality obligations survive for 2 years.\\n\\n## Governing Law\\n\\nThe agreement is governed by Delaware.\\n\\n## Deviations from template baseline\\n\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\n- governing-law (governing_law): baseline California; proposed Delaware.\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\n\",\"party_roles\":[{\"legal_name\":\"Northstar Example Services LLC\",\"role\":\"provider\"},{\"legal_name\":\"Harbor Example Studio Inc.\",\"role\":\"customer\"}],\"schema\":\"runx.contract_draft.document.v1\",\"source_paths\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"template\":{\"source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\",\"template_id\":\"public-services-review-v1\"},\"title\":\"Services Agreement Review Draft\"},\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"package\":\"contract-drafter\",\"schema\":\"runx.contract_draft.v1\",\"send_proposal\":{\"consumer\":{\"inputs\":{\"audience\":{\"ref\":\"RYDE-PLAY/frantic-86-contract-drafter\",\"type\":\"repository_review\"},\"consent_basis\":\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\",\"content_ref\":{\"digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"objective\":\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\",\"operator_context\":\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\",\"principal\":\"github:RYDE-PLAY\"},\"packet\":\"runx.send_as.plan.v1\",\"runner\":\"plan\",\"skill\":\"runx/send-as\"},\"deviation_count\":4,\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"gate\":{\"approved\":false,\"gate_id\":\"contract-drafter.send.approval\",\"human_approval_required\":true,\"send_as_preflight_required\":true},\"no_send_performed\":true,\"provider_action\":null,\"schema\":\"runx.contract_send_proposal.v1\",\"status\":\"gated_not_sent\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"status\":\"draft_ready\",\"validation\":{\"all_deviations_visible\":true,\"errors\":[],\"no_invented_clauses\":true,\"no_invented_parties\":true,\"no_invented_terms\":true,\"no_send_performed\":true,\"placeholders_checked\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"required_party_roles\":[\"provider\",\"customer\"],\"required_terms\":[\"effective_date\",\"services\",\"fees\",\"payment_terms\",\"liability_cap\",\"governing_law\",\"confidentiality_period\"],\"template_source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\"}}},\"deviations\":[{\"baseline\":\"3 years\",\"clause\":\"confidentiality\",\"proposed_change\":\"2 years\",\"source\":\"terms.confidentiality_period\",\"term\":\"confidentiality_period\",\"visibility\":\"explicit_template_departure\"},{\"baseline\":\"California\",\"clause\":\"governing-law\",\"proposed_change\":\"Delaware\",\"source\":\"terms.governing_law\",\"term\":\"governing_law\",\"visibility\":\"explicit_template_departure\"},{\"baseline\":\"Fees paid in the prior 12 months\",\"clause\":\"liability\",\"proposed_change\":\"USD 80,000 aggregate\",\"source\":\"terms.liability_cap\",\"term\":\"liability_cap\",\"visibility\":\"explicit_template_departure\"},{\"baseline\":\"Net 30\",\"clause\":\"fees\",\"proposed_change\":\"Net 45\",\"source\":\"terms.payment_terms\",\"term\":\"payment_terms\",\"visibility\":\"explicit_template_departure\"}],\"draft_doc\":{\"clauses\":[{\"body\":\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\",\"id\":\"parties\",\"source\":\"template.clauses.parties.body_template\",\"title\":\"Parties and Effective Date\"},{\"body\":\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\",\"id\":\"services\",\"source\":\"template.clauses.services.body_template\",\"title\":\"Services\"},{\"body\":\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\",\"id\":\"fees\",\"source\":\"template.clauses.fees.body_template\",\"title\":\"Fees and Payment\"},{\"body\":\"The aggregate liability cap is USD 80,000 aggregate.\",\"id\":\"liability\",\"source\":\"template.clauses.liability.body_template\",\"title\":\"Limitation of Liability\"},{\"body\":\"Confidentiality obligations survive for 2 years.\",\"id\":\"confidentiality\",\"source\":\"template.clauses.confidentiality.body_template\",\"title\":\"Confidentiality\"},{\"body\":\"The agreement is governed by Delaware.\",\"id\":\"governing-law\",\"source\":\"template.clauses.governing-law.body_template\",\"title\":\"Governing Law\"}],\"content_digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"delivery_status\":\"not_sent\",\"draft_id\":\"c29a7681049d5b7e\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"format\":\"markdown\",\"legal_approval\":\"not_reviewed\",\"markdown\":\"# Services Agreement Review Draft\\n\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\nTemplate: public-services-review-v1\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\nStatus: review draft; not legally approved; not sent.\\n\\n## Parties and Effective Date\\n\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\n\\n## Services\\n\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\n\\n## Fees and Payment\\n\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\n\\n## Limitation of Liability\\n\\nThe aggregate liability cap is USD 80,000 aggregate.\\n\\n## Confidentiality\\n\\nConfidentiality obligations survive for 2 years.\\n\\n## Governing Law\\n\\nThe agreement is governed by Delaware.\\n\\n## Deviations from template baseline\\n\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\n- governing-law (governing_law): baseline California; proposed Delaware.\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\n\",\"party_roles\":[{\"legal_name\":\"Northstar Example Services LLC\",\"role\":\"provider\"},{\"legal_name\":\"Harbor Example Studio Inc.\",\"role\":\"customer\"}],\"schema\":\"runx.contract_draft.document.v1\",\"source_paths\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"template\":{\"source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\",\"template_id\":\"public-services-review-v1\"},\"title\":\"Services Agreement Review Draft\"},\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"raw\":\"{\\\"schema\\\":\\\"runx.contract_draft.v1\\\",\\\"package\\\":\\\"contract-drafter\\\",\\\"status\\\":\\\"draft_ready\\\",\\\"act_decision\\\":\\\"prepared\\\",\\\"act_reason\\\":\\\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\\\",\\\"draft_ref\\\":\\\"runx:contract-draft:c29a7681049d5b7e\\\",\\\"draft_doc\\\":{\\\"schema\\\":\\\"runx.contract_draft.document.v1\\\",\\\"draft_ref\\\":\\\"runx:contract-draft:c29a7681049d5b7e\\\",\\\"draft_id\\\":\\\"c29a7681049d5b7e\\\",\\\"format\\\":\\\"markdown\\\",\\\"title\\\":\\\"Services Agreement Review Draft\\\",\\\"template\\\":{\\\"template_id\\\":\\\"public-services-review-v1\\\",\\\"source_ref\\\":\\\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\\"},\\\"party_roles\\\":[{\\\"role\\\":\\\"provider\\\",\\\"legal_name\\\":\\\"Northstar Example Services LLC\\\"},{\\\"role\\\":\\\"customer\\\",\\\"legal_name\\\":\\\"Harbor Example Studio Inc.\\\"}],\\\"clauses\\\":[{\\\"id\\\":\\\"parties\\\",\\\"title\\\":\\\"Parties and Effective Date\\\",\\\"body\\\":\\\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\\",\\\"source\\\":\\\"template.clauses.parties.body_template\\\"},{\\\"id\\\":\\\"services\\\",\\\"title\\\":\\\"Services\\\",\\\"body\\\":\\\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\\",\\\"source\\\":\\\"template.clauses.services.body_template\\\"},{\\\"id\\\":\\\"fees\\\",\\\"title\\\":\\\"Fees and Payment\\\",\\\"body\\\":\\\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\\",\\\"source\\\":\\\"template.clauses.fees.body_template\\\"},{\\\"id\\\":\\\"liability\\\",\\\"title\\\":\\\"Limitation of Liability\\\",\\\"body\\\":\\\"The aggregate liability cap is USD 80,000 aggregate.\\\",\\\"source\\\":\\\"template.clauses.liability.body_template\\\"},{\\\"id\\\":\\\"confidentiality\\\",\\\"title\\\":\\\"Confidentiality\\\",\\\"body\\\":\\\"Confidentiality obligations survive for 2 years.\\\",\\\"source\\\":\\\"template.clauses.confidentiality.body_template\\\"},{\\\"id\\\":\\\"governing-law\\\",\\\"title\\\":\\\"Governing Law\\\",\\\"body\\\":\\\"The agreement is governed by Delaware.\\\",\\\"source\\\":\\\"template.clauses.governing-law.body_template\\\"}],\\\"markdown\\\":\\\"# Services Agreement Review Draft\\\\n\\\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\\\nTemplate: public-services-review-v1\\\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\\\nStatus: review draft; not legally approved; not sent.\\\\n\\\\n## Parties and Effective Date\\\\n\\\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\\\n\\\\n## Services\\\\n\\\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\\\n\\\\n## Fees and Payment\\\\n\\\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\\\n\\\\n## Limitation of Liability\\\\n\\\\nThe aggregate liability cap is USD 80,000 aggregate.\\\\n\\\\n## Confidentiality\\\\n\\\\nConfidentiality obligations survive for 2 years.\\\\n\\\\n## Governing Law\\\\n\\\\nThe agreement is governed by Delaware.\\\\n\\\\n## Deviations from template baseline\\\\n\\\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\\\n- governing-law (governing_law): baseline California; proposed Delaware.\\\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\\\n\\\",\\\"content_digest\\\":\\\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\\\",\\\"source_paths\\\":[\\\"parties.customer.legal_name\\\",\\\"parties.provider.legal_name\\\",\\\"terms.confidentiality_period\\\",\\\"terms.effective_date\\\",\\\"terms.fees\\\",\\\"terms.governing_law\\\",\\\"terms.liability_cap\\\",\\\"terms.payment_terms\\\",\\\"terms.services\\\"],\\\"legal_approval\\\":\\\"not_reviewed\\\",\\\"delivery_status\\\":\\\"not_sent\\\"},\\\"deviations\\\":[{\\\"clause\\\":\\\"confidentiality\\\",\\\"term\\\":\\\"confidentiality_period\\\",\\\"baseline\\\":\\\"3 years\\\",\\\"proposed_change\\\":\\\"2 years\\\",\\\"source\\\":\\\"terms.confidentiality_period\\\",\\\"visibility\\\":\\\"explicit_template_departure\\\"},{\\\"clause\\\":\\\"governing-law\\\",\\\"term\\\":\\\"governing_law\\\",\\\"baseline\\\":\\\"California\\\",\\\"proposed_change\\\":\\\"Delaware\\\",\\\"source\\\":\\\"terms.governing_law\\\",\\\"visibility\\\":\\\"explicit_template_departure\\\"},{\\\"clause\\\":\\\"liability\\\",\\\"term\\\":\\\"liability_cap\\\",\\\"baseline\\\":\\\"Fees paid in the prior 12 months\\\",\\\"proposed_change\\\":\\\"USD 80,000 aggregate\\\",\\\"source\\\":\\\"terms.liability_cap\\\",\\\"visibility\\\":\\\"explicit_template_departure\\\"},{\\\"clause\\\":\\\"fees\\\",\\\"term\\\":\\\"payment_terms\\\",\\\"baseline\\\":\\\"Net 30\\\",\\\"proposed_change\\\":\\\"Net 45\\\",\\\"source\\\":\\\"terms.payment_terms\\\",\\\"visibility\\\":\\\"explicit_template_departure\\\"}],\\\"send_proposal\\\":{\\\"schema\\\":\\\"runx.contract_send_proposal.v1\\\",\\\"status\\\":\\\"gated_not_sent\\\",\\\"draft_ref\\\":\\\"runx:contract-draft:c29a7681049d5b7e\\\",\\\"subject_or_title\\\":\\\"Review the public services agreement demonstration draft\\\",\\\"deviation_count\\\":4,\\\"gate\\\":{\\\"gate_id\\\":\\\"contract-drafter.send.approval\\\",\\\"human_approval_required\\\":true,\\\"approved\\\":false,\\\"send_as_preflight_required\\\":true},\\\"consumer\\\":{\\\"skill\\\":\\\"runx/send-as\\\",\\\"runner\\\":\\\"plan\\\",\\\"packet\\\":\\\"runx.send_as.plan.v1\\\",\\\"inputs\\\":{\\\"objective\\\":\\\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\\\",\\\"principal\\\":\\\"github:RYDE-PLAY\\\",\\\"audience\\\":{\\\"ref\\\":\\\"RYDE-PLAY/frantic-86-contract-drafter\\\",\\\"type\\\":\\\"repository_review\\\"},\\\"content_ref\\\":{\\\"draft_ref\\\":\\\"runx:contract-draft:c29a7681049d5b7e\\\",\\\"digest\\\":\\\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\\\",\\\"subject_or_title\\\":\\\"Review the public services agreement demonstration draft\\\"},\\\"consent_basis\\\":\\\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\\\",\\\"operator_context\\\":\\\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\\\"}},\\\"provider_action\\\":null,\\\"no_send_performed\\\":true},\\\"validation\\\":{\\\"errors\\\":[],\\\"required_party_roles\\\":[\\\"provider\\\",\\\"customer\\\"],\\\"required_terms\\\":[\\\"effective_date\\\",\\\"services\\\",\\\"fees\\\",\\\"payment_terms\\\",\\\"liability_cap\\\",\\\"governing_law\\\",\\\"confidentiality_period\\\"],\\\"placeholders_checked\\\":[\\\"parties.customer.legal_name\\\",\\\"parties.provider.legal_name\\\",\\\"terms.confidentiality_period\\\",\\\"terms.effective_date\\\",\\\"terms.fees\\\",\\\"terms.governing_law\\\",\\\"terms.liability_cap\\\",\\\"terms.payment_terms\\\",\\\"terms.services\\\"],\\\"template_source_ref\\\":\\\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\\",\\\"no_invented_parties\\\":true,\\\"no_invented_clauses\\\":true,\\\"no_invented_terms\\\":true,\\\"all_deviations_visible\\\":true,\\\"no_send_performed\\\":true}}\\n\",\"send_proposal\":{\"consumer\":{\"inputs\":{\"audience\":{\"ref\":\"RYDE-PLAY/frantic-86-contract-drafter\",\"type\":\"repository_review\"},\"consent_basis\":\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\",\"content_ref\":{\"digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"objective\":\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\",\"operator_context\":\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\",\"principal\":\"github:RYDE-PLAY\"},\"packet\":\"runx.send_as.plan.v1\",\"runner\":\"plan\",\"skill\":\"runx/send-as\"},\"deviation_count\":4,\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"gate\":{\"approved\":false,\"gate_id\":\"contract-drafter.send.approval\",\"human_approval_required\":true,\"send_as_preflight_required\":true},\"no_send_performed\":true,\"provider_action\":null,\"schema\":\"runx.contract_send_proposal.v1\",\"status\":\"gated_not_sent\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"skill_claim\":{\"act_decision\":\"prepared\",\"act_reason\":\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\",\"deviations\":[{\"baseline\":\"3 years\",\"clause\":\"confidentiality\",\"proposed_change\":\"2 years\",\"source\":\"terms.confidentiality_period\",\"term\":\"confidentiality_period\",\"visibility\":\"explicit_template_departure\"},{\"baseline\":\"California\",\"clause\":\"governing-law\",\"proposed_change\":\"Delaware\",\"source\":\"terms.governing_law\",\"term\":\"governing_law\",\"visibility\":\"explicit_template_departure\"},{\"baseline\":\"Fees paid in the prior 12 months\",\"clause\":\"liability\",\"proposed_change\":\"USD 80,000 aggregate\",\"source\":\"terms.liability_cap\",\"term\":\"liability_cap\",\"visibility\":\"explicit_template_departure\"},{\"baseline\":\"Net 30\",\"clause\":\"fees\",\"proposed_change\":\"Net 45\",\"source\":\"terms.payment_terms\",\"term\":\"payment_terms\",\"visibility\":\"explicit_template_departure\"}],\"draft_doc\":{\"clauses\":[{\"body\":\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\",\"id\":\"parties\",\"source\":\"template.clauses.parties.body_template\",\"title\":\"Parties and Effective Date\"},{\"body\":\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\",\"id\":\"services\",\"source\":\"template.clauses.services.body_template\",\"title\":\"Services\"},{\"body\":\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\",\"id\":\"fees\",\"source\":\"template.clauses.fees.body_template\",\"title\":\"Fees and Payment\"},{\"body\":\"The aggregate liability cap is USD 80,000 aggregate.\",\"id\":\"liability\",\"source\":\"template.clauses.liability.body_template\",\"title\":\"Limitation of Liability\"},{\"body\":\"Confidentiality obligations survive for 2 years.\",\"id\":\"confidentiality\",\"source\":\"template.clauses.confidentiality.body_template\",\"title\":\"Confidentiality\"},{\"body\":\"The agreement is governed by Delaware.\",\"id\":\"governing-law\",\"source\":\"template.clauses.governing-law.body_template\",\"title\":\"Governing Law\"}],\"content_digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"delivery_status\":\"not_sent\",\"draft_id\":\"c29a7681049d5b7e\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"format\":\"markdown\",\"legal_approval\":\"not_reviewed\",\"markdown\":\"# Services Agreement Review Draft\\n\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\nTemplate: public-services-review-v1\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\nStatus: review draft; not legally approved; not sent.\\n\\n## Parties and Effective Date\\n\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\n\\n## Services\\n\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\n\\n## Fees and Payment\\n\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\n\\n## Limitation of Liability\\n\\nThe aggregate liability cap is USD 80,000 aggregate.\\n\\n## Confidentiality\\n\\nConfidentiality obligations survive for 2 years.\\n\\n## Governing Law\\n\\nThe agreement is governed by Delaware.\\n\\n## Deviations from template baseline\\n\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\n- governing-law (governing_law): baseline California; proposed Delaware.\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\n\",\"party_roles\":[{\"legal_name\":\"Northstar Example Services LLC\",\"role\":\"provider\"},{\"legal_name\":\"Harbor Example Studio Inc.\",\"role\":\"customer\"}],\"schema\":\"runx.contract_draft.document.v1\",\"source_paths\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"template\":{\"source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\",\"template_id\":\"public-services-review-v1\"},\"title\":\"Services Agreement Review Draft\"},\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"package\":\"contract-drafter\",\"schema\":\"runx.contract_draft.v1\",\"send_proposal\":{\"consumer\":{\"inputs\":{\"audience\":{\"ref\":\"RYDE-PLAY/frantic-86-contract-drafter\",\"type\":\"repository_review\"},\"consent_basis\":\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\",\"content_ref\":{\"digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"objective\":\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\",\"operator_context\":\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\",\"principal\":\"github:RYDE-PLAY\"},\"packet\":\"runx.send_as.plan.v1\",\"runner\":\"plan\",\"skill\":\"runx/send-as\"},\"deviation_count\":4,\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"gate\":{\"approved\":false,\"gate_id\":\"contract-drafter.send.approval\",\"human_approval_required\":true,\"send_as_preflight_required\":true},\"no_send_performed\":true,\"provider_action\":null,\"schema\":\"runx.contract_send_proposal.v1\",\"status\":\"gated_not_sent\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"status\":\"draft_ready\",\"validation\":{\"all_deviations_visible\":true,\"errors\":[],\"no_invented_clauses\":true,\"no_invented_parties\":true,\"no_invented_terms\":true,\"no_send_performed\":true,\"placeholders_checked\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"required_party_roles\":[\"provider\",\"customer\"],\"required_terms\":[\"effective_date\",\"services\",\"fees\",\"payment_terms\",\"liability_cap\",\"governing_law\",\"confidentiality_period\"],\"template_source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\"}},\"status\":\"success\",\"stderr\":\"\",\"stdout\":\"{\\\"schema\\\":\\\"runx.contract_draft.v1\\\",\\\"package\\\":\\\"contract-drafter\\\",\\\"status\\\":\\\"draft_ready\\\",\\\"act_decision\\\":\\\"prepared\\\",\\\"act_reason\\\":\\\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\\\",\\\"draft_ref\\\":\\\"runx:contract-draft:c29a7681049d5b7e\\\",\\\"draft_doc\\\":{\\\"schema\\\":\\\"runx.contract_draft.document.v1\\\",\\\"draft_ref\\\":\\\"runx:contract-draft:c29a7681049d5b7e\\\",\\\"draft_id\\\":\\\"c29a7681049d5b7e\\\",\\\"format\\\":\\\"markdown\\\",\\\"title\\\":\\\"Services Agreement Review Draft\\\",\\\"template\\\":{\\\"template_id\\\":\\\"public-services-review-v1\\\",\\\"source_ref\\\":\\\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\\"},\\\"party_roles\\\":[{\\\"role\\\":\\\"provider\\\",\\\"legal_name\\\":\\\"Northstar Example Services LLC\\\"},{\\\"role\\\":\\\"customer\\\",\\\"legal_name\\\":\\\"Harbor Example Studio Inc.\\\"}],\\\"clauses\\\":[{\\\"id\\\":\\\"parties\\\",\\\"title\\\":\\\"Parties and Effective Date\\\",\\\"body\\\":\\\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\\",\\\"source\\\":\\\"template.clauses.parties.body_template\\\"},{\\\"id\\\":\\\"services\\\",\\\"title\\\":\\\"Services\\\",\\\"body\\\":\\\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\\",\\\"source\\\":\\\"template.clauses.services.body_template\\\"},{\\\"id\\\":\\\"fees\\\",\\\"title\\\":\\\"Fees and Payment\\\",\\\"body\\\":\\\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\\",\\\"source\\\":\\\"template.clauses.fees.body_template\\\"},{\\\"id\\\":\\\"liability\\\",\\\"title\\\":\\\"Limitation of Liability\\\",\\\"body\\\":\\\"The aggregate liability cap is USD 80,000 aggregate.\\\",\\\"source\\\":\\\"template.clauses.liability.body_template\\\"},{\\\"id\\\":\\\"confidentiality\\\",\\\"title\\\":\\\"Confidentiality\\\",\\\"body\\\":\\\"Confidentiality obligations survive for 2 years.\\\",\\\"source\\\":\\\"template.clauses.confidentiality.body_template\\\"},{\\\"id\\\":\\\"governing-law\\\",\\\"title\\\":\\\"Governing Law\\\",\\\"body\\\":\\\"The agreement is governed by Delaware.\\\",\\\"source\\\":\\\"template.clauses.governing-law.body_template\\\"}],\\\"markdown\\\":\\\"# Services Agreement Review Draft\\\\n\\\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\\\nTemplate: public-services-review-v1\\\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\\\nStatus: review draft; not legally approved; not sent.\\\\n\\\\n## Parties and Effective Date\\\\n\\\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\\\n\\\\n## Services\\\\n\\\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\\\n\\\\n## Fees and Payment\\\\n\\\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\\\n\\\\n## Limitation of Liability\\\\n\\\\nThe aggregate liability cap is USD 80,000 aggregate.\\\\n\\\\n## Confidentiality\\\\n\\\\nConfidentiality obligations survive for 2 years.\\\\n\\\\n## Governing Law\\\\n\\\\nThe agreement is governed by Delaware.\\\\n\\\\n## Deviations from template baseline\\\\n\\\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\\\n- governing-law (governing_law): baseline California; proposed Delaware.\\\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\\\n\\\",\\\"content_digest\\\":\\\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\\\",\\\"source_paths\\\":[\\\"parties.customer.legal_name\\\",\\\"parties.provider.legal_name\\\",\\\"terms.confidentiality_period\\\",\\\"terms.effective_date\\\",\\\"terms.fees\\\",\\\"terms.governing_law\\\",\\\"terms.liability_cap\\\",\\\"terms.payment_terms\\\",\\\"terms.services\\\"],\\\"legal_approval\\\":\\\"not_reviewed\\\",\\\"delivery_status\\\":\\\"not_sent\\\"},\\\"deviations\\\":[{\\\"clause\\\":\\\"confidentiality\\\",\\\"term\\\":\\\"confidentiality_period\\\",\\\"baseline\\\":\\\"3 years\\\",\\\"proposed_change\\\":\\\"2 years\\\",\\\"source\\\":\\\"terms.confidentiality_period\\\",\\\"visibility\\\":\\\"explicit_template_departure\\\"},{\\\"clause\\\":\\\"governing-law\\\",\\\"term\\\":\\\"governing_law\\\",\\\"baseline\\\":\\\"California\\\",\\\"proposed_change\\\":\\\"Delaware\\\",\\\"source\\\":\\\"terms.governing_law\\\",\\\"visibility\\\":\\\"explicit_template_departure\\\"},{\\\"clause\\\":\\\"liability\\\",\\\"term\\\":\\\"liability_cap\\\",\\\"baseline\\\":\\\"Fees paid in the prior 12 months\\\",\\\"proposed_change\\\":\\\"USD 80,000 aggregate\\\",\\\"source\\\":\\\"terms.liability_cap\\\",\\\"visibility\\\":\\\"explicit_template_departure\\\"},{\\\"clause\\\":\\\"fees\\\",\\\"term\\\":\\\"payment_terms\\\",\\\"baseline\\\":\\\"Net 30\\\",\\\"proposed_change\\\":\\\"Net 45\\\",\\\"source\\\":\\\"terms.payment_terms\\\",\\\"visibility\\\":\\\"explicit_template_departure\\\"}],\\\"send_proposal\\\":{\\\"schema\\\":\\\"runx.contract_send_proposal.v1\\\",\\\"status\\\":\\\"gated_not_sent\\\",\\\"draft_ref\\\":\\\"runx:contract-draft:c29a7681049d5b7e\\\",\\\"subject_or_title\\\":\\\"Review the public services agreement demonstration draft\\\",\\\"deviation_count\\\":4,\\\"gate\\\":{\\\"gate_id\\\":\\\"contract-drafter.send.approval\\\",\\\"human_approval_required\\\":true,\\\"approved\\\":false,\\\"send_as_preflight_required\\\":true},\\\"consumer\\\":{\\\"skill\\\":\\\"runx/send-as\\\",\\\"runner\\\":\\\"plan\\\",\\\"packet\\\":\\\"runx.send_as.plan.v1\\\",\\\"inputs\\\":{\\\"objective\\\":\\\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\\\",\\\"principal\\\":\\\"github:RYDE-PLAY\\\",\\\"audience\\\":{\\\"ref\\\":\\\"RYDE-PLAY/frantic-86-contract-drafter\\\",\\\"type\\\":\\\"repository_review\\\"},\\\"content_ref\\\":{\\\"draft_ref\\\":\\\"runx:contract-draft:c29a7681049d5b7e\\\",\\\"digest\\\":\\\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\\\",\\\"subject_or_title\\\":\\\"Review the public services agreement demonstration draft\\\"},\\\"consent_basis\\\":\\\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\\\",\\\"operator_context\\\":\\\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\\\"}},\\\"provider_action\\\":null,\\\"no_send_performed\\\":true},\\\"validation\\\":{\\\"errors\\\":[],\\\"required_party_roles\\\":[\\\"provider\\\",\\\"customer\\\"],\\\"required_terms\\\":[\\\"effective_date\\\",\\\"services\\\",\\\"fees\\\",\\\"payment_terms\\\",\\\"liability_cap\\\",\\\"governing_law\\\",\\\"confidentiality_period\\\"],\\\"placeholders_checked\\\":[\\\"parties.customer.legal_name\\\",\\\"parties.provider.legal_name\\\",\\\"terms.confidentiality_period\\\",\\\"terms.effective_date\\\",\\\"terms.fees\\\",\\\"terms.governing_law\\\",\\\"terms.liability_cap\\\",\\\"terms.payment_terms\\\",\\\"terms.services\\\"],\\\"template_source_ref\\\":\\\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\\",\\\"no_invented_parties\\\":true,\\\"no_invented_clauses\\\":true,\\\"no_invented_terms\\\":true,\\\"all_deviations_visible\\\":true,\\\"no_send_performed\\\":true}}\\n\",\"validation\":{\"all_deviations_visible\":true,\"errors\":[],\"no_invented_clauses\":true,\"no_invented_parties\":true,\"no_invented_terms\":true,\"no_send_performed\":true,\"placeholders_checked\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"required_party_roles\":[\"provider\",\"customer\"],\"required_terms\":[\"effective_date\",\"services\",\"fees\",\"payment_terms\",\"liability_cap\",\"governing_law\",\"confidentiality_period\"],\"template_source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\"}}},\"steps\":[{\"receipt_id\":\"sha256:51ce4573f927e459bac0a6952631001f53a17dd758a127288d94a077fe2d27ba\",\"skill\":\"assemble\",\"status\":\"success\",\"step_id\":\"assemble\"}]}",
+    "structured_output": {
+      "graph": "contract-drafter",
+      "graph_status": "Succeeded",
+      "step_outputs": {
+        "assemble": {
+          "act_decision": "prepared",
+          "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+          "contract_draft_packet": {
+            "data": {
+              "act_decision": "prepared",
+              "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+              "deviations": [
+                {
+                  "baseline": "3 years",
+                  "clause": "confidentiality",
+                  "proposed_change": "2 years",
+                  "source": "terms.confidentiality_period",
+                  "term": "confidentiality_period",
+                  "visibility": "explicit_template_departure"
+                },
+                {
+                  "baseline": "California",
+                  "clause": "governing-law",
+                  "proposed_change": "Delaware",
+                  "source": "terms.governing_law",
+                  "term": "governing_law",
+                  "visibility": "explicit_template_departure"
+                },
+                {
+                  "baseline": "Fees paid in the prior 12 months",
+                  "clause": "liability",
+                  "proposed_change": "USD 80,000 aggregate",
+                  "source": "terms.liability_cap",
+                  "term": "liability_cap",
+                  "visibility": "explicit_template_departure"
+                },
+                {
+                  "baseline": "Net 30",
+                  "clause": "fees",
+                  "proposed_change": "Net 45",
+                  "source": "terms.payment_terms",
+                  "term": "payment_terms",
+                  "visibility": "explicit_template_departure"
+                }
+              ],
+              "draft_doc": {
+                "clauses": [
+                  {
+                    "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+                    "id": "parties",
+                    "source": "template.clauses.parties.body_template",
+                    "title": "Parties and Effective Date"
+                  },
+                  {
+                    "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+                    "id": "services",
+                    "source": "template.clauses.services.body_template",
+                    "title": "Services"
+                  },
+                  {
+                    "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+                    "id": "fees",
+                    "source": "template.clauses.fees.body_template",
+                    "title": "Fees and Payment"
+                  },
+                  {
+                    "body": "The aggregate liability cap is USD 80,000 aggregate.",
+                    "id": "liability",
+                    "source": "template.clauses.liability.body_template",
+                    "title": "Limitation of Liability"
+                  },
+                  {
+                    "body": "Confidentiality obligations survive for 2 years.",
+                    "id": "confidentiality",
+                    "source": "template.clauses.confidentiality.body_template",
+                    "title": "Confidentiality"
+                  },
+                  {
+                    "body": "The agreement is governed by Delaware.",
+                    "id": "governing-law",
+                    "source": "template.clauses.governing-law.body_template",
+                    "title": "Governing Law"
+                  }
+                ],
+                "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                "delivery_status": "not_sent",
+                "draft_id": "c29a7681049d5b7e",
+                "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                "format": "markdown",
+                "legal_approval": "not_reviewed",
+                "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+                "party_roles": [
+                  {
+                    "legal_name": "Northstar Example Services LLC",
+                    "role": "provider"
+                  },
+                  {
+                    "legal_name": "Harbor Example Studio Inc.",
+                    "role": "customer"
+                  }
+                ],
+                "schema": "runx.contract_draft.document.v1",
+                "source_paths": [
+                  "parties.customer.legal_name",
+                  "parties.provider.legal_name",
+                  "terms.confidentiality_period",
+                  "terms.effective_date",
+                  "terms.fees",
+                  "terms.governing_law",
+                  "terms.liability_cap",
+                  "terms.payment_terms",
+                  "terms.services"
+                ],
+                "template": {
+                  "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+                  "template_id": "public-services-review-v1"
+                },
+                "title": "Services Agreement Review Draft"
+              },
+              "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+              "package": "contract-drafter",
+              "schema": "runx.contract_draft.v1",
+              "send_proposal": {
+                "consumer": {
+                  "inputs": {
+                    "audience": {
+                      "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                      "type": "repository_review"
+                    },
+                    "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+                    "content_ref": {
+                      "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                      "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                      "subject_or_title": "Review the public services agreement demonstration draft"
+                    },
+                    "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+                    "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+                    "principal": "github:RYDE-PLAY"
+                  },
+                  "packet": "runx.send_as.plan.v1",
+                  "runner": "plan",
+                  "skill": "runx/send-as"
+                },
+                "deviation_count": 4,
+                "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                "gate": {
+                  "approved": false,
+                  "gate_id": "contract-drafter.send.approval",
+                  "human_approval_required": true,
+                  "send_as_preflight_required": true
+                },
+                "no_send_performed": true,
+                "provider_action": null,
+                "schema": "runx.contract_send_proposal.v1",
+                "status": "gated_not_sent",
+                "subject_or_title": "Review the public services agreement demonstration draft"
+              },
+              "status": "draft_ready",
+              "validation": {
+                "all_deviations_visible": true,
+                "errors": [],
+                "no_invented_clauses": true,
+                "no_invented_parties": true,
+                "no_invented_terms": true,
+                "no_send_performed": true,
+                "placeholders_checked": [
+                  "parties.customer.legal_name",
+                  "parties.provider.legal_name",
+                  "terms.confidentiality_period",
+                  "terms.effective_date",
+                  "terms.fees",
+                  "terms.governing_law",
+                  "terms.liability_cap",
+                  "terms.payment_terms",
+                  "terms.services"
+                ],
+                "required_party_roles": [
+                  "provider",
+                  "customer"
+                ],
+                "required_terms": [
+                  "effective_date",
+                  "services",
+                  "fees",
+                  "payment_terms",
+                  "liability_cap",
+                  "governing_law",
+                  "confidentiality_period"
+                ],
+                "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+              }
+            }
+          },
+          "deviations": [
+            {
+              "baseline": "3 years",
+              "clause": "confidentiality",
+              "proposed_change": "2 years",
+              "source": "terms.confidentiality_period",
+              "term": "confidentiality_period",
+              "visibility": "explicit_template_departure"
+            },
+            {
+              "baseline": "California",
+              "clause": "governing-law",
+              "proposed_change": "Delaware",
+              "source": "terms.governing_law",
+              "term": "governing_law",
+              "visibility": "explicit_template_departure"
+            },
+            {
+              "baseline": "Fees paid in the prior 12 months",
+              "clause": "liability",
+              "proposed_change": "USD 80,000 aggregate",
+              "source": "terms.liability_cap",
+              "term": "liability_cap",
+              "visibility": "explicit_template_departure"
+            },
+            {
+              "baseline": "Net 30",
+              "clause": "fees",
+              "proposed_change": "Net 45",
+              "source": "terms.payment_terms",
+              "term": "payment_terms",
+              "visibility": "explicit_template_departure"
+            }
+          ],
+          "draft_doc": {
+            "clauses": [
+              {
+                "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+                "id": "parties",
+                "source": "template.clauses.parties.body_template",
+                "title": "Parties and Effective Date"
+              },
+              {
+                "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+                "id": "services",
+                "source": "template.clauses.services.body_template",
+                "title": "Services"
+              },
+              {
+                "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+                "id": "fees",
+                "source": "template.clauses.fees.body_template",
+                "title": "Fees and Payment"
+              },
+              {
+                "body": "The aggregate liability cap is USD 80,000 aggregate.",
+                "id": "liability",
+                "source": "template.clauses.liability.body_template",
+                "title": "Limitation of Liability"
+              },
+              {
+                "body": "Confidentiality obligations survive for 2 years.",
+                "id": "confidentiality",
+                "source": "template.clauses.confidentiality.body_template",
+                "title": "Confidentiality"
+              },
+              {
+                "body": "The agreement is governed by Delaware.",
+                "id": "governing-law",
+                "source": "template.clauses.governing-law.body_template",
+                "title": "Governing Law"
+              }
+            ],
+            "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+            "delivery_status": "not_sent",
+            "draft_id": "c29a7681049d5b7e",
+            "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+            "format": "markdown",
+            "legal_approval": "not_reviewed",
+            "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+            "party_roles": [
+              {
+                "legal_name": "Northstar Example Services LLC",
+                "role": "provider"
+              },
+              {
+                "legal_name": "Harbor Example Studio Inc.",
+                "role": "customer"
+              }
+            ],
+            "schema": "runx.contract_draft.document.v1",
+            "source_paths": [
+              "parties.customer.legal_name",
+              "parties.provider.legal_name",
+              "terms.confidentiality_period",
+              "terms.effective_date",
+              "terms.fees",
+              "terms.governing_law",
+              "terms.liability_cap",
+              "terms.payment_terms",
+              "terms.services"
+            ],
+            "template": {
+              "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+              "template_id": "public-services-review-v1"
+            },
+            "title": "Services Agreement Review Draft"
+          },
+          "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+          "raw": "{\"schema\":\"runx.contract_draft.v1\",\"package\":\"contract-drafter\",\"status\":\"draft_ready\",\"act_decision\":\"prepared\",\"act_reason\":\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_doc\":{\"schema\":\"runx.contract_draft.document.v1\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_id\":\"c29a7681049d5b7e\",\"format\":\"markdown\",\"title\":\"Services Agreement Review Draft\",\"template\":{\"template_id\":\"public-services-review-v1\",\"source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\"},\"party_roles\":[{\"role\":\"provider\",\"legal_name\":\"Northstar Example Services LLC\"},{\"role\":\"customer\",\"legal_name\":\"Harbor Example Studio Inc.\"}],\"clauses\":[{\"id\":\"parties\",\"title\":\"Parties and Effective Date\",\"body\":\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\",\"source\":\"template.clauses.parties.body_template\"},{\"id\":\"services\",\"title\":\"Services\",\"body\":\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\",\"source\":\"template.clauses.services.body_template\"},{\"id\":\"fees\",\"title\":\"Fees and Payment\",\"body\":\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\",\"source\":\"template.clauses.fees.body_template\"},{\"id\":\"liability\",\"title\":\"Limitation of Liability\",\"body\":\"The aggregate liability cap is USD 80,000 aggregate.\",\"source\":\"template.clauses.liability.body_template\"},{\"id\":\"confidentiality\",\"title\":\"Confidentiality\",\"body\":\"Confidentiality obligations survive for 2 years.\",\"source\":\"template.clauses.confidentiality.body_template\"},{\"id\":\"governing-law\",\"title\":\"Governing Law\",\"body\":\"The agreement is governed by Delaware.\",\"source\":\"template.clauses.governing-law.body_template\"}],\"markdown\":\"# Services Agreement Review Draft\\n\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\nTemplate: public-services-review-v1\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\nStatus: review draft; not legally approved; not sent.\\n\\n## Parties and Effective Date\\n\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\n\\n## Services\\n\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\n\\n## Fees and Payment\\n\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\n\\n## Limitation of Liability\\n\\nThe aggregate liability cap is USD 80,000 aggregate.\\n\\n## Confidentiality\\n\\nConfidentiality obligations survive for 2 years.\\n\\n## Governing Law\\n\\nThe agreement is governed by Delaware.\\n\\n## Deviations from template baseline\\n\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\n- governing-law (governing_law): baseline California; proposed Delaware.\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\n\",\"content_digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"source_paths\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"legal_approval\":\"not_reviewed\",\"delivery_status\":\"not_sent\"},\"deviations\":[{\"clause\":\"confidentiality\",\"term\":\"confidentiality_period\",\"baseline\":\"3 years\",\"proposed_change\":\"2 years\",\"source\":\"terms.confidentiality_period\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"governing-law\",\"term\":\"governing_law\",\"baseline\":\"California\",\"proposed_change\":\"Delaware\",\"source\":\"terms.governing_law\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"liability\",\"term\":\"liability_cap\",\"baseline\":\"Fees paid in the prior 12 months\",\"proposed_change\":\"USD 80,000 aggregate\",\"source\":\"terms.liability_cap\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"fees\",\"term\":\"payment_terms\",\"baseline\":\"Net 30\",\"proposed_change\":\"Net 45\",\"source\":\"terms.payment_terms\",\"visibility\":\"explicit_template_departure\"}],\"send_proposal\":{\"schema\":\"runx.contract_send_proposal.v1\",\"status\":\"gated_not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"subject_or_title\":\"Review the public services agreement demonstration draft\",\"deviation_count\":4,\"gate\":{\"gate_id\":\"contract-drafter.send.approval\",\"human_approval_required\":true,\"approved\":false,\"send_as_preflight_required\":true},\"consumer\":{\"skill\":\"runx/send-as\",\"runner\":\"plan\",\"packet\":\"runx.send_as.plan.v1\",\"inputs\":{\"objective\":\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\",\"principal\":\"github:RYDE-PLAY\",\"audience\":{\"ref\":\"RYDE-PLAY/frantic-86-contract-drafter\",\"type\":\"repository_review\"},\"content_ref\":{\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"consent_basis\":\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\",\"operator_context\":\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\"}},\"provider_action\":null,\"no_send_performed\":true},\"validation\":{\"errors\":[],\"required_party_roles\":[\"provider\",\"customer\"],\"required_terms\":[\"effective_date\",\"services\",\"fees\",\"payment_terms\",\"liability_cap\",\"governing_law\",\"confidentiality_period\"],\"placeholders_checked\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"template_source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\",\"no_invented_parties\":true,\"no_invented_clauses\":true,\"no_invented_terms\":true,\"all_deviations_visible\":true,\"no_send_performed\":true}}\n",
+          "send_proposal": {
+            "consumer": {
+              "inputs": {
+                "audience": {
+                  "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                  "type": "repository_review"
+                },
+                "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+                "content_ref": {
+                  "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                  "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                  "subject_or_title": "Review the public services agreement demonstration draft"
+                },
+                "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+                "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+                "principal": "github:RYDE-PLAY"
+              },
+              "packet": "runx.send_as.plan.v1",
+              "runner": "plan",
+              "skill": "runx/send-as"
+            },
+            "deviation_count": 4,
+            "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+            "gate": {
+              "approved": false,
+              "gate_id": "contract-drafter.send.approval",
+              "human_approval_required": true,
+              "send_as_preflight_required": true
+            },
+            "no_send_performed": true,
+            "provider_action": null,
+            "schema": "runx.contract_send_proposal.v1",
+            "status": "gated_not_sent",
+            "subject_or_title": "Review the public services agreement demonstration draft"
+          },
+          "skill_claim": {
+            "act_decision": "prepared",
+            "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+            "deviations": [
+              {
+                "baseline": "3 years",
+                "clause": "confidentiality",
+                "proposed_change": "2 years",
+                "source": "terms.confidentiality_period",
+                "term": "confidentiality_period",
+                "visibility": "explicit_template_departure"
+              },
+              {
+                "baseline": "California",
+                "clause": "governing-law",
+                "proposed_change": "Delaware",
+                "source": "terms.governing_law",
+                "term": "governing_law",
+                "visibility": "explicit_template_departure"
+              },
+              {
+                "baseline": "Fees paid in the prior 12 months",
+                "clause": "liability",
+                "proposed_change": "USD 80,000 aggregate",
+                "source": "terms.liability_cap",
+                "term": "liability_cap",
+                "visibility": "explicit_template_departure"
+              },
+              {
+                "baseline": "Net 30",
+                "clause": "fees",
+                "proposed_change": "Net 45",
+                "source": "terms.payment_terms",
+                "term": "payment_terms",
+                "visibility": "explicit_template_departure"
+              }
+            ],
+            "draft_doc": {
+              "clauses": [
+                {
+                  "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+                  "id": "parties",
+                  "source": "template.clauses.parties.body_template",
+                  "title": "Parties and Effective Date"
+                },
+                {
+                  "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+                  "id": "services",
+                  "source": "template.clauses.services.body_template",
+                  "title": "Services"
+                },
+                {
+                  "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+                  "id": "fees",
+                  "source": "template.clauses.fees.body_template",
+                  "title": "Fees and Payment"
+                },
+                {
+                  "body": "The aggregate liability cap is USD 80,000 aggregate.",
+                  "id": "liability",
+                  "source": "template.clauses.liability.body_template",
+                  "title": "Limitation of Liability"
+                },
+                {
+                  "body": "Confidentiality obligations survive for 2 years.",
+                  "id": "confidentiality",
+                  "source": "template.clauses.confidentiality.body_template",
+                  "title": "Confidentiality"
+                },
+                {
+                  "body": "The agreement is governed by Delaware.",
+                  "id": "governing-law",
+                  "source": "template.clauses.governing-law.body_template",
+                  "title": "Governing Law"
+                }
+              ],
+              "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+              "delivery_status": "not_sent",
+              "draft_id": "c29a7681049d5b7e",
+              "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+              "format": "markdown",
+              "legal_approval": "not_reviewed",
+              "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+              "party_roles": [
+                {
+                  "legal_name": "Northstar Example Services LLC",
+                  "role": "provider"
+                },
+                {
+                  "legal_name": "Harbor Example Studio Inc.",
+                  "role": "customer"
+                }
+              ],
+              "schema": "runx.contract_draft.document.v1",
+              "source_paths": [
+                "parties.customer.legal_name",
+                "parties.provider.legal_name",
+                "terms.confidentiality_period",
+                "terms.effective_date",
+                "terms.fees",
+                "terms.governing_law",
+                "terms.liability_cap",
+                "terms.payment_terms",
+                "terms.services"
+              ],
+              "template": {
+                "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+                "template_id": "public-services-review-v1"
+              },
+              "title": "Services Agreement Review Draft"
+            },
+            "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+            "package": "contract-drafter",
+            "schema": "runx.contract_draft.v1",
+            "send_proposal": {
+              "consumer": {
+                "inputs": {
+                  "audience": {
+                    "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                    "type": "repository_review"
+                  },
+                  "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+                  "content_ref": {
+                    "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                    "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                    "subject_or_title": "Review the public services agreement demonstration draft"
+                  },
+                  "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+                  "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+                  "principal": "github:RYDE-PLAY"
+                },
+                "packet": "runx.send_as.plan.v1",
+                "runner": "plan",
+                "skill": "runx/send-as"
+              },
+              "deviation_count": 4,
+              "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+              "gate": {
+                "approved": false,
+                "gate_id": "contract-drafter.send.approval",
+                "human_approval_required": true,
+                "send_as_preflight_required": true
+              },
+              "no_send_performed": true,
+              "provider_action": null,
+              "schema": "runx.contract_send_proposal.v1",
+              "status": "gated_not_sent",
+              "subject_or_title": "Review the public services agreement demonstration draft"
+            },
+            "status": "draft_ready",
+            "validation": {
+              "all_deviations_visible": true,
+              "errors": [],
+              "no_invented_clauses": true,
+              "no_invented_parties": true,
+              "no_invented_terms": true,
+              "no_send_performed": true,
+              "placeholders_checked": [
+                "parties.customer.legal_name",
+                "parties.provider.legal_name",
+                "terms.confidentiality_period",
+                "terms.effective_date",
+                "terms.fees",
+                "terms.governing_law",
+                "terms.liability_cap",
+                "terms.payment_terms",
+                "terms.services"
+              ],
+              "required_party_roles": [
+                "provider",
+                "customer"
+              ],
+              "required_terms": [
+                "effective_date",
+                "services",
+                "fees",
+                "payment_terms",
+                "liability_cap",
+                "governing_law",
+                "confidentiality_period"
+              ],
+              "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+            }
+          },
+          "status": "success",
+          "stderr": "",
+          "stdout": "{\"schema\":\"runx.contract_draft.v1\",\"package\":\"contract-drafter\",\"status\":\"draft_ready\",\"act_decision\":\"prepared\",\"act_reason\":\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_doc\":{\"schema\":\"runx.contract_draft.document.v1\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_id\":\"c29a7681049d5b7e\",\"format\":\"markdown\",\"title\":\"Services Agreement Review Draft\",\"template\":{\"template_id\":\"public-services-review-v1\",\"source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\"},\"party_roles\":[{\"role\":\"provider\",\"legal_name\":\"Northstar Example Services LLC\"},{\"role\":\"customer\",\"legal_name\":\"Harbor Example Studio Inc.\"}],\"clauses\":[{\"id\":\"parties\",\"title\":\"Parties and Effective Date\",\"body\":\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\",\"source\":\"template.clauses.parties.body_template\"},{\"id\":\"services\",\"title\":\"Services\",\"body\":\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\",\"source\":\"template.clauses.services.body_template\"},{\"id\":\"fees\",\"title\":\"Fees and Payment\",\"body\":\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\",\"source\":\"template.clauses.fees.body_template\"},{\"id\":\"liability\",\"title\":\"Limitation of Liability\",\"body\":\"The aggregate liability cap is USD 80,000 aggregate.\",\"source\":\"template.clauses.liability.body_template\"},{\"id\":\"confidentiality\",\"title\":\"Confidentiality\",\"body\":\"Confidentiality obligations survive for 2 years.\",\"source\":\"template.clauses.confidentiality.body_template\"},{\"id\":\"governing-law\",\"title\":\"Governing Law\",\"body\":\"The agreement is governed by Delaware.\",\"source\":\"template.clauses.governing-law.body_template\"}],\"markdown\":\"# Services Agreement Review Draft\\n\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\nTemplate: public-services-review-v1\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\nStatus: review draft; not legally approved; not sent.\\n\\n## Parties and Effective Date\\n\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\n\\n## Services\\n\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\n\\n## Fees and Payment\\n\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\n\\n## Limitation of Liability\\n\\nThe aggregate liability cap is USD 80,000 aggregate.\\n\\n## Confidentiality\\n\\nConfidentiality obligations survive for 2 years.\\n\\n## Governing Law\\n\\nThe agreement is governed by Delaware.\\n\\n## Deviations from template baseline\\n\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\n- governing-law (governing_law): baseline California; proposed Delaware.\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\n\",\"content_digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"source_paths\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"legal_approval\":\"not_reviewed\",\"delivery_status\":\"not_sent\"},\"deviations\":[{\"clause\":\"confidentiality\",\"term\":\"confidentiality_period\",\"baseline\":\"3 years\",\"proposed_change\":\"2 years\",\"source\":\"terms.confidentiality_period\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"governing-law\",\"term\":\"governing_law\",\"baseline\":\"California\",\"proposed_change\":\"Delaware\",\"source\":\"terms.governing_law\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"liability\",\"term\":\"liability_cap\",\"baseline\":\"Fees paid in the prior 12 months\",\"proposed_change\":\"USD 80,000 aggregate\",\"source\":\"terms.liability_cap\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"fees\",\"term\":\"payment_terms\",\"baseline\":\"Net 30\",\"proposed_change\":\"Net 45\",\"source\":\"terms.payment_terms\",\"visibility\":\"explicit_template_departure\"}],\"send_proposal\":{\"schema\":\"runx.contract_send_proposal.v1\",\"status\":\"gated_not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"subject_or_title\":\"Review the public services agreement demonstration draft\",\"deviation_count\":4,\"gate\":{\"gate_id\":\"contract-drafter.send.approval\",\"human_approval_required\":true,\"approved\":false,\"send_as_preflight_required\":true},\"consumer\":{\"skill\":\"runx/send-as\",\"runner\":\"plan\",\"packet\":\"runx.send_as.plan.v1\",\"inputs\":{\"objective\":\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\",\"principal\":\"github:RYDE-PLAY\",\"audience\":{\"ref\":\"RYDE-PLAY/frantic-86-contract-drafter\",\"type\":\"repository_review\"},\"content_ref\":{\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"consent_basis\":\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\",\"operator_context\":\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\"}},\"provider_action\":null,\"no_send_performed\":true},\"validation\":{\"errors\":[],\"required_party_roles\":[\"provider\",\"customer\"],\"required_terms\":[\"effective_date\",\"services\",\"fees\",\"payment_terms\",\"liability_cap\",\"governing_law\",\"confidentiality_period\"],\"placeholders_checked\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"template_source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\",\"no_invented_parties\":true,\"no_invented_clauses\":true,\"no_invented_terms\":true,\"all_deviations_visible\":true,\"no_send_performed\":true}}\n",
+          "validation": {
+            "all_deviations_visible": true,
+            "errors": [],
+            "no_invented_clauses": true,
+            "no_invented_parties": true,
+            "no_invented_terms": true,
+            "no_send_performed": true,
+            "placeholders_checked": [
+              "parties.customer.legal_name",
+              "parties.provider.legal_name",
+              "terms.confidentiality_period",
+              "terms.effective_date",
+              "terms.fees",
+              "terms.governing_law",
+              "terms.liability_cap",
+              "terms.payment_terms",
+              "terms.services"
+            ],
+            "required_party_roles": [
+              "provider",
+              "customer"
+            ],
+            "required_terms": [
+              "effective_date",
+              "services",
+              "fees",
+              "payment_terms",
+              "liability_cap",
+              "governing_law",
+              "confidentiality_period"
+            ],
+            "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+          }
+        }
+      },
+      "steps": [
+        {
+          "receipt_id": "sha256:51ce4573f927e459bac0a6952631001f53a17dd758a127288d94a077fe2d27ba",
+          "skill": "assemble",
+          "status": "success",
+          "step_id": "assemble"
+        }
+      ]
+    }
+  },
+  "payload": {
+    "graph": "contract-drafter",
+    "graph_status": "Succeeded",
+    "step_outputs": {
+      "assemble": {
+        "act_decision": "prepared",
+        "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+        "contract_draft_packet": {
+          "data": {
+            "act_decision": "prepared",
+            "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+            "deviations": [
+              {
+                "baseline": "3 years",
+                "clause": "confidentiality",
+                "proposed_change": "2 years",
+                "source": "terms.confidentiality_period",
+                "term": "confidentiality_period",
+                "visibility": "explicit_template_departure"
+              },
+              {
+                "baseline": "California",
+                "clause": "governing-law",
+                "proposed_change": "Delaware",
+                "source": "terms.governing_law",
+                "term": "governing_law",
+                "visibility": "explicit_template_departure"
+              },
+              {
+                "baseline": "Fees paid in the prior 12 months",
+                "clause": "liability",
+                "proposed_change": "USD 80,000 aggregate",
+                "source": "terms.liability_cap",
+                "term": "liability_cap",
+                "visibility": "explicit_template_departure"
+              },
+              {
+                "baseline": "Net 30",
+                "clause": "fees",
+                "proposed_change": "Net 45",
+                "source": "terms.payment_terms",
+                "term": "payment_terms",
+                "visibility": "explicit_template_departure"
+              }
+            ],
+            "draft_doc": {
+              "clauses": [
+                {
+                  "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+                  "id": "parties",
+                  "source": "template.clauses.parties.body_template",
+                  "title": "Parties and Effective Date"
+                },
+                {
+                  "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+                  "id": "services",
+                  "source": "template.clauses.services.body_template",
+                  "title": "Services"
+                },
+                {
+                  "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+                  "id": "fees",
+                  "source": "template.clauses.fees.body_template",
+                  "title": "Fees and Payment"
+                },
+                {
+                  "body": "The aggregate liability cap is USD 80,000 aggregate.",
+                  "id": "liability",
+                  "source": "template.clauses.liability.body_template",
+                  "title": "Limitation of Liability"
+                },
+                {
+                  "body": "Confidentiality obligations survive for 2 years.",
+                  "id": "confidentiality",
+                  "source": "template.clauses.confidentiality.body_template",
+                  "title": "Confidentiality"
+                },
+                {
+                  "body": "The agreement is governed by Delaware.",
+                  "id": "governing-law",
+                  "source": "template.clauses.governing-law.body_template",
+                  "title": "Governing Law"
+                }
+              ],
+              "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+              "delivery_status": "not_sent",
+              "draft_id": "c29a7681049d5b7e",
+              "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+              "format": "markdown",
+              "legal_approval": "not_reviewed",
+              "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+              "party_roles": [
+                {
+                  "legal_name": "Northstar Example Services LLC",
+                  "role": "provider"
+                },
+                {
+                  "legal_name": "Harbor Example Studio Inc.",
+                  "role": "customer"
+                }
+              ],
+              "schema": "runx.contract_draft.document.v1",
+              "source_paths": [
+                "parties.customer.legal_name",
+                "parties.provider.legal_name",
+                "terms.confidentiality_period",
+                "terms.effective_date",
+                "terms.fees",
+                "terms.governing_law",
+                "terms.liability_cap",
+                "terms.payment_terms",
+                "terms.services"
+              ],
+              "template": {
+                "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+                "template_id": "public-services-review-v1"
+              },
+              "title": "Services Agreement Review Draft"
+            },
+            "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+            "package": "contract-drafter",
+            "schema": "runx.contract_draft.v1",
+            "send_proposal": {
+              "consumer": {
+                "inputs": {
+                  "audience": {
+                    "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                    "type": "repository_review"
+                  },
+                  "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+                  "content_ref": {
+                    "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                    "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                    "subject_or_title": "Review the public services agreement demonstration draft"
+                  },
+                  "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+                  "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+                  "principal": "github:RYDE-PLAY"
+                },
+                "packet": "runx.send_as.plan.v1",
+                "runner": "plan",
+                "skill": "runx/send-as"
+              },
+              "deviation_count": 4,
+              "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+              "gate": {
+                "approved": false,
+                "gate_id": "contract-drafter.send.approval",
+                "human_approval_required": true,
+                "send_as_preflight_required": true
+              },
+              "no_send_performed": true,
+              "provider_action": null,
+              "schema": "runx.contract_send_proposal.v1",
+              "status": "gated_not_sent",
+              "subject_or_title": "Review the public services agreement demonstration draft"
+            },
+            "status": "draft_ready",
+            "validation": {
+              "all_deviations_visible": true,
+              "errors": [],
+              "no_invented_clauses": true,
+              "no_invented_parties": true,
+              "no_invented_terms": true,
+              "no_send_performed": true,
+              "placeholders_checked": [
+                "parties.customer.legal_name",
+                "parties.provider.legal_name",
+                "terms.confidentiality_period",
+                "terms.effective_date",
+                "terms.fees",
+                "terms.governing_law",
+                "terms.liability_cap",
+                "terms.payment_terms",
+                "terms.services"
+              ],
+              "required_party_roles": [
+                "provider",
+                "customer"
+              ],
+              "required_terms": [
+                "effective_date",
+                "services",
+                "fees",
+                "payment_terms",
+                "liability_cap",
+                "governing_law",
+                "confidentiality_period"
+              ],
+              "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+            }
+          }
+        },
+        "deviations": [
+          {
+            "baseline": "3 years",
+            "clause": "confidentiality",
+            "proposed_change": "2 years",
+            "source": "terms.confidentiality_period",
+            "term": "confidentiality_period",
+            "visibility": "explicit_template_departure"
+          },
+          {
+            "baseline": "California",
+            "clause": "governing-law",
+            "proposed_change": "Delaware",
+            "source": "terms.governing_law",
+            "term": "governing_law",
+            "visibility": "explicit_template_departure"
+          },
+          {
+            "baseline": "Fees paid in the prior 12 months",
+            "clause": "liability",
+            "proposed_change": "USD 80,000 aggregate",
+            "source": "terms.liability_cap",
+            "term": "liability_cap",
+            "visibility": "explicit_template_departure"
+          },
+          {
+            "baseline": "Net 30",
+            "clause": "fees",
+            "proposed_change": "Net 45",
+            "source": "terms.payment_terms",
+            "term": "payment_terms",
+            "visibility": "explicit_template_departure"
+          }
+        ],
+        "draft_doc": {
+          "clauses": [
+            {
+              "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+              "id": "parties",
+              "source": "template.clauses.parties.body_template",
+              "title": "Parties and Effective Date"
+            },
+            {
+              "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+              "id": "services",
+              "source": "template.clauses.services.body_template",
+              "title": "Services"
+            },
+            {
+              "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+              "id": "fees",
+              "source": "template.clauses.fees.body_template",
+              "title": "Fees and Payment"
+            },
+            {
+              "body": "The aggregate liability cap is USD 80,000 aggregate.",
+              "id": "liability",
+              "source": "template.clauses.liability.body_template",
+              "title": "Limitation of Liability"
+            },
+            {
+              "body": "Confidentiality obligations survive for 2 years.",
+              "id": "confidentiality",
+              "source": "template.clauses.confidentiality.body_template",
+              "title": "Confidentiality"
+            },
+            {
+              "body": "The agreement is governed by Delaware.",
+              "id": "governing-law",
+              "source": "template.clauses.governing-law.body_template",
+              "title": "Governing Law"
+            }
+          ],
+          "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+          "delivery_status": "not_sent",
+          "draft_id": "c29a7681049d5b7e",
+          "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+          "format": "markdown",
+          "legal_approval": "not_reviewed",
+          "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+          "party_roles": [
+            {
+              "legal_name": "Northstar Example Services LLC",
+              "role": "provider"
+            },
+            {
+              "legal_name": "Harbor Example Studio Inc.",
+              "role": "customer"
+            }
+          ],
+          "schema": "runx.contract_draft.document.v1",
+          "source_paths": [
+            "parties.customer.legal_name",
+            "parties.provider.legal_name",
+            "terms.confidentiality_period",
+            "terms.effective_date",
+            "terms.fees",
+            "terms.governing_law",
+            "terms.liability_cap",
+            "terms.payment_terms",
+            "terms.services"
+          ],
+          "template": {
+            "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+            "template_id": "public-services-review-v1"
+          },
+          "title": "Services Agreement Review Draft"
+        },
+        "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+        "raw": "{\"schema\":\"runx.contract_draft.v1\",\"package\":\"contract-drafter\",\"status\":\"draft_ready\",\"act_decision\":\"prepared\",\"act_reason\":\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_doc\":{\"schema\":\"runx.contract_draft.document.v1\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_id\":\"c29a7681049d5b7e\",\"format\":\"markdown\",\"title\":\"Services Agreement Review Draft\",\"template\":{\"template_id\":\"public-services-review-v1\",\"source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\"},\"party_roles\":[{\"role\":\"provider\",\"legal_name\":\"Northstar Example Services LLC\"},{\"role\":\"customer\",\"legal_name\":\"Harbor Example Studio Inc.\"}],\"clauses\":[{\"id\":\"parties\",\"title\":\"Parties and Effective Date\",\"body\":\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\",\"source\":\"template.clauses.parties.body_template\"},{\"id\":\"services\",\"title\":\"Services\",\"body\":\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\",\"source\":\"template.clauses.services.body_template\"},{\"id\":\"fees\",\"title\":\"Fees and Payment\",\"body\":\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\",\"source\":\"template.clauses.fees.body_template\"},{\"id\":\"liability\",\"title\":\"Limitation of Liability\",\"body\":\"The aggregate liability cap is USD 80,000 aggregate.\",\"source\":\"template.clauses.liability.body_template\"},{\"id\":\"confidentiality\",\"title\":\"Confidentiality\",\"body\":\"Confidentiality obligations survive for 2 years.\",\"source\":\"template.clauses.confidentiality.body_template\"},{\"id\":\"governing-law\",\"title\":\"Governing Law\",\"body\":\"The agreement is governed by Delaware.\",\"source\":\"template.clauses.governing-law.body_template\"}],\"markdown\":\"# Services Agreement Review Draft\\n\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\nTemplate: public-services-review-v1\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\nStatus: review draft; not legally approved; not sent.\\n\\n## Parties and Effective Date\\n\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\n\\n## Services\\n\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\n\\n## Fees and Payment\\n\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\n\\n## Limitation of Liability\\n\\nThe aggregate liability cap is USD 80,000 aggregate.\\n\\n## Confidentiality\\n\\nConfidentiality obligations survive for 2 years.\\n\\n## Governing Law\\n\\nThe agreement is governed by Delaware.\\n\\n## Deviations from template baseline\\n\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\n- governing-law (governing_law): baseline California; proposed Delaware.\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\n\",\"content_digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"source_paths\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"legal_approval\":\"not_reviewed\",\"delivery_status\":\"not_sent\"},\"deviations\":[{\"clause\":\"confidentiality\",\"term\":\"confidentiality_period\",\"baseline\":\"3 years\",\"proposed_change\":\"2 years\",\"source\":\"terms.confidentiality_period\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"governing-law\",\"term\":\"governing_law\",\"baseline\":\"California\",\"proposed_change\":\"Delaware\",\"source\":\"terms.governing_law\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"liability\",\"term\":\"liability_cap\",\"baseline\":\"Fees paid in the prior 12 months\",\"proposed_change\":\"USD 80,000 aggregate\",\"source\":\"terms.liability_cap\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"fees\",\"term\":\"payment_terms\",\"baseline\":\"Net 30\",\"proposed_change\":\"Net 45\",\"source\":\"terms.payment_terms\",\"visibility\":\"explicit_template_departure\"}],\"send_proposal\":{\"schema\":\"runx.contract_send_proposal.v1\",\"status\":\"gated_not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"subject_or_title\":\"Review the public services agreement demonstration draft\",\"deviation_count\":4,\"gate\":{\"gate_id\":\"contract-drafter.send.approval\",\"human_approval_required\":true,\"approved\":false,\"send_as_preflight_required\":true},\"consumer\":{\"skill\":\"runx/send-as\",\"runner\":\"plan\",\"packet\":\"runx.send_as.plan.v1\",\"inputs\":{\"objective\":\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\",\"principal\":\"github:RYDE-PLAY\",\"audience\":{\"ref\":\"RYDE-PLAY/frantic-86-contract-drafter\",\"type\":\"repository_review\"},\"content_ref\":{\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"consent_basis\":\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\",\"operator_context\":\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\"}},\"provider_action\":null,\"no_send_performed\":true},\"validation\":{\"errors\":[],\"required_party_roles\":[\"provider\",\"customer\"],\"required_terms\":[\"effective_date\",\"services\",\"fees\",\"payment_terms\",\"liability_cap\",\"governing_law\",\"confidentiality_period\"],\"placeholders_checked\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"template_source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\",\"no_invented_parties\":true,\"no_invented_clauses\":true,\"no_invented_terms\":true,\"all_deviations_visible\":true,\"no_send_performed\":true}}\n",
+        "send_proposal": {
+          "consumer": {
+            "inputs": {
+              "audience": {
+                "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                "type": "repository_review"
+              },
+              "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+              "content_ref": {
+                "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                "subject_or_title": "Review the public services agreement demonstration draft"
+              },
+              "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+              "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+              "principal": "github:RYDE-PLAY"
+            },
+            "packet": "runx.send_as.plan.v1",
+            "runner": "plan",
+            "skill": "runx/send-as"
+          },
+          "deviation_count": 4,
+          "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+          "gate": {
+            "approved": false,
+            "gate_id": "contract-drafter.send.approval",
+            "human_approval_required": true,
+            "send_as_preflight_required": true
+          },
+          "no_send_performed": true,
+          "provider_action": null,
+          "schema": "runx.contract_send_proposal.v1",
+          "status": "gated_not_sent",
+          "subject_or_title": "Review the public services agreement demonstration draft"
+        },
+        "skill_claim": {
+          "act_decision": "prepared",
+          "act_reason": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+          "deviations": [
+            {
+              "baseline": "3 years",
+              "clause": "confidentiality",
+              "proposed_change": "2 years",
+              "source": "terms.confidentiality_period",
+              "term": "confidentiality_period",
+              "visibility": "explicit_template_departure"
+            },
+            {
+              "baseline": "California",
+              "clause": "governing-law",
+              "proposed_change": "Delaware",
+              "source": "terms.governing_law",
+              "term": "governing_law",
+              "visibility": "explicit_template_departure"
+            },
+            {
+              "baseline": "Fees paid in the prior 12 months",
+              "clause": "liability",
+              "proposed_change": "USD 80,000 aggregate",
+              "source": "terms.liability_cap",
+              "term": "liability_cap",
+              "visibility": "explicit_template_departure"
+            },
+            {
+              "baseline": "Net 30",
+              "clause": "fees",
+              "proposed_change": "Net 45",
+              "source": "terms.payment_terms",
+              "term": "payment_terms",
+              "visibility": "explicit_template_departure"
+            }
+          ],
+          "draft_doc": {
+            "clauses": [
+              {
+                "body": "Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.",
+                "id": "parties",
+                "source": "template.clauses.parties.body_template",
+                "title": "Parties and Effective Date"
+              },
+              {
+                "body": "Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.",
+                "id": "services",
+                "source": "template.clauses.services.body_template",
+                "title": "Services"
+              },
+              {
+                "body": "Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.",
+                "id": "fees",
+                "source": "template.clauses.fees.body_template",
+                "title": "Fees and Payment"
+              },
+              {
+                "body": "The aggregate liability cap is USD 80,000 aggregate.",
+                "id": "liability",
+                "source": "template.clauses.liability.body_template",
+                "title": "Limitation of Liability"
+              },
+              {
+                "body": "Confidentiality obligations survive for 2 years.",
+                "id": "confidentiality",
+                "source": "template.clauses.confidentiality.body_template",
+                "title": "Confidentiality"
+              },
+              {
+                "body": "The agreement is governed by Delaware.",
+                "id": "governing-law",
+                "source": "template.clauses.governing-law.body_template",
+                "title": "Governing Law"
+              }
+            ],
+            "content_digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+            "delivery_status": "not_sent",
+            "draft_id": "c29a7681049d5b7e",
+            "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+            "format": "markdown",
+            "legal_approval": "not_reviewed",
+            "markdown": "# Services Agreement Review Draft\n\nDraft ref: runx:contract-draft:c29a7681049d5b7e\nTemplate: public-services-review-v1\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\nStatus: review draft; not legally approved; not sent.\n\n## Parties and Effective Date\n\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\n\n## Services\n\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\n\n## Fees and Payment\n\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\n\n## Limitation of Liability\n\nThe aggregate liability cap is USD 80,000 aggregate.\n\n## Confidentiality\n\nConfidentiality obligations survive for 2 years.\n\n## Governing Law\n\nThe agreement is governed by Delaware.\n\n## Deviations from template baseline\n\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\n- governing-law (governing_law): baseline California; proposed Delaware.\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\n- fees (payment_terms): baseline Net 30; proposed Net 45.\n",
+            "party_roles": [
+              {
+                "legal_name": "Northstar Example Services LLC",
+                "role": "provider"
+              },
+              {
+                "legal_name": "Harbor Example Studio Inc.",
+                "role": "customer"
+              }
+            ],
+            "schema": "runx.contract_draft.document.v1",
+            "source_paths": [
+              "parties.customer.legal_name",
+              "parties.provider.legal_name",
+              "terms.confidentiality_period",
+              "terms.effective_date",
+              "terms.fees",
+              "terms.governing_law",
+              "terms.liability_cap",
+              "terms.payment_terms",
+              "terms.services"
+            ],
+            "template": {
+              "source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json",
+              "template_id": "public-services-review-v1"
+            },
+            "title": "Services Agreement Review Draft"
+          },
+          "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+          "package": "contract-drafter",
+          "schema": "runx.contract_draft.v1",
+          "send_proposal": {
+            "consumer": {
+              "inputs": {
+                "audience": {
+                  "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                  "type": "repository_review"
+                },
+                "consent_basis": "The repository owner requested public review of this synthetic nonbinding demonstration draft.",
+                "content_ref": {
+                  "digest": "sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7",
+                  "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+                  "subject_or_title": "Review the public services agreement demonstration draft"
+                },
+                "objective": "Prepare this public nonbinding review draft for a separate governed send-as planning run.",
+                "operator_context": "Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.",
+                "principal": "github:RYDE-PLAY"
+              },
+              "packet": "runx.send_as.plan.v1",
+              "runner": "plan",
+              "skill": "runx/send-as"
+            },
+            "deviation_count": 4,
+            "draft_ref": "runx:contract-draft:c29a7681049d5b7e",
+            "gate": {
+              "approved": false,
+              "gate_id": "contract-drafter.send.approval",
+              "human_approval_required": true,
+              "send_as_preflight_required": true
+            },
+            "no_send_performed": true,
+            "provider_action": null,
+            "schema": "runx.contract_send_proposal.v1",
+            "status": "gated_not_sent",
+            "subject_or_title": "Review the public services agreement demonstration draft"
+          },
+          "status": "draft_ready",
+          "validation": {
+            "all_deviations_visible": true,
+            "errors": [],
+            "no_invented_clauses": true,
+            "no_invented_parties": true,
+            "no_invented_terms": true,
+            "no_send_performed": true,
+            "placeholders_checked": [
+              "parties.customer.legal_name",
+              "parties.provider.legal_name",
+              "terms.confidentiality_period",
+              "terms.effective_date",
+              "terms.fees",
+              "terms.governing_law",
+              "terms.liability_cap",
+              "terms.payment_terms",
+              "terms.services"
+            ],
+            "required_party_roles": [
+              "provider",
+              "customer"
+            ],
+            "required_terms": [
+              "effective_date",
+              "services",
+              "fees",
+              "payment_terms",
+              "liability_cap",
+              "governing_law",
+              "confidentiality_period"
+            ],
+            "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+          }
+        },
+        "status": "success",
+        "stderr": "",
+        "stdout": "{\"schema\":\"runx.contract_draft.v1\",\"package\":\"contract-drafter\",\"status\":\"draft_ready\",\"act_decision\":\"prepared\",\"act_reason\":\"draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_doc\":{\"schema\":\"runx.contract_draft.document.v1\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"draft_id\":\"c29a7681049d5b7e\",\"format\":\"markdown\",\"title\":\"Services Agreement Review Draft\",\"template\":{\"template_id\":\"public-services-review-v1\",\"source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\"},\"party_roles\":[{\"role\":\"provider\",\"legal_name\":\"Northstar Example Services LLC\"},{\"role\":\"customer\",\"legal_name\":\"Harbor Example Studio Inc.\"}],\"clauses\":[{\"id\":\"parties\",\"title\":\"Parties and Effective Date\",\"body\":\"Northstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\",\"source\":\"template.clauses.parties.body_template\"},{\"id\":\"services\",\"title\":\"Services\",\"body\":\"Northstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\",\"source\":\"template.clauses.services.body_template\"},{\"id\":\"fees\",\"title\":\"Fees and Payment\",\"body\":\"Harbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\",\"source\":\"template.clauses.fees.body_template\"},{\"id\":\"liability\",\"title\":\"Limitation of Liability\",\"body\":\"The aggregate liability cap is USD 80,000 aggregate.\",\"source\":\"template.clauses.liability.body_template\"},{\"id\":\"confidentiality\",\"title\":\"Confidentiality\",\"body\":\"Confidentiality obligations survive for 2 years.\",\"source\":\"template.clauses.confidentiality.body_template\"},{\"id\":\"governing-law\",\"title\":\"Governing Law\",\"body\":\"The agreement is governed by Delaware.\",\"source\":\"template.clauses.governing-law.body_template\"}],\"markdown\":\"# Services Agreement Review Draft\\n\\nDraft ref: runx:contract-draft:c29a7681049d5b7e\\nTemplate: public-services-review-v1\\nTemplate source: https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\\nStatus: review draft; not legally approved; not sent.\\n\\n## Parties and Effective Date\\n\\nNorthstar Example Services LLC and Harbor Example Studio Inc. enter this agreement effective 2026-07-15.\\n\\n## Services\\n\\nNorthstar Example Services LLC will provide Monthly release engineering review and incident-readiness support.\\n\\n## Fees and Payment\\n\\nHarbor Example Studio Inc. will pay USD 8,000 per month under Net 45 payment terms.\\n\\n## Limitation of Liability\\n\\nThe aggregate liability cap is USD 80,000 aggregate.\\n\\n## Confidentiality\\n\\nConfidentiality obligations survive for 2 years.\\n\\n## Governing Law\\n\\nThe agreement is governed by Delaware.\\n\\n## Deviations from template baseline\\n\\n- confidentiality (confidentiality_period): baseline 3 years; proposed 2 years.\\n- governing-law (governing_law): baseline California; proposed Delaware.\\n- liability (liability_cap): baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate.\\n- fees (payment_terms): baseline Net 30; proposed Net 45.\\n\",\"content_digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"source_paths\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"legal_approval\":\"not_reviewed\",\"delivery_status\":\"not_sent\"},\"deviations\":[{\"clause\":\"confidentiality\",\"term\":\"confidentiality_period\",\"baseline\":\"3 years\",\"proposed_change\":\"2 years\",\"source\":\"terms.confidentiality_period\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"governing-law\",\"term\":\"governing_law\",\"baseline\":\"California\",\"proposed_change\":\"Delaware\",\"source\":\"terms.governing_law\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"liability\",\"term\":\"liability_cap\",\"baseline\":\"Fees paid in the prior 12 months\",\"proposed_change\":\"USD 80,000 aggregate\",\"source\":\"terms.liability_cap\",\"visibility\":\"explicit_template_departure\"},{\"clause\":\"fees\",\"term\":\"payment_terms\",\"baseline\":\"Net 30\",\"proposed_change\":\"Net 45\",\"source\":\"terms.payment_terms\",\"visibility\":\"explicit_template_departure\"}],\"send_proposal\":{\"schema\":\"runx.contract_send_proposal.v1\",\"status\":\"gated_not_sent\",\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"subject_or_title\":\"Review the public services agreement demonstration draft\",\"deviation_count\":4,\"gate\":{\"gate_id\":\"contract-drafter.send.approval\",\"human_approval_required\":true,\"approved\":false,\"send_as_preflight_required\":true},\"consumer\":{\"skill\":\"runx/send-as\",\"runner\":\"plan\",\"packet\":\"runx.send_as.plan.v1\",\"inputs\":{\"objective\":\"Prepare this public nonbinding review draft for a separate governed send-as planning run.\",\"principal\":\"github:RYDE-PLAY\",\"audience\":{\"ref\":\"RYDE-PLAY/frantic-86-contract-drafter\",\"type\":\"repository_review\"},\"content_ref\":{\"draft_ref\":\"runx:contract-draft:c29a7681049d5b7e\",\"digest\":\"sha256:3151d32d9990cecdc7ce37f0ee86ced4ced49b4f38a9476603b182c1aee7d5e7\",\"subject_or_title\":\"Review the public services agreement demonstration draft\"},\"consent_basis\":\"The repository owner requested public review of this synthetic nonbinding demonstration draft.\",\"operator_context\":\"Draft only; human approval and provider preflight remain required. No provider delivery is authorized by contract-drafter.\"}},\"provider_action\":null,\"no_send_performed\":true},\"validation\":{\"errors\":[],\"required_party_roles\":[\"provider\",\"customer\"],\"required_terms\":[\"effective_date\",\"services\",\"fees\",\"payment_terms\",\"liability_cap\",\"governing_law\",\"confidentiality_period\"],\"placeholders_checked\":[\"parties.customer.legal_name\",\"parties.provider.legal_name\",\"terms.confidentiality_period\",\"terms.effective_date\",\"terms.fees\",\"terms.governing_law\",\"terms.liability_cap\",\"terms.payment_terms\",\"terms.services\"],\"template_source_ref\":\"https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json\",\"no_invented_parties\":true,\"no_invented_clauses\":true,\"no_invented_terms\":true,\"all_deviations_visible\":true,\"no_send_performed\":true}}\n",
+        "validation": {
+          "all_deviations_visible": true,
+          "errors": [],
+          "no_invented_clauses": true,
+          "no_invented_parties": true,
+          "no_invented_terms": true,
+          "no_send_performed": true,
+          "placeholders_checked": [
+            "parties.customer.legal_name",
+            "parties.provider.legal_name",
+            "terms.confidentiality_period",
+            "terms.effective_date",
+            "terms.fees",
+            "terms.governing_law",
+            "terms.liability_cap",
+            "terms.payment_terms",
+            "terms.services"
+          ],
+          "required_party_roles": [
+            "provider",
+            "customer"
+          ],
+          "required_terms": [
+            "effective_date",
+            "services",
+            "fees",
+            "payment_terms",
+            "liability_cap",
+            "governing_law",
+            "confidentiality_period"
+          ],
+          "template_source_ref": "https://raw.githubusercontent.com/RYDE-PLAY/frantic-86-contract-drafter/5ef65cde926e0aa5aad88fb966518ff7f877117c/public/template.json"
+        }
+      }
+    },
+    "steps": [
+      {
+        "receipt_id": "sha256:51ce4573f927e459bac0a6952631001f53a17dd758a127288d94a077fe2d27ba",
+        "skill": "assemble",
+        "status": "success",
+        "step_id": "assemble"
+      }
+    ]
+  },
+  "receipt": {
+    "acts": [
+      {
+        "artifact_refs": [
+          {
+            "type": "artifact",
+            "uri": "runx:contract-draft:c29a7681049d5b7e"
+          }
+        ],
+        "closure": {
+          "closed_at": "2026-07-15T09:47:30.232Z",
+          "disposition": "closed",
+          "reason_code": "agent_act_closed",
+          "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent"
+        },
+        "criterion_bindings": [
+          {
+            "criterion_id": "act_closed",
+            "evidence_refs": [],
+            "status": "verified",
+            "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+            "verification_refs": []
+          }
+        ],
+        "form": "review",
+        "id": "act_turn",
+        "intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "The operator supplied the template, parties, terms, and downstream review context; send-as retains separate authority.",
+          "purpose": "Assemble a contract review draft from explicit source fields and record every template departure without sending it.",
+          "success_criteria": []
+        },
+        "source_refs": [],
+        "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+        "target_refs": []
+      }
+    ],
+    "authority": {
+      "actor_ref": {
+        "type": "principal",
+        "uri": "runx:principal:local_runtime"
+      },
+      "attenuation": {
+        "parent_authority_ref": null,
+        "subset_proof": null
+      },
+      "authority_proof_refs": [],
+      "enforcement": {
+        "profile_hash": "sha256:635fdb0a7eef93911e3c6bd0b25b5e635edba32e0259133042b3a5f1fb19394e",
+        "redaction_refs": [],
+        "setup_refs": [],
+        "teardown_refs": []
+      },
+      "grant_refs": [],
+      "scope_refs": [],
+      "terms": []
+    },
+    "canonicalization": "runx.receipt.c14n.v1",
+    "created_at": "2026-07-15T09:47:30.232Z",
+    "decisions": [
+      {
+        "artifact_refs": [
+          {
+            "type": "artifact",
+            "uri": "runx:contract-draft:c29a7681049d5b7e"
+          }
+        ],
+        "choice": "close",
+        "closure": {
+          "closed_at": "2026-07-15T09:47:30.232Z",
+          "disposition": "closed",
+          "reason_code": "agent_act_closed",
+          "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent"
+        },
+        "decision_id": "dec_turn",
+        "inputs": {
+          "opportunity_refs": [],
+          "selection_ref": null,
+          "signal_refs": [],
+          "target_ref": null
+        },
+        "justification": {
+          "evidence_refs": [],
+          "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent"
+        },
+        "proposed_intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "The operator supplied the template, parties, terms, and downstream review context; send-as retains separate authority.",
+          "purpose": "Assemble a contract review draft from explicit source fields and record every template departure without sending it.",
+          "success_criteria": []
+        },
+        "selected_act_id": "act_turn",
+        "selected_harness_ref": null
+      }
+    ],
+    "digest": "sha256:83455994bf0852d5621ebc655a5c1688de8c1f973f4928d450d215e25ab47d7a",
+    "id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+    "idempotency": {
+      "content_hash": "sha256:run_draft_7bd5705a3d7a-turn-content",
+      "intent_key": "sha256:run_draft_7bd5705a3d7a-turn-intent",
+      "trigger_fingerprint": "sha256:run_draft_7bd5705a3d7a-turn-trigger"
+    },
+    "issuer": {
+      "kid": "contract-drafter-dogfood-20260715-v2",
+      "public_key_sha256": "sha256:666fec0a87d62103e7a1256f013f8a8dbedc8908f241a2f8d40bc3d2710031b6",
+      "type": "hosted"
+    },
+    "lineage": {
+      "children": [],
+      "sync": []
+    },
+    "schema": "runx.receipt.v1",
+    "seal": {
+      "closed_at": "2026-07-15T09:47:30.232Z",
+      "criteria": [
+        {
+          "criterion_id": "act_closed",
+          "evidence_refs": [],
+          "status": "verified",
+          "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+          "verification_refs": []
+        }
+      ],
+      "disposition": "closed",
+      "last_observed_at": "2026-07-15T09:47:30.232Z",
+      "reason_code": "agent_act_closed",
+      "summary": "governed graph turn sealed"
+    },
+    "signals": [],
+    "signature": {
+      "alg": "Ed25519",
+      "value": "base64:nRy8eFu--3gEgfu2ecccP3oL3D5ZexFC-Ctr8UVPFe-Ekwtwm19XLJk3jUO7zNwEONNXUysASg6JFrAbT36eAQ"
+    },
+    "subject": {
+      "commitments": [],
+      "kind": "skill",
+      "ref": {
+        "type": "harness",
+        "uri": "hrn_run_draft_7bd5705a3d7a_turn"
+      }
+    }
+  },
+  "receipt_id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+  "registry_provenance": {
+    "digest": "sha256:18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+    "profile_digest": "sha256:a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+    "registry_key_id": "runx-registry-ed25519-v1",
+    "registry_source": "remote https://api.runx.ai",
+    "registry_source_fingerprint": "ba1ac16b631195fd",
+    "skill_id": "ryde-play/contract-drafter",
+    "trust_state": "trusted",
+    "trust_tier": "community",
+    "version": "sha-8f10f3657a3c"
+  },
+  "run_id": "run_draft_7bd5705a3d7a",
+  "schema": "runx.skill_run.v1",
+  "skill_name": "contract-drafter",
+  "status": "sealed"
+}

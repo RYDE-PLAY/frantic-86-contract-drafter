@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "skill_id": "ryde-play/contract-drafter",
+  "harness": {
+    "status": "passed",
+    "declared_case_count": 2,
+    "declared_cases": [
+      {
+        "name": "complete-template-produces-gated-draft",
+        "expected_status": "sealed"
+      },
+      {
+        "name": "missing-required-term-refuses-without-proposal",
+        "runner": "refusal_check",
+        "expected_status": "failure"
+      }
+    ],
+    "case_count": 2,
+    "checks_passed": 2,
+    "checks_failed": 0,
+    "receipt_ids": [
+      "sha256:88c59b044eccadb0f94f3f7783e252c958587943b70f65ddd7dcdecf7e697b97",
+      "sha256:d7f2e7e77d58cfe0d84f71bc4665702af6fb8441133bc133c558d4a4657fc65f"
+    ],
+    "evidence_url": "https://runx.ai/x/ryde-play/contract-drafter@sha-8f10f3657a3c#harness",
+    "latest_run": {
+      "id": "runx-harness:ryde-play/contract-drafter:sha-8f10f3657a3c",
+      "kind": "harness_run",
+      "source": "runx-registry",
+      "status": "success",
+      "title": "tested contract-drafter: all 2 passed",
+      "timestamp": "2026-07-15T09:44:21.293Z",
+      "summary": "2 fixtures passed for contract-drafter",
+      "skill_id": "ryde-play/contract-drafter",
+      "metadata": {
+        "public_lane": "runx",
+        "lane": "harness",
+        "package_version": "sha-8f10f3657a3c",
+        "digest": "18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+        "profile_digest": "a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+        "install_command": "runx add ryde-play/contract-drafter@sha-8f10f3657a3c",
+        "run_command": "runx skill ryde-play/contract-drafter@sha-8f10f3657a3c",
+        "checks_total": 2,
+        "checks_passed": 2,
+        "checks_failed": 0,
+        "case_names": [
+          "complete-template-produces-gated-draft",
+          "missing-required-term-refuses-without-proposal"
+        ],
+        "receipt_ids": [
+          "sha256:88c59b044eccadb0f94f3f7783e252c958587943b70f65ddd7dcdecf7e697b97",
+          "sha256:d7f2e7e77d58cfe0d84f71bc4665702af6fb8441133bc133c558d4a4657fc65f"
+        ],
+        "harness_status": "passed"
+      }
+    },
+    "recent_runs": [
+      {
+        "id": "runx-harness:ryde-play/contract-drafter:sha-8f10f3657a3c",
+        "kind": "harness_run",
+        "source": "runx-registry",
+        "status": "success",
+        "title": "tested contract-drafter: all 2 passed",
+        "timestamp": "2026-07-15T09:44:21.293Z",
+        "summary": "2 fixtures passed for contract-drafter",
+        "skill_id": "ryde-play/contract-drafter",
+        "metadata": {
+          "public_lane": "runx",
+          "lane": "harness",
+          "package_version": "sha-8f10f3657a3c",
+          "digest": "18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+          "profile_digest": "a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+          "install_command": "runx add ryde-play/contract-drafter@sha-8f10f3657a3c",
+          "run_command": "runx skill ryde-play/contract-drafter@sha-8f10f3657a3c",
+          "checks_total": 2,
+          "checks_passed": 2,
+          "checks_failed": 0,
+          "case_names": [
+            "complete-template-produces-gated-draft",
+            "missing-required-term-refuses-without-proposal"
+          ],
+          "receipt_ids": [
+            "sha256:88c59b044eccadb0f94f3f7783e252c958587943b70f65ddd7dcdecf7e697b97",
+            "sha256:d7f2e7e77d58cfe0d84f71bc4665702af6fb8441133bc133c558d4a4657fc65f"
+          ],
+          "harness_status": "passed"
+        }
+      }
+    ]
+  }
+}

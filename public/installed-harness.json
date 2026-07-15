@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "case_count": 2,
+  "assertion_error_count": 0,
+  "assertion_errors": [],
+  "case_names": [
+    "complete-template-produces-gated-draft",
+    "missing-required-term-refuses-without-proposal"
+  ],
+  "receipt_ids": [
+    "sha256:9996a59061ba69c14b2781533525cf42a81a3284fe3e04ddf6ac8c706c41cb10",
+    "sha256:3ee882a99d29ea3a543f67091ff19a0c3fad48c33dd449b6c0f6d042b9a23ab6"
+  ],
+  "graph_case_count": 1
+}

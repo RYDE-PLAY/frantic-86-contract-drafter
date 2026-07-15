@@ -1,0 +1,70 @@
+{
+  "schema": "runx.contract_drafter.receipt_selection.v1",
+  "runtime_status": "sealed",
+  "runtime_run_id": "run_draft_7bd5705a3d7a",
+  "runtime_receipt_id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+  "persisted_receipt_id": "sha256:4dc88c84fd87417183cb31873422178c9b9e227b953b76d8aacac7bb7f17a568",
+  "persisted_receipt_matches_runtime_output": true,
+  "persisted_receipt_selected_from_dedicated_store": true,
+  "subject": {
+    "kind": "skill",
+    "ref": {
+      "type": "harness",
+      "uri": "hrn_run_draft_7bd5705a3d7a_turn"
+    },
+    "commitments": []
+  },
+  "acts": [
+    {
+      "id": "act_turn",
+      "form": "review",
+      "intent": {
+        "purpose": "Assemble a contract review draft from explicit source fields and record every template departure without sending it.",
+        "legitimacy": "The operator supplied the template, parties, terms, and downstream review context; send-as retains separate authority.",
+        "success_criteria": [],
+        "constraints": [],
+        "derived_from": []
+      },
+      "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+      "criterion_bindings": [
+        {
+          "criterion_id": "act_closed",
+          "status": "verified",
+          "evidence_refs": [],
+          "verification_refs": [],
+          "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent"
+        }
+      ],
+      "source_refs": [],
+      "target_refs": [],
+      "artifact_refs": [
+        {
+          "type": "artifact",
+          "uri": "runx:contract-draft:c29a7681049d5b7e"
+        }
+      ],
+      "closure": {
+        "disposition": "closed",
+        "reason_code": "agent_act_closed",
+        "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent",
+        "closed_at": "2026-07-15T09:47:30.232Z"
+      }
+    }
+  ],
+  "seal": {
+    "disposition": "closed",
+    "reason_code": "agent_act_closed",
+    "summary": "governed graph turn sealed",
+    "closed_at": "2026-07-15T09:47:30.232Z",
+    "last_observed_at": "2026-07-15T09:47:30.232Z",
+    "criteria": [
+      {
+        "criterion_id": "act_closed",
+        "status": "verified",
+        "evidence_refs": [],
+        "verification_refs": [],
+        "summary": "draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=not_sent"
+      }
+    ]
+  }
+}

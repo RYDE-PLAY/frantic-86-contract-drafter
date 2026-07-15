@@ -1,0 +1,6 @@
+{
+  "schema": "runx.receipt.verification_key.v1",
+  "kid": "contract-drafter-dogfood-20260715-v2",
+  "alg": "Ed25519",
+  "public_key_base64": "VOF1/bTyz5WkAtFHyCN9FRAXndbHIddIXqVdY45UYyA="
+}

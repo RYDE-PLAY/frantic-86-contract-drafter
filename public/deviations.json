@@ -1,0 +1,34 @@
+[
+  {
+    "baseline": "3 years",
+    "clause": "confidentiality",
+    "proposed_change": "2 years",
+    "source": "terms.confidentiality_period",
+    "term": "confidentiality_period",
+    "visibility": "explicit_template_departure"
+  },
+  {
+    "baseline": "California",
+    "clause": "governing-law",
+    "proposed_change": "Delaware",
+    "source": "terms.governing_law",
+    "term": "governing_law",
+    "visibility": "explicit_template_departure"
+  },
+  {
+    "baseline": "Fees paid in the prior 12 months",
+    "clause": "liability",
+    "proposed_change": "USD 80,000 aggregate",
+    "source": "terms.liability_cap",
+    "term": "liability_cap",
+    "visibility": "explicit_template_departure"
+  },
+  {
+    "baseline": "Net 30",
+    "clause": "fees",
+    "proposed_change": "Net 45",
+    "source": "terms.payment_terms",
+    "term": "payment_terms",
+    "visibility": "explicit_template_departure"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "schema": "runx.contract_drafter.source_package_match.v1",
+  "source_commit": "a7ee625855088af9394900ac0e79b667cfe47b76",
+  "registry_ref": "ryde-play/contract-drafter@sha-8f10f3657a3c",
+  "registry_digest": "sha256:18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+  "profile_digest": "sha256:a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+  "files": [
+    {
+      "name": "SKILL.md",
+      "source_sha256": "sha256:d8f2a3186aaeab9a34532086c0e00a91072ca0500f25687d0fec65ed8a706ae9",
+      "installed_sha256": "sha256:18710b89ac00256fc41ca93788b1c75a1e19c9353d166ea5f71e836e980f3109",
+      "byte_match": false,
+      "normalized_eof_match": true
+    },
+    {
+      "name": "X.yaml",
+      "source_sha256": "sha256:a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+      "installed_sha256": "sha256:a37fb2462c37f4a2aefae049f56121eee4950588e5b9e77d90e21d72a430c504",
+      "byte_match": true,
+      "normalized_eof_match": true
+    },
+    {
+      "name": "run.mjs",
+      "source_sha256": "sha256:72f74eabcb61b49bf724299b44a93561d7e165bc51ed75f0245724ff82cda51c",
+      "installed_sha256": "sha256:72f74eabcb61b49bf724299b44a93561d7e165bc51ed75f0245724ff82cda51c",
+      "byte_match": true,
+      "normalized_eof_match": true
+    }
+  ],
+  "all_normalized_eof_match": true,
+  "runtime_files_byte_match": true,
+  "normalization_note": "Registry installation removes the final newline from SKILL.md; its installed hash equals registry_digest. X.yaml and run.mjs are byte-identical to source."
+}
