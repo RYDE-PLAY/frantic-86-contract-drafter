@@ -5,15 +5,15 @@
   "summary": "Repair delivery for contract-drafter: the skill no longer replays a hand-fed template object. The dogfood run supplies only template.source_ref, fetches the public template source at runtime, assembles the draft, executes the send-as planning step in the same sealed graph, and binds the send_as_result back to the draft_ref/content digest. Verification passes with a production Ed25519 signature.",
   "artifact_urls": {
     "public_url": "https://runx.ai/x/ryde-play/contract-drafter@sha-e442a388dfa5",
-    "source_url": "https://github.com/RYDE-PLAY/runx/tree/9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6/skills/contract-drafter",
+    "source_url": "https://github.com/RYDE-PLAY/runx/tree/9e92a5044d9a3611e60bb504599653963a5beb78/skills/contract-drafter",
     "pr_url": "https://github.com/runxhq/runx/pull/334",
-    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6/skills/contract-drafter/X.yaml",
-    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6/skills/contract-drafter/SKILL.md",
+    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/9e92a5044d9a3611e60bb504599653963a5beb78/skills/contract-drafter/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/9e92a5044d9a3611e60bb504599653963a5beb78/skills/contract-drafter/SKILL.md",
     "template_source": "https://cdn.jsdelivr.net/gh/RYDE-PLAY/frantic-86-contract-drafter@main/public/repair-20260716/template-source.json",
     "receipt": "https://cdn.jsdelivr.net/gh/RYDE-PLAY/frantic-86-contract-drafter@main/public/repair-20260716/runx-receipt-v3.json"
   },
   "source": {
-    "commit": "9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6",
+    "commit": "9e92a5044d9a3611e60bb504599653963a5beb78",
     "pr": "https://github.com/runxhq/runx/pull/334"
   },
   "registry": {
@@ -130,7 +130,7 @@
     },
     {
       "id": "source_pr",
-      "evidence": "PR #334 head 9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6; raw X.yaml and SKILL.md URLs point to the same commit."
+      "evidence": "PR #334 head 9e92a5044d9a3611e60bb504599653963a5beb78; raw X.yaml and SKILL.md URLs point to the same commit."
     }
   ],
   "commands": {

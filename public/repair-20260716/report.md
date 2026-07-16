@@ -2,7 +2,7 @@
 
 Package: ryde-play/contract-drafter@sha-e442a388dfa5
 
-Source commit: 9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6
+Source commit: 9e92a5044d9a3611e60bb504599653963a5beb78
 
 PR: https://github.com/runxhq/runx/pull/334
 
