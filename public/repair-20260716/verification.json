@@ -2,7 +2,7 @@
   "schema": "frantic.verification.v1",
   "package": "ryde-play/contract-drafter@sha-e442a388dfa5",
   "source_commit": "9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6",
-  "evidence_commit": "b1e4983",
+  "evidence_commit": "3a0d3ec",
   "receipt_ref": "runx:receipt:sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c",
   "runx_verify": {
     "receipt_dir": "/Volumes/SN770/娱乐/Grinder/frantic-86-contract-drafter/receipts-repair-20260716",
