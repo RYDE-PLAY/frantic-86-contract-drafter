@@ -65,6 +65,10 @@
   },
   "observations": [
     {
+      "id": "runx_cli_version",
+      "evidence": "runx --version returned exactly: runx-cli 0.6.14"
+    },
+    {
       "id": "repair_addresses_review",
       "evidence": "The runner now reads only template.source_ref, fetches the template at runtime, and records template_fetch.fetched_at_runtime=true with the fetched URL and digest."
     },
@@ -133,6 +137,8 @@
     "registry_read": "runx registry read ryde-play/contract-drafter@sha-e442a388dfa5 --registry https://api.runx.ai --json",
     "clean_install": "runx add ryde-play/contract-drafter@sha-e442a388dfa5 --registry https://api.runx.ai --to <tmp> --json",
     "installed_harness": "runx harness <tmp>/ryde-play/contract-drafter/sha-e442a388dfa5 --json",
-    "verify": "RUNX_RECEIPT_VERIFY_KID=contract-drafter-dogfood-20260716-v3 RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64=<public key> runx verify sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c --receipt-dir receipts-repair-20260716 --json"
-  }
+    "verify": "RUNX_RECEIPT_VERIFY_KID=contract-drafter-dogfood-20260716-v3 RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64=<public key> runx verify sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c --receipt-dir receipts-repair-20260716 --json",
+    "runx_version": "runx --version # runx-cli 0.6.14"
+  },
+  "runx_cli_version": "runx-cli 0.6.14"
 }
