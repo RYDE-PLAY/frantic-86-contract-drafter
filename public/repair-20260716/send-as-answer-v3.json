@@ -1,0 +1,43 @@
+{
+  "agent_task.send-as.output": {
+    "send_plan": {
+      "decision": "ready",
+      "action_family": "send-as",
+      "principal": {
+        "type": "account",
+        "ref": "account:contract-review-demo"
+      },
+      "provider": {
+        "name": "review-queue",
+        "runtime_path": "review.plan"
+      },
+      "send_class": "contract_review",
+      "audience": {
+        "type": "repository_review",
+        "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+        "requires_reconfirmation": true
+      },
+      "content": {
+        "draft_ref": "runx:contract-draft:c5cdddf5289247d9",
+        "digest": "sha256:649ca90b6f13066ae36f5a55d3cdefd991d259b44973baff0671a1f92ba44031",
+        "subject_or_title": "Review the services agreement draft"
+      },
+      "gates": {
+        "preflight_required": true,
+        "human_approval_required": true,
+        "approval_ref": "contract-drafter.send.approval"
+      },
+      "blockers": [],
+      "provider_actions": [
+        "review.plan"
+      ],
+      "evidence_refs": [
+        "runx:contract-draft:c5cdddf5289247d9"
+      ],
+      "success_checkpoint": {
+        "milestone": "provider_delivery_required",
+        "description": "Provider delivery and readback remain outside contract-drafter after this plan."
+      }
+    }
+  }
+}

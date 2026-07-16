@@ -1,0 +1,145 @@
+{
+  "schema": "frantic.verification.v1",
+  "package": "ryde-play/contract-drafter@sha-e442a388dfa5",
+  "source_commit": "9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6",
+  "evidence_commit": "b1e4983",
+  "receipt_ref": "runx:receipt:sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c",
+  "runx_verify": {
+    "receipt_dir": "/Volumes/SN770/娱乐/Grinder/frantic-86-contract-drafter/receipts-repair-20260716",
+    "signature_mode": "production",
+    "trees": [
+      {
+        "root_receipt_id": "sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c",
+        "receipt_count": 1,
+        "parent_missing": null,
+        "valid": true,
+        "findings": []
+      }
+    ],
+    "unreadable_files": [],
+    "valid": true
+  },
+  "verification_public_key": {
+    "schema": "runx.receipt.verification_key.v1",
+    "kid": "contract-drafter-dogfood-20260716-v3",
+    "alg": "Ed25519",
+    "public_key_base64": "IVL40Zt5HSRFMkLhXy6rbLfP+ntqXtMAl5YOBpiB2xI="
+  },
+  "registry": {
+    "package": "ryde-play/contract-drafter@sha-e442a388dfa5",
+    "digest": "sha256:f7aed6d350fa4c8a0bacbb53a95670d5742b7bd643b996cf99a30c9ffb750f0d",
+    "profile_digest": "sha256:6a3d44c69e65d1befaec71db3f44d27582eb742996111afe1266ecfb63a25909",
+    "public_url": "https://runx.ai/x/ryde-play/contract-drafter@sha-e442a388dfa5"
+  },
+  "harness": {
+    "installed": {
+      "status": "passed",
+      "case_count": 2,
+      "assertion_error_count": 0,
+      "assertion_errors": [],
+      "case_names": [
+        "complete-template-fetches-source-and-executes-send-as-plan",
+        "missing-required-term-refuses-without-proposal"
+      ],
+      "receipt_ids": [
+        "sha256:87a7c1a72a127e8f09d7a9d921dfc89eea51657f928ce76e22bd004428dc464e",
+        "sha256:5249d26eb9c828df28eea9cdd65dd8466892ba33d3d95421571ed48c0c1e2651"
+      ],
+      "graph_case_count": 1
+    }
+  },
+  "checks": [
+    {
+      "id": "runtime_template_fetch",
+      "passed": true,
+      "detail": {
+        "content_digest": "sha256:106527af305161b4a003c2862045d591cb0a53dedabc76c2a655cff036216006",
+        "fetched_at_runtime": true,
+        "resolved_path": "https://cdn.jsdelivr.net/gh/RYDE-PLAY/frantic-86-contract-drafter@main/public/repair-20260716/template-source.json",
+        "source_ref": "https://cdn.jsdelivr.net/gh/RYDE-PLAY/frantic-86-contract-drafter@main/public/repair-20260716/template-source.json"
+      }
+    },
+    {
+      "id": "same_graph_send_as",
+      "passed": true,
+      "detail": {
+        "bound_content_digest": "sha256:649ca90b6f13066ae36f5a55d3cdefd991d259b44973baff0671a1f92ba44031",
+        "bound_draft_ref": "runx:contract-draft:c5cdddf5289247d9",
+        "runner": "plan",
+        "schema": "runx.contract_send_as_result.v1",
+        "sealed_in_same_graph": true,
+        "send_plan": {
+          "action_family": "send-as",
+          "audience": {
+            "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+            "requires_reconfirmation": true,
+            "type": "repository_review"
+          },
+          "blockers": [],
+          "content": {
+            "digest": "sha256:649ca90b6f13066ae36f5a55d3cdefd991d259b44973baff0671a1f92ba44031",
+            "draft_ref": "runx:contract-draft:c5cdddf5289247d9",
+            "subject_or_title": "Review the services agreement draft"
+          },
+          "decision": "ready",
+          "evidence_refs": [
+            "runx:contract-draft:c5cdddf5289247d9"
+          ],
+          "gates": {
+            "approval_ref": "contract-drafter.send.approval",
+            "human_approval_required": true,
+            "preflight_required": true
+          },
+          "principal": {
+            "ref": "account:contract-review-demo",
+            "type": "account"
+          },
+          "provider": {
+            "name": "review-queue",
+            "runtime_path": "review.plan"
+          },
+          "provider_actions": [
+            "review.plan"
+          ],
+          "send_class": "contract_review",
+          "success_checkpoint": {
+            "description": "Provider delivery and readback remain outside contract-drafter after this plan.",
+            "milestone": "provider_delivery_required"
+          }
+        },
+        "skill": "runx/send-as"
+      }
+    },
+    {
+      "id": "draft_binding",
+      "passed": true
+    },
+    {
+      "id": "verify_valid",
+      "passed": true,
+      "detail": {
+        "receipt_dir": "/Volumes/SN770/娱乐/Grinder/frantic-86-contract-drafter/receipts-repair-20260716",
+        "signature_mode": "production",
+        "trees": [
+          {
+            "root_receipt_id": "sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c",
+            "receipt_count": 1,
+            "parent_missing": null,
+            "valid": true,
+            "findings": []
+          }
+        ],
+        "unreadable_files": [],
+        "valid": true
+      }
+    },
+    {
+      "id": "installed_harness_passed",
+      "passed": true,
+      "detail": [
+        "complete-template-fetches-source-and-executes-send-as-plan",
+        "missing-required-term-refuses-without-proposal"
+      ]
+    }
+  ]
+}

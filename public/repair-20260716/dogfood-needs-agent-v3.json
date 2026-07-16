@@ -1,0 +1,127 @@
+{
+  "registry_provenance": {
+    "digest": "sha256:f7aed6d350fa4c8a0bacbb53a95670d5742b7bd643b996cf99a30c9ffb750f0d",
+    "profile_digest": "sha256:6a3d44c69e65d1befaec71db3f44d27582eb742996111afe1266ecfb63a25909",
+    "registry_key_id": "runx-registry-ed25519-v1",
+    "registry_source": "remote https://api.runx.ai",
+    "registry_source_fingerprint": "ba1ac16b631195fd",
+    "skill_id": "ryde-play/contract-drafter",
+    "trust_state": "trusted",
+    "trust_tier": "community",
+    "version": "sha-e442a388dfa5"
+  },
+  "requests": [
+    {
+      "id": "agent_task.send-as.output",
+      "invocation": {
+        "agent": "reviewer",
+        "envelope": {
+          "allowed_tools": [],
+          "current_context": [],
+          "execution_location": {
+            "skill_directory": "/Users/ryde/.runx/registry-skills/ba1ac16b631195fd/ryde-play/contract-drafter/sha-e442a388dfa5/8e49e7fea10f772f/ryde-play/contract-drafter/sha-e442a388dfa5"
+          },
+          "historical_context": [],
+          "inputs": {
+            "audience": {
+              "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+              "type": "repository_review"
+            },
+            "consent_basis": "Public maintainer review of a nonbinding synthetic contract fixture.",
+            "content_ref": {
+              "digest": "sha256:649ca90b6f13066ae36f5a55d3cdefd991d259b44973baff0671a1f92ba44031",
+              "draft_ref": "runx:contract-draft:c5cdddf5289247d9",
+              "subject_or_title": "Review the services agreement draft"
+            },
+            "objective": "Execute send-as planning for the review draft in the same sealed graph.",
+            "operator_context": "Contract-drafter composes send-as planning in this run; human approval and provider preflight remain required.",
+            "parties": {
+              "customer": {
+                "legal_name": "Harbor Example Studio Inc.",
+                "role": "customer"
+              },
+              "provider": {
+                "legal_name": "Northstar Example Services LLC",
+                "role": "provider"
+              }
+            },
+            "principal": "account:contract-review-demo",
+            "send_proposal": {
+              "consumer": {
+                "inputs": {
+                  "audience": {
+                    "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                    "type": "repository_review"
+                  },
+                  "consent_basis": "Public maintainer review of a nonbinding synthetic contract fixture.",
+                  "content_ref": {
+                    "digest": "sha256:649ca90b6f13066ae36f5a55d3cdefd991d259b44973baff0671a1f92ba44031",
+                    "draft_ref": "runx:contract-draft:c5cdddf5289247d9",
+                    "subject_or_title": "Review the services agreement draft"
+                  },
+                  "objective": "Execute send-as planning for the review draft in the same sealed graph.",
+                  "operator_context": "Contract-drafter composes send-as planning in this run; human approval and provider preflight remain required.",
+                  "principal": "account:contract-review-demo"
+                },
+                "packet": "runx.send_as.plan.v1",
+                "runner": "plan",
+                "skill": "runx/send-as"
+              },
+              "deviation_count": 4,
+              "draft_ref": "runx:contract-draft:c5cdddf5289247d9",
+              "gate": {
+                "approved": false,
+                "gate_id": "contract-drafter.send.approval",
+                "human_approval_required": true,
+                "send_as_preflight_required": true
+              },
+              "no_send_performed": true,
+              "provider_action": null,
+              "schema": "runx.contract_send_proposal.v1",
+              "status": "gated_not_sent",
+              "subject_or_title": "Review the services agreement draft"
+            },
+            "template": {
+              "source_ref": "https://cdn.jsdelivr.net/gh/RYDE-PLAY/frantic-86-contract-drafter@main/public/repair-20260716/template-source.json"
+            },
+            "terms": {
+              "confidentiality_period": "2 years",
+              "effective_date": "2026-07-16",
+              "fees": "USD 8,000 per month",
+              "governing_law": "Delaware",
+              "liability_cap": "USD 80,000 aggregate",
+              "payment_terms": "Net 45",
+              "send": {
+                "audience": {
+                  "ref": "RYDE-PLAY/frantic-86-contract-drafter",
+                  "type": "repository_review"
+                },
+                "consent_basis": "Public maintainer review of a nonbinding synthetic contract fixture.",
+                "objective": "Execute send-as planning for the review draft in the same sealed graph.",
+                "operator_context": "Contract-drafter composes send-as planning in this run; human approval and provider preflight remain required.",
+                "principal": "account:contract-review-demo",
+                "subject_or_title": "Review the services agreement draft"
+              },
+              "services": "Monthly release engineering review and incident-readiness support"
+            }
+          },
+          "instructions": "Resolve the runx agent act using the supplied inputs and context.",
+          "output": {
+            "send_plan": "object"
+          },
+          "provenance": [],
+          "run_id": "rx_pending",
+          "skill": "plan-send",
+          "trust_boundary": "native-managed: runx executes the model and tool loop directly, receipts the result, and only yields to a surface for explicit human resolution outside this path"
+        },
+        "id": "agent_task.send-as.output",
+        "source_type": "agent-task",
+        "task": "send-as"
+      },
+      "kind": "agent_act"
+    }
+  ],
+  "run_id": "run_draft_1f28a06127e4",
+  "schema": "runx.skill_run.v1",
+  "status": "needs_agent"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "case_count": 2,
+  "assertion_error_count": 0,
+  "assertion_errors": [],
+  "case_names": [
+    "complete-template-fetches-source-and-executes-send-as-plan",
+    "missing-required-term-refuses-without-proposal"
+  ],
+  "receipt_ids": [
+    "sha256:87a7c1a72a127e8f09d7a9d921dfc89eea51657f928ce76e22bd004428dc464e",
+    "sha256:5249d26eb9c828df28eea9cdd65dd8466892ba33d3d95421571ed48c0c1e2651"
+  ],
+  "graph_case_count": 1
+}

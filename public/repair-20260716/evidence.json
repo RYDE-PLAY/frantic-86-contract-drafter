@@ -1,0 +1,138 @@
+{
+  "schema": "frantic.evidence.v1",
+  "bounty": 86,
+  "package": "ryde-play/contract-drafter@sha-e442a388dfa5",
+  "summary": "Repair delivery for contract-drafter: the skill no longer replays a hand-fed template object. The dogfood run supplies only template.source_ref, fetches the public template source at runtime, assembles the draft, executes the send-as planning step in the same sealed graph, and binds the send_as_result back to the draft_ref/content digest. Verification passes with a production Ed25519 signature.",
+  "artifact_urls": {
+    "public_url": "https://runx.ai/x/ryde-play/contract-drafter@sha-e442a388dfa5",
+    "source_url": "https://github.com/RYDE-PLAY/runx/tree/9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6/skills/contract-drafter",
+    "pr_url": "https://github.com/runxhq/runx/pull/334",
+    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6/skills/contract-drafter/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6/skills/contract-drafter/SKILL.md",
+    "template_source": "https://cdn.jsdelivr.net/gh/RYDE-PLAY/frantic-86-contract-drafter@main/public/repair-20260716/template-source.json",
+    "receipt": "https://cdn.jsdelivr.net/gh/RYDE-PLAY/frantic-86-contract-drafter@main/public/repair-20260716/runx-receipt-v3.json"
+  },
+  "source": {
+    "commit": "9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6",
+    "pr": "https://github.com/runxhq/runx/pull/334"
+  },
+  "registry": {
+    "package": "ryde-play/contract-drafter@sha-e442a388dfa5",
+    "digest": "sha256:f7aed6d350fa4c8a0bacbb53a95670d5742b7bd643b996cf99a30c9ffb750f0d",
+    "profile_digest": "sha256:6a3d44c69e65d1befaec71db3f44d27582eb742996111afe1266ecfb63a25909",
+    "public_url": "https://runx.ai/x/ryde-play/contract-drafter@sha-e442a388dfa5"
+  },
+  "dogfood": {
+    "package": "ryde-play/contract-drafter@sha-e442a388dfa5",
+    "command": "runx skill ryde-play/contract-drafter@sha-e442a388dfa5 --registry https://api.runx.ai --receipt-dir receipts-repair-20260716 --input-json template={source_ref:https-template} --input-json parties=... --input-json terms=... --json; runx resume run_draft_1f28a06127e4 public/repair-20260716/send-as-answer-v3.json --receipt-dir receipts-repair-20260716 --json",
+    "input": {
+      "template": {
+        "source_ref": "https://cdn.jsdelivr.net/gh/RYDE-PLAY/frantic-86-contract-drafter@main/public/repair-20260716/template-source.json"
+      }
+    },
+    "needs_agent_run": "run_draft_1f28a06127e4",
+    "receipt_ref": "runx:receipt:sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c",
+    "receipt_id": "sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c",
+    "draft_ref": "runx:contract-draft:c5cdddf5289247d9",
+    "content_digest": "sha256:649ca90b6f13066ae36f5a55d3cdefd991d259b44973baff0671a1f92ba44031",
+    "send_as_result_bound": true,
+    "send_as_composed_in_graph": true,
+    "verify_verdict": {
+      "receipt_dir": "/Volumes/SN770/娱乐/Grinder/frantic-86-contract-drafter/receipts-repair-20260716",
+      "signature_mode": "production",
+      "trees": [
+        {
+          "root_receipt_id": "sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c",
+          "receipt_count": 1,
+          "parent_missing": null,
+          "valid": true,
+          "findings": []
+        }
+      ],
+      "unreadable_files": [],
+      "valid": true
+    },
+    "harness_cases": [
+      {
+        "name": "complete-template-fetches-source-and-executes-send-as-plan",
+        "status": "sealed"
+      },
+      {
+        "name": "missing-required-term-refuses-without-proposal",
+        "status": "refused/failure expected"
+      }
+    ]
+  },
+  "observations": [
+    {
+      "id": "repair_addresses_review",
+      "evidence": "The runner now reads only template.source_ref, fetches the template at runtime, and records template_fetch.fetched_at_runtime=true with the fetched URL and digest."
+    },
+    {
+      "id": "no_hand_fed_template",
+      "evidence": "Dogfood input supplied only template.source_ref=https://cdn.jsdelivr.net/gh/RYDE-PLAY/frantic-86-contract-drafter@main/public/repair-20260716/template-source.json; clauses/baseline came from the fetched template source."
+    },
+    {
+      "id": "same_graph_send_as",
+      "evidence": "The dogfood graph executed three successful steps: assemble, plan-send, and bind-send-as."
+    },
+    {
+      "id": "send_as_plan_executed",
+      "evidence": "Final send_proposal.status=send_as_plan_executed; send_as_result.sealed_in_same_graph=true."
+    },
+    {
+      "id": "binding",
+      "evidence": "send_as_result.bound_draft_ref=runx:contract-draft:c5cdddf5289247d9; bound_content_digest=sha256:649ca90b6f13066ae36f5a55d3cdefd991d259b44973baff0671a1f92ba44031."
+    },
+    {
+      "id": "receipt",
+      "evidence": "Dogfood receipt id sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c; run_id run_draft_1f28a06127e4; status sealed; receipt summary draft_ready template=public-services-review-v1 deviations=4 downstream=runx/send-as status=send_as_plan_executed."
+    },
+    {
+      "id": "verify",
+      "evidence": "runx verify valid=true; signature_mode=production; findings=[]."
+    },
+    {
+      "id": "registry",
+      "evidence": "Published ryde-play/contract-drafter@sha-e442a388dfa5; digest sha256:f7aed6d350fa4c8a0bacbb53a95670d5742b7bd643b996cf99a30c9ffb750f0d; profile sha256:6a3d44c69e65d1befaec71db3f44d27582eb742996111afe1266ecfb63a25909."
+    },
+    {
+      "id": "install",
+      "evidence": "Clean install status=installed; destination=/tmp/contract-drafter-repair-install.7Ivcpb/ryde-play/contract-drafter/sha-e442a388dfa5/SKILL.md."
+    },
+    {
+      "id": "harness",
+      "evidence": "Installed harness status=passed; cases=complete-template-fetches-source-and-executes-send-as-plan, missing-required-term-refuses-without-proposal; graph_case_count=1."
+    },
+    {
+      "id": "deviation_1_confidentiality_period",
+      "evidence": "confidentiality: baseline 3 years; proposed 2 years; source terms.confidentiality_period."
+    },
+    {
+      "id": "deviation_2_governing_law",
+      "evidence": "governing-law: baseline California; proposed Delaware; source terms.governing_law."
+    },
+    {
+      "id": "deviation_3_liability_cap",
+      "evidence": "liability: baseline Fees paid in the prior 12 months; proposed USD 80,000 aggregate; source terms.liability_cap."
+    },
+    {
+      "id": "deviation_4_payment_terms",
+      "evidence": "fees: baseline Net 30; proposed Net 45; source terms.payment_terms."
+    },
+    {
+      "id": "provider_boundary",
+      "evidence": "Provider delivery remains false/no-send: provider_delivery_performed=false; no_send_performed=true."
+    },
+    {
+      "id": "source_pr",
+      "evidence": "PR #334 head 9e92a504c3c7b64f575a3a96c8f4c47b7e6c31c6; raw X.yaml and SKILL.md URLs point to the same commit."
+    }
+  ],
+  "commands": {
+    "registry_read": "runx registry read ryde-play/contract-drafter@sha-e442a388dfa5 --registry https://api.runx.ai --json",
+    "clean_install": "runx add ryde-play/contract-drafter@sha-e442a388dfa5 --registry https://api.runx.ai --to <tmp> --json",
+    "installed_harness": "runx harness <tmp>/ryde-play/contract-drafter/sha-e442a388dfa5 --json",
+    "verify": "RUNX_RECEIPT_VERIFY_KID=contract-drafter-dogfood-20260716-v3 RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64=<public key> runx verify sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c --receipt-dir receipts-repair-20260716 --json"
+  }
+}

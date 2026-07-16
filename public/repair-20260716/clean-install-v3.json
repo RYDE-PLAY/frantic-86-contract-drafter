@@ -1,0 +1,44 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "install",
+    "source": "remote",
+    "ref": "ryde-play/contract-drafter@sha-e442a388dfa5",
+    "install": {
+      "status": "installed",
+      "destination": "/tmp/contract-drafter-repair-install.7Ivcpb/ryde-play/contract-drafter/sha-e442a388dfa5/SKILL.md",
+      "skill_name": "contract-drafter",
+      "source": "runx-registry",
+      "source_label": "runx registry",
+      "skill_id": "ryde-play/contract-drafter",
+      "version": "sha-e442a388dfa5",
+      "digest": "sha256:f7aed6d350fa4c8a0bacbb53a95670d5742b7bd643b996cf99a30c9ffb750f0d",
+      "profile_digest": "sha256:6a3d44c69e65d1befaec71db3f44d27582eb742996111afe1266ecfb63a25909",
+      "profile_state_path": "/tmp/contract-drafter-repair-install.7Ivcpb/ryde-play/contract-drafter/sha-e442a388dfa5/.runx/profile.json",
+      "runner_names": [
+        "draft",
+        "refusal_check"
+      ],
+      "trust_tier": "community"
+    },
+    "receipt_metadata": {
+      "destination": "/tmp/contract-drafter-repair-install.7Ivcpb/ryde-play/contract-drafter/sha-e442a388dfa5/SKILL.md",
+      "digest": "sha256:f7aed6d350fa4c8a0bacbb53a95670d5742b7bd643b996cf99a30c9ffb750f0d",
+      "install_count": 1,
+      "package_digest": "a7ee0da4fd23fda1f8dcc240625185d42824981bc2d565df5f1a203bc4df761d",
+      "profile_digest": "sha256:6a3d44c69e65d1befaec71db3f44d27582eb742996111afe1266ecfb63a25909",
+      "publisher": {
+        "display_name": "RYDE",
+        "handle": "ryde-play",
+        "id": "user_0e65bd23969ab1dea100a77c",
+        "kind": "user"
+      },
+      "ref": "ryde-play/contract-drafter@sha-e442a388dfa5",
+      "skill_id": "ryde-play/contract-drafter",
+      "source_label": "runx registry",
+      "status": "installed",
+      "trust_tier": "community",
+      "version": "sha-e442a388dfa5"
+    }
+  }
+}

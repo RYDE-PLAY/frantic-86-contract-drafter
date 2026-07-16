@@ -1,0 +1,15 @@
+{
+  "receipt_dir": "/Volumes/SN770/娱乐/Grinder/frantic-86-contract-drafter/receipts-repair-20260716",
+  "signature_mode": "production",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:815aab326a8b59afbc1efaf9e92b612e5b5ec24ba8fad0d7a972072a5cc3854c",
+      "receipt_count": 1,
+      "parent_missing": null,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
+}
