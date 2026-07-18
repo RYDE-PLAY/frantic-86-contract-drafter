@@ -1,0 +1,44 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "install",
+    "source": "remote",
+    "ref": "ryde-play/contract-drafter@sha-49f4e7a4ea6c",
+    "install": {
+      "status": "installed",
+      "destination": "/Volumes/SN770/娱乐/Grinder/runx-fork-86-real-send/skills/ryde-play/contract-drafter/sha-49f4e7a4ea6c/SKILL.md",
+      "skill_name": "contract-drafter",
+      "source": "runx-registry",
+      "source_label": "runx registry",
+      "skill_id": "ryde-play/contract-drafter",
+      "version": "sha-49f4e7a4ea6c",
+      "digest": "sha256:92a6497ec0c02194f3827784be0c0a6b8d87bae8cadcde437e255846ca3842da",
+      "profile_digest": "sha256:e458cc6f0308b15757e7ce6b43391ea0a95c341067a2b63c0a5ad1393aaac67f",
+      "profile_state_path": "/Volumes/SN770/娱乐/Grinder/runx-fork-86-real-send/skills/ryde-play/contract-drafter/sha-49f4e7a4ea6c/.runx/profile.json",
+      "runner_names": [
+        "draft",
+        "refusal_check"
+      ],
+      "trust_tier": "community"
+    },
+    "receipt_metadata": {
+      "destination": "/Volumes/SN770/娱乐/Grinder/runx-fork-86-real-send/skills/ryde-play/contract-drafter/sha-49f4e7a4ea6c/SKILL.md",
+      "digest": "sha256:92a6497ec0c02194f3827784be0c0a6b8d87bae8cadcde437e255846ca3842da",
+      "install_count": 2,
+      "package_digest": "78ec673763714f1ab2d6b6740f0a6044542b9f57ba0f2240572f3ad3f916ae9b",
+      "profile_digest": "sha256:e458cc6f0308b15757e7ce6b43391ea0a95c341067a2b63c0a5ad1393aaac67f",
+      "publisher": {
+        "display_name": "RYDE",
+        "handle": "ryde-play",
+        "id": "user_0e65bd23969ab1dea100a77c",
+        "kind": "user"
+      },
+      "ref": "ryde-play/contract-drafter@sha-49f4e7a4ea6c",
+      "skill_id": "ryde-play/contract-drafter",
+      "source_label": "runx registry",
+      "status": "installed",
+      "trust_tier": "community",
+      "version": "sha-49f4e7a4ea6c"
+    }
+  }
+}

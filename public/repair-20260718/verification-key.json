@@ -1,0 +1,7 @@
+{
+  "schema": "runx.receipt.verification_key.v1",
+  "kid": "contract-drafter-published-external-dogfood-v2",
+  "public_key_base64": "+miKyDX0yFaWfc0ebxuKe0exxZpYIbFJ5I3YNasclDc=",
+  "public_key_sha256": "sha256:25262284da1de35195178786f0ee68e92c200dd8c747b9344446dee38f831ac8",
+  "receipt_id": "sha256:3a12270bd32648da2a991f23c2782c37ce83ce279aae29882e5aee924bb3413e"
+}

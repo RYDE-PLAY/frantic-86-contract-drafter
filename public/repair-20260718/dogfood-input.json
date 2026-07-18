@@ -1,0 +1,42 @@
+{
+  "template": {
+    "source_ref": "https://raw.githubusercontent.com/obvious/playbook/master/legal-templates/legal-templates/master-services-agreement.md"
+  },
+  "parties": {
+    "provider": {
+      "legal_name": "Northstar Example Services LLC",
+      "role": "provider"
+    },
+    "customer": {
+      "legal_name": "Harbor Example Studio Inc.",
+      "role": "customer"
+    }
+  },
+  "terms": {
+    "effective_date": "2026-07-18",
+    "services": "Monthly release engineering review and incident-readiness support",
+    "fees": "USD 8,000 per month",
+    "payment_terms": "Net 45",
+    "liability_cap": "USD 80,000 aggregate",
+    "governing_law": "Delaware",
+    "confidentiality_period": "2 years",
+    "provider_address": "120 Demo Market Street, Dover, DE 19901",
+    "customer_address": "88 Example Harbor Way, Wilmington, DE 19801",
+    "send": {
+      "objective": "Execute send-as planning and deterministic mock provider delivery for a review draft generated from an external public MSA template.",
+      "principal": "account:contract-review-demo",
+      "provider_context": {
+        "name": "mock-review-queue",
+        "account_ref": "provider-account:contract-review-demo",
+        "runtime_path": "mock.review_queue.deliver"
+      },
+      "audience": {
+        "type": "repository_review",
+        "ref": "RYDE-PLAY/frantic-86-contract-drafter"
+      },
+      "consent_basis": "Public maintainer review of a nonbinding synthetic contract draft produced from a public template.",
+      "operator_context": "Contract-drafter may execute only the deterministic mock review-queue transport; no live external send is authorized.",
+      "subject_or_title": "Review the externally sourced services agreement draft"
+    }
+  }
+}

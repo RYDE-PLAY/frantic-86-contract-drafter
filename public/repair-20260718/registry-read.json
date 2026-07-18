@@ -1,0 +1,55 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "read",
+    "source": "remote",
+    "ref": "ryde-play/contract-drafter@sha-49f4e7a4ea6c",
+    "skill": {
+      "skill_id": "ryde-play/contract-drafter",
+      "owner": "ryde-play",
+      "name": "contract-drafter",
+      "description": "Fetch a contract template by source ref, assemble a review draft, expose every baseline departure, compose send-as, and execute deterministic mock provider delivery/readback in the same graph.",
+      "category": "content",
+      "version": "sha-49f4e7a4ea6c",
+      "digest": "92a6497ec0c02194f3827784be0c0a6b8d87bae8cadcde437e255846ca3842da",
+      "markdown": "---\nname: contract-drafter\ndescription: Fetch a contract template by source ref, assemble a review draft, expose every baseline departure, compose send-as, and execute deterministic mock provider delivery/readback in the same graph.\nrunx:\n  category: business-ops\n  tags:\n    - contracts\n    - drafting\n    - governance\n---\n\n# Contract Drafter\n\n`contract-drafter` assembles a review draft from a runtime-fetched template,\nexplicit parties, and explicit terms. It reads only `template.source_ref` from\nthe template input, fetches the template document at run time, renders only\nclause text present in that fetched source, records each supplied value that\ndiffers from the template baseline, composes the canonical `runx/send-as`\nplanner inside the same graph, and executes a deterministic mock provider\ndelivery/readback bound to the draft.\n\nThe skill does not approve legal terms, provide legal advice, execute a\nsignature workflow, or contact a real recipient. The included provider action\nis a non-live mock review queue used to prove that the `send_proposal` is\nconsumed and read back in the same sealed run.\n\n## Inputs\n\n- `template` is a source descriptor with `source_ref`. The runner trusts only\n  that reference, then reads the template source at runtime from `repo:`,\n  `file:`, `https:`, or `http:`. It refuses when the source cannot be resolved,\n  fetched, parsed, or matched back to the fetched template's own `source_ref`.\n  The source document supplies:\n  - `template_id`, `title`, and a `source_ref` matching `template.source_ref`;\n  - `required_party_roles` and `required_terms`;\n  - `clauses[]`, each with a stable `id`, `title`, and `body_template`;\n  - `baseline`, keyed by term; and\n  - `term_clauses`, mapping every baseline term to the clause it changes.\n- `parties` supplies every role named by `required_party_roles`. Each role must\n  include an explicit `legal_name`; the runner never creates one.\n- `terms` supplies every required deal value and a `send` object containing the\n  exact downstream `send-as` planning inputs.\n\nClause templates use `[[path]]` placeholders and may interpolate only scalar\n`parties.*` and `terms.*` paths.\nEvery placeholder must resolve from the current run inputs. The runner does not\nfall back to a baseline, guess a missing value, or add a clause.\n\n## Outputs\n\n- `draft_doc`: Markdown assembled from the supplied clause bodies, with a\n  content digest, stable draft ref, template source, party roles, and the exact\n  source paths used.\n- `deviations[]`: one item per changed baseline value. Every item names the\n  clause, term, baseline, and proposed change.\n- `send_proposal`: a packet with `approved: false` and status\n  `mock_provider_sent` after the default graph runs. Its `consumer` names\n  `runx/send-as`, runner `plan`, binds the official planner inputs `objective`,\n  `principal`, `audience`, `content_ref`, `consent_basis`, and\n  `operator_context`, and includes the executed send-as plan and mock provider\n  delivery/readback result.\n- `send_as_result`: the `runx/send-as` plan output bound to the same\n  `draft_ref` and content digest as `draft_doc`, plus the mock delivery result.\n- `validation`: the required fields and placeholders checked, plus explicit\n  runtime template fetch, send-as composition, no-invention, provider delivery,\n  and readback assertions.\n\nThe sealed receipt uses a review act and binds the generated `draft_ref` as the\nartifact effect. The receipt proves the draft run and mock provider handoff\noccurred; it does not claim the draft was legally approved or delivered to a\nreal external recipient.\n\n## Refusal Rules\n\nThe run refuses closed and emits `draft_doc: null`, `deviations: []`, and\n`send_proposal: null` when any of these conditions holds:\n\n- a required party or `legal_name` is absent;\n- a required term or baseline term is absent;\n- the template source ref cannot be resolved or does not match the template\n  `source_ref`;\n- the template has no clauses;\n- a clause id is duplicated;\n- a clause placeholder is unresolved, non-scalar, or outside `parties.*` and\n  `terms.*`;\n- a baseline term lacks a clause mapping; or\n- any required downstream `terms.send` field is missing.\n\nRefusal output identifies every missing or invalid field and seals that refusal\nfor review in the default graph. The package also exposes `refusal_check` for\nharness and policy validation; it emits the same refusal packet and exits with\na failure status. Neither path creates a partial draft.\n\n## Send-As Boundary\n\nThe default graph passes `send_proposal.consumer.inputs` to the canonical\n`send-as` plan runner in the same sealed run. The returned plan is then consumed\nby the deterministic `mock-review-queue` provider adapter. That adapter records\ndelivery and readback evidence and refuses unless the draft ref and content\ndigest match the draft packet. The contract draft body is referenced by digest\nand draft ref, not silently copied into a provider call.\n\nRequired sequence:\n\n1. Run `contract-drafter` with `template.source_ref`, `parties`, and `terms`.\n2. Inspect `draft_doc`, `deviations`, and `send_as_result`.\n3. Inspect the `send_as_result.delivery` packet. It must show\n   `provider_delivery_performed: true`, `readback_verified: true`, and\n   `mock_transport: true`.\n4. For a real recipient, run a separate provider-specific adapter under its own\n   authority. The default runner proves only the non-live mock transport.\n\n## Harness Cases\n\n- `complete-template-fetches-source-and-executes-mock-send` fetches the\n  template from `template.source_ref`, seals a draft with four visible\n  deviations, invokes `runx/send-as` plan in the same graph, executes the mock\n  provider delivery/readback, and binds both results to the draft.\n- `missing-required-term-refuses-without-proposal` runs `refusal_check`, omits\n  `payment_terms`, returns failure, and emits neither a draft nor a proposal.\n\nThe fixtures use synthetic parties and nonbinding review data so the public\npackage contains no private contract or personal information. Production users\nmust provide their own authorized template and party data.",
+      "profile_digest": "e458cc6f0308b15757e7ce6b43391ea0a95c341067a2b63c0a5ad1393aaac67f",
+      "runner_names": [
+        "draft",
+        "refusal_check"
+      ],
+      "source_type": "agent",
+      "trust_tier": "community",
+      "required_scopes": [],
+      "tags": [
+        "contracts",
+        "drafting",
+        "governance"
+      ],
+      "publisher": {
+        "kind": "user",
+        "id": "user_0e65bd23969ab1dea100a77c",
+        "handle": "ryde-play",
+        "display_name": "RYDE"
+      },
+      "attestations": [
+        {
+          "kind": "publisher",
+          "id": "publisher:user_0e65bd23969ab1dea100a77c",
+          "status": "declared",
+          "summary": "RYDE",
+          "issued_at": "2026-07-18T15:59:46.653Z",
+          "metadata": {
+            "publisher_display_name": "RYDE",
+            "publisher_handle": "ryde-play",
+            "publisher_id": "user_0e65bd23969ab1dea100a77c",
+            "publisher_kind": "user",
+            "trust_tier": "community"
+          }
+        }
+      ],
+      "install_command": "runx add ryde-play/contract-drafter@sha-49f4e7a4ea6c --registry https://api.runx.ai",
+      "run_command": "runx skill ryde-play/contract-drafter@sha-49f4e7a4ea6c --registry https://api.runx.ai"
+    }
+  }
+}

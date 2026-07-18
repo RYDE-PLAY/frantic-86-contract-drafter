@@ -1,0 +1,51 @@
+{
+  "runx_version": "runx-cli 0.6.14",
+  "status": "sealed",
+  "run_id": "run_draft_96e704017841",
+  "receipt_id": "sha256:3a12270bd32648da2a991f23c2782c37ce83ce279aae29882e5aee924bb3413e",
+  "issuer": {
+    "kid": "contract-drafter-published-external-dogfood-v2",
+    "public_key_sha256": "sha256:25262284da1de35195178786f0ee68e92c200dd8c747b9344446dee38f831ac8",
+    "type": "hosted"
+  },
+  "step_count": 4,
+  "steps": [
+    {
+      "receipt_id": "sha256:747c58c2a080f506e89a4c71d2f6e207e666ea0f7afd4c51fd6d6c59e21c4b28",
+      "skill": "assemble",
+      "status": "success",
+      "step_id": "assemble"
+    },
+    {
+      "receipt_id": "sha256:e5138f52ece1a9dc25ddda9f780ff5f2ee5a350bf0aecd45b781ab8cf229c5b8",
+      "skill": "mock_provider_plan",
+      "status": "success",
+      "step_id": "plan-send"
+    },
+    {
+      "receipt_id": "sha256:cc412e31cac53c8f75f45ea1957ec5fd6a54f9d0568e37ed14b8144b69daa9d9",
+      "skill": "mock-provider-send",
+      "status": "success",
+      "step_id": "mock-provider-send"
+    },
+    {
+      "receipt_id": "sha256:b95f3b3b8e046d51a8bd702df4c82fde9a14b5dbafa40c2cd03526410080561c",
+      "skill": "bind-send",
+      "status": "success",
+      "step_id": "bind-send"
+    }
+  ],
+  "final": {
+    "act_reason": "draft_ready template=obvious-playbook-master-services-agreement deviations=7 downstream=runx/send-as status=mock_provider_sent",
+    "draft_ref": "runx:contract-draft:0ea9c1adceae29dd",
+    "content_digest": "sha256:3f80941161550c11c8f3a2629e396716e54a8d2aa92ab0d8567478e3a7cd6603",
+    "deviations": 7,
+    "proposal_status": "mock_provider_sent",
+    "provider_delivery": true,
+    "readback": true,
+    "template_source": "https://raw.githubusercontent.com/obvious/playbook/master/legal-templates/legal-templates/master-services-agreement.md",
+    "template_digest": "sha256:9bf235ed4f8630d52e58df8b868ed47e8ae9e10b65b53d54c3bb712c809ae794",
+    "delivery_id": "mock-delivery:702f0698cb2ab11a",
+    "readback_digest": "sha256:fbd09eab2041ea45db6d0d921cc6ddf74aee6b0013aa3c42214be46e7d964bf2"
+  }
+}

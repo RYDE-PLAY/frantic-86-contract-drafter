@@ -1,0 +1,176 @@
+{
+  "schema": "frantic.evidence.v1",
+  "bounty": 86,
+  "package": "ryde-play/contract-drafter@sha-49f4e7a4ea6c",
+  "summary": "Repair delivery for contract-drafter: the default graph no longer pauses for a hand-fed send-as answer and no longer records an inert no-send proposal. It fetches the dogfood template from an external public MSA source, composes a package-local send-as planning contract, executes deterministic mock provider delivery/readback in the same sealed run, and binds the delivery to the draft_ref and content digest. The post-publish receipt verifies with a production Ed25519 signature.",
+  "artifact_urls": {
+    "public_url": "https://runx.ai/x/ryde-play/contract-drafter@sha-49f4e7a4ea6c",
+    "source_url": "https://github.com/RYDE-PLAY/runx/tree/2ac6911dbaa3cd0f3df0f45f01482a647e7a9b7e/skills/contract-drafter",
+    "pr_url": "https://github.com/runxhq/runx/pull/334",
+    "x_yaml": "https://raw.githubusercontent.com/RYDE-PLAY/runx/2ac6911dbaa3cd0f3df0f45f01482a647e7a9b7e/skills/contract-drafter/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/RYDE-PLAY/runx/2ac6911dbaa3cd0f3df0f45f01482a647e7a9b7e/skills/contract-drafter/SKILL.md",
+    "external_template_source": "https://raw.githubusercontent.com/obvious/playbook/master/legal-templates/legal-templates/master-services-agreement.md"
+  },
+  "source": {
+    "commit": "2ac6911dbaa3cd0f3df0f45f01482a647e7a9b7e",
+    "pr": "https://github.com/runxhq/runx/pull/334"
+  },
+  "registry": {
+    "owner": "ryde-play",
+    "name": "contract-drafter",
+    "version": "sha-49f4e7a4ea6c",
+    "package_ref": "ryde-play/contract-drafter@sha-49f4e7a4ea6c",
+    "public_url": "https://runx.ai/x/ryde-play/contract-drafter@sha-49f4e7a4ea6c",
+    "digest": "sha256:92a6497ec0c02194f3827784be0c0a6b8d87bae8cadcde437e255846ca3842da",
+    "profile_digest": "sha256:e458cc6f0308b15757e7ce6b43391ea0a95c341067a2b63c0a5ad1393aaac67f",
+    "package_digest": "78ec673763714f1ab2d6b6740f0a6044542b9f57ba0f2240572f3ad3f916ae9b",
+    "install_command": "runx add ryde-play/contract-drafter@sha-49f4e7a4ea6c --registry https://api.runx.ai",
+    "read_command": "runx registry read ryde-play/contract-drafter@sha-49f4e7a4ea6c --registry https://api.runx.ai --json",
+    "publish_method": "runx registry publish ./skills/contract-drafter/SKILL.md --registry https://api.runx.ai"
+  },
+  "dogfood": {
+    "package": "ryde-play/contract-drafter@sha-49f4e7a4ea6c",
+    "input": {
+      "template": {
+        "source_ref": "https://raw.githubusercontent.com/obvious/playbook/master/legal-templates/legal-templates/master-services-agreement.md"
+      },
+      "parties": {
+        "provider": {
+          "legal_name": "Northstar Example Services LLC",
+          "role": "provider"
+        },
+        "customer": {
+          "legal_name": "Harbor Example Studio Inc.",
+          "role": "customer"
+        }
+      },
+      "terms": {
+        "effective_date": "2026-07-18",
+        "services": "Monthly release engineering review and incident-readiness support",
+        "fees": "USD 8,000 per month",
+        "payment_terms": "Net 45",
+        "liability_cap": "USD 80,000 aggregate",
+        "governing_law": "Delaware",
+        "confidentiality_period": "2 years",
+        "provider_address": "120 Demo Market Street, Dover, DE 19901",
+        "customer_address": "88 Example Harbor Way, Wilmington, DE 19801",
+        "send": {
+          "objective": "Execute send-as planning and deterministic mock provider delivery for a review draft generated from an external public MSA template.",
+          "principal": "account:contract-review-demo",
+          "provider_context": {
+            "name": "mock-review-queue",
+            "account_ref": "provider-account:contract-review-demo",
+            "runtime_path": "mock.review_queue.deliver"
+          },
+          "audience": {
+            "type": "repository_review",
+            "ref": "RYDE-PLAY/frantic-86-contract-drafter"
+          },
+          "consent_basis": "Public maintainer review of a nonbinding synthetic contract draft produced from a public template.",
+          "operator_context": "Contract-drafter may execute only the deterministic mock review-queue transport; no live external send is authorized.",
+          "subject_or_title": "Review the externally sourced services agreement draft"
+        }
+      }
+    },
+    "command": "runx skill ryde-play/contract-drafter@sha-49f4e7a4ea6c --registry https://api.runx.ai --json -R <receipt-dir> --input-json template=<json> --input-json parties=<json> --input-json terms=<json>",
+    "output_url": "./dogfood-output.json",
+    "summary_url": "./dogfood-summary.json",
+    "status": "sealed",
+    "run_id": "run_draft_96e704017841",
+    "receipt_ref": "runx:receipt:sha256:3a12270bd32648da2a991f23c2782c37ce83ce279aae29882e5aee924bb3413e",
+    "verify_verdict": {
+      "valid": true,
+      "signature_mode": "production"
+    },
+    "draft_ref": "runx:contract-draft:0ea9c1adceae29dd",
+    "content_digest": "sha256:3f80941161550c11c8f3a2629e396716e54a8d2aa92ab0d8567478e3a7cd6603",
+    "template_source_ref": "https://raw.githubusercontent.com/obvious/playbook/master/legal-templates/legal-templates/master-services-agreement.md",
+    "template_fetch_digest": "sha256:9bf235ed4f8630d52e58df8b868ed47e8ae9e10b65b53d54c3bb712c809ae794",
+    "deviations": 7,
+    "send_proposal_status": "mock_provider_sent",
+    "provider_delivery_performed": true,
+    "provider_readback_verified": true,
+    "mock_delivery_id": "mock-delivery:702f0698cb2ab11a",
+    "readback_digest": "sha256:fbd09eab2041ea45db6d0d921cc6ddf74aee6b0013aa3c42214be46e7d964bf2",
+    "harness_cases": [
+      {
+        "name": "complete-template-fetches-source-and-executes-mock-send",
+        "status": "sealed"
+      },
+      {
+        "name": "missing-required-term-refuses-without-proposal",
+        "status": "refused"
+      }
+    ]
+  },
+  "observations": [
+    {
+      "id": "runx_cli_version",
+      "evidence": "runx-cli 0.6.14"
+    },
+    {
+      "id": "publisher_owner",
+      "evidence": "registry owner ryde-play; GitHub identity RYDE-PLAY/ryde-play verified before push"
+    },
+    {
+      "id": "package_name",
+      "evidence": "ryde-play/contract-drafter@sha-49f4e7a4ea6c"
+    },
+    {
+      "id": "registry_read",
+      "evidence": "registry read succeeded for ryde-play/contract-drafter@sha-49f4e7a4ea6c; digest sha256:92a6497ec0c02194f3827784be0c0a6b8d87bae8cadcde437e255846ca3842da; package digest 78ec673763714f1ab2d6b6740f0a6044542b9f57ba0f2240572f3ad3f916ae9b"
+    },
+    {
+      "id": "public_url",
+      "evidence": "https://runx.ai/x/ryde-play/contract-drafter@sha-49f4e7a4ea6c"
+    },
+    {
+      "id": "source_pr",
+      "evidence": "PR #334 source commit 2ac6911dbaa3cd0f3df0f45f01482a647e7a9b7e; raw X.yaml and SKILL.md URLs return HTTP 200"
+    },
+    {
+      "id": "publish_method",
+      "evidence": "runx registry publish ./skills/contract-drafter/SKILL.md --registry https://api.runx.ai"
+    },
+    {
+      "id": "clean_install",
+      "evidence": "runx add ryde-play/contract-drafter@sha-49f4e7a4ea6c succeeded; installed package includes graph/send-as and mock-send.mjs"
+    },
+    {
+      "id": "installed_harness",
+      "evidence": "installed package harness passed 2/2 cases: complete-template-fetches-source-and-executes-mock-send, missing-required-term-refuses-without-proposal"
+    },
+    {
+      "id": "dogfood_receipt",
+      "evidence": "runx:receipt:sha256:3a12270bd32648da2a991f23c2782c37ce83ce279aae29882e5aee924bb3413e is the post-publish runx skill receipt for ryde-play/contract-drafter@sha-49f4e7a4ea6c"
+    },
+    {
+      "id": "runx_verify",
+      "evidence": "runx verify returned valid=true, signature_mode=production"
+    },
+    {
+      "id": "external_template_source",
+      "evidence": "dogfood fetched template source_ref https://raw.githubusercontent.com/obvious/playbook/master/legal-templates/legal-templates/master-services-agreement.md at runtime; digest sha256:9bf235ed4f8630d52e58df8b868ed47e8ae9e10b65b53d54c3bb712c809ae794"
+    },
+    {
+      "id": "draft_ref",
+      "evidence": "runx:contract-draft:0ea9c1adceae29dd; content digest sha256:3f80941161550c11c8f3a2629e396716e54a8d2aa92ab0d8567478e3a7cd6603"
+    },
+    {
+      "id": "deviations_visible",
+      "evidence": "dogfood recorded 7 visible deviations; each names clause, baseline, and proposed change in dogfood-output.json"
+    },
+    {
+      "id": "send_as_consumed",
+      "evidence": "plan-send, mock-provider-send, and bind-send all succeeded in the same sealed graph; no needs_agent/resume/caller.answers path is used"
+    },
+    {
+      "id": "provider_delivery",
+      "evidence": "provider_delivery_performed=true; readback_verified=true; delivery_id=mock-delivery:702f0698cb2ab11a; readback_digest=sha256:fbd09eab2041ea45db6d0d921cc6ddf74aee6b0013aa3c42214be46e7d964bf2"
+    },
+    {
+      "id": "refusal_case",
+      "evidence": "missing-required-term-refuses-without-proposal returns failure with no draft and no proposal"
+    }
+  ]
+}

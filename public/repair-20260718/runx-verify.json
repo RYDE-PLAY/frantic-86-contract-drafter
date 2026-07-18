@@ -1,0 +1,15 @@
+{
+  "receipt_dir": "/tmp/runx-86-published-external-dogfood-receipts-1784390533",
+  "signature_mode": "production",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:3a12270bd32648da2a991f23c2782c37ce83ce279aae29882e5aee924bb3413e",
+      "receipt_count": 1,
+      "parent_missing": null,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
+}
